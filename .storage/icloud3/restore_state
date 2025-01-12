@@ -1,13 +1,13 @@
 {
   "profile": {
     "version": 0,
-    "last_update": "2025-01-12 16:00:00",
-    "last_commit": "2025-01-12 16:00:10",
+    "last_update": "2025-01-12 16:03:00",
+    "last_commit": "2025-01-12 16:03:10",
     "recds_changed": 2
   },
   "devices": {
     "archers_apple_watch": {
-      "last_update": "2025-01-12 16:00:00",
+      "last_update": "2025-01-12 16:03:00",
       "sensors": {
         "device_tracker_state": "StatZon1",
         "name": "Archers Apple Watch (archers_apple_watch)",
@@ -156,14 +156,14 @@
       }
     },
     "michaels_ipad_pro": {
-      "last_update": "2025-01-12 16:00:00",
+      "last_update": "2025-01-12 16:03:00",
       "sensors": {
         "device_tracker_state": "home",
         "name": "Michaels iPad Pro (michaels_ipad_pro)",
         "entity_picture": "",
         "badge": "Home",
         "low_power_mode": false,
-        "info": "Home-@2:42p, MobApp LastUpdate-1.3 hrs ago",
+        "info": "Home-@2:42p, MobApp LastUpdate-1.4 hrs ago",
         "alert": "",
         "battery": 91,
         "battery_status": "NotCharging",
@@ -305,14 +305,14 @@
       }
     },
     "yellow_phone": {
-      "last_update": "2025-01-12 16:00:00",
+      "last_update": "2025-01-12 16:03:00",
       "sensors": {
         "device_tracker_state": "home",
         "name": "Yellow Phone (yellow_phone)",
         "entity_picture": "",
         "badge": "Home",
         "low_power_mode": false,
-        "info": "Home-@2:42p, MobApp LastUpdate-1.3 hrs ago",
+        "info": "Home-@2:42p, MobApp LastUpdate-1.4 hrs ago",
         "alert": "",
         "battery": 76,
         "battery_status": "NotCharging",
