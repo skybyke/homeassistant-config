@@ -37534,3 +37534,20 @@ Traceback (most recent call last):
     self._attr_current_option = self._attr_options[value]
                                 ~~~~~~~~~~~~~~~~~~^^^^^^^
 IndexError: list index out of range
+2025-01-12 16:04:47.431 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 267, in _handle_refresh_interval
+    await self._async_refresh(log_failures=True, scheduled=True)
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 478, in _async_refresh
+    self.async_update_listeners()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 177, in async_update_listeners
+    update_callback()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/entity.py", line 83, in _handle_coordinator_update
+    self._async_update_attrs()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/select.py", line 188, in _async_update_attrs
+    self._attr_current_option = self._attr_options[value]
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
