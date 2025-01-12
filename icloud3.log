@@ -4974,3 +4974,332 @@ DeviceEntry(area_id=None, config_entries={'01JH1211QA6T3AEF98VE2X18MG'}, configu
 01-12 16:30:00 ------  archers_apple_watch > DistTo Devices >  Michaels iPad Pro--2.2mi, Yellow Phone--2.2mi
 01-12 16:30:00 ------  michaels_ipad_pro > DistTo Devices >  Archers Apple Watch--2.2mi (8 mins), Yellow Phone--36.9ft
 01-12 16:30:00 ------  yellow_phone > DistTo Devices >  Archers Apple Watch--2.2mi (8 mins), Michaels iPad Pro--36.9ft
+01-12 16:38:40 ICLOUD
+🔻 MICHAEL.KLYNSTRA, POST, RESPONSE, REFRESH_CLIENT/1509 
+❗   items={'code': 450, 'ok': False}
+01-12 16:38:40 ICLOUD  michael.klynstra, Authenticate with Token
+01-12 16:38:40 ICLOUD
+🔺 MICHAEL.KLYNSTRA, POST, REQUEST, _AUTHENTICATE_WITH_TOKEN/611
+❗   items={'url': 'setup.icloud.com/setup/ws/1/accountLogin', 'retry': 0, 'json': None}
+❗   params={'dsid': '135071557'}
+❗   data.items={'accountCountryCode': 'USA', 'dsWebAuthToken': 'GWwPvE……iakFNy', 'extended_login': True, 'trustToken': 'HSARMT……2OSRVX'}
+01-12 16:38:43 ICLOUD
+🔻 MICHAEL.KLYNSTRA, POST, RESPONSE, _AUTHENTICATE_WITH_TOKEN/611 
+❗   items={'code': 200, 'ok': True}
+❗   data.items={'hsaTrustedBrowser': True, 'hsaChallengeRequired': False}
+❗   data.dsInfo={'lastName': 'Klynstra', 'dsid': '135071557', 'hsaEnabled': True, 'locale': 'en-us_US', 'hsaVersion': 2, 'locked': False, 'appleIdEntries': [{'isPrimary': True, 'type': 'EMAIL', 'value': 'michael.klynstra@gmail.com'}, {'type': 'EMAIL', 'value': 'michaelklynstra@mac.com'}, {'type': 'EMAIL', 'value': 'michaelklynstra@icloud.com'}], 'fullName': 'Michael Klynstra', 'appleId': 'michae……il.com', 'firstName': 'Michael', 'statusCode': 2, 'familyEligible': True}
+❗   data.webservices={'findme': {'url': 'https://p158-fmipweb.icloud.com:443', 'status': 'active'}, 'contacts': {'url': 'https://p158-contactsws.icloud.com:443', 'status': 'active'}}
+01-12 16:38:43 ICLOUD  archers_apple_watch > Located > iCloud-4:22:11p → 4:24:14p, Old, 14 mins ago
+01-12 16:38:55 GETLOC ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 16:38:55 GETLOC ⡇ archers_apple_watch > Located > iCloud-4:24:14p → 4:38:48p, 79% → 77%
+01-12 16:38:55 LOCATE ⡇ archers_apple_watch > Located > iCloud-4:38:48p (7 secs ago)
+01-12 16:38:55 GETLOC ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:00 ICLOUD  archers_apple_watch > Trigger > Next Update Time Reached
+01-12 16:39:00 ICLOUD ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   ARCHERS_APPLE_WATCH⟢MICHAELKLYNSTRA, ICLOUD, NEXT UPDATE TIME REACHED 
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 16:39:00 ICLOUD ⡇ archers_apple_watch > Zone > Home(3)-359.9ft > AccuracyAdjustment-23m, GPS-(42.64480, -86.16077/±47m)
+01-12 16:39:00 ICLOUD ⡇ archers_apple_watch > Results > NextUpdate-4:54:00p, Moved-2.3mi , Battery-77%, ✓Went3km
+01-12 16:39:00 ICLOUD ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   ARCHERS_APPLE_WATCH⟢MICHAELKLYNSTRA, ICLOUD, CURRZONE-HOME 
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:17 ------  HA Shutting Down
+01-12 16:39:45  
+                         ⛔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                         ⛔    iCloud3 v3.1.4.1, Sunday, 2025-01-12 16:39:45
+                         ⛔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:45 _INIT_  PROFILE:
+                          {'version': 1, 'ic3_version': '3.1.4.1', 'version_install_date': '2025-01-08 20:14:25', 'config_update_date': '2025-01-12 16:39:45', 'event_log_version': '3.1', 'event_log_version_running': '', 'event_log_card_directory': 'www/icloud3', 'event_log_card_program': 'icloud3-event-log-card.js', 'event_log_btnconfig_url': '', 'picture_www_dirs': []}
+01-12 16:39:45 _INIT_  GENERAL CONFIGURAION:
+                          {'log_level': 'info', 'log_level_devices': ['all'], 'unit_of_measurement': 'mi', 'time_format': '12-hour', 'display_zone_format': 'fname', 'device_tracker_state_source': 'ic3_fname', 'max_interval': 240, 'offline_interval': 20, 'exit_zone_interval': 3, 'mobapp_alive_interval': 60, 'old_location_threshold': 3, 'old_location_adjustment': 0, 'gps_accuracy_threshold': 100, 'display_gps_lat_long': True, 'travel_time_factor': 0.5, 'tfz_tracking_max_distance': 8, 'passthru_zone_time': 0.5, 'track_from_base_zone_used': True, 'track_from_base_zone': 'home', 'track_from_home_zone': True, 'center_in_zone': False, 'discard_poor_gps_inzone': False, 'distance_between_devices': True, 'inzone_intervals': {'iphone': 120, 'ipad': 120, 'watch': 15, 'mac': 120, 'airpods': 15, 'no_mobapp': 15, 'other': 120}, 'waze_used': True, 'waze_region': 'us', 'waze_min_distance': 1, 'waze_max_distance': 1000, 'waze_realtime': False, 'waze_history_database_used': True, 'waze_history_max_distance': 20, 'waze_history_track_direction': 'north_south', 'stat_zone_fname': 'StatZon#', 'stat_zone_still_time': 8, 'stat_zone_inzone_interval': 30, 'stat_zone_base_latitude': 1, 'stat_zone_base_longitude': 0, 'display_text_as': ['#1', '#2', '#3', '#4', '#5', '#6', '#7', '#8', '#9', '#10'], 'away_time_zone_1_offset': 0, 'away_time_zone_1_devices': ['none'], 'away_time_zone_2_offset': 0, 'away_time_zone_2_devices': ['none']}
+                          {'country_code': 'us', 'use_metric': False}
+01-12 16:39:45 _INIT_  TRACKING:
+                          {'username': 'michael.klynstra@gmail.com', 'password': '««..................', 'encode_password': True, 'icloud_server_endpoint_suffix': 'None', 'setup_icloud_session_early': True, 'data_source': 'iCloud,MobApp', 'apple_accounts': 1, 'devices': 3}
+01-12 16:39:45 _INIT_  APPLE ACCOUNTS:
+                          [{'username': 'michael.klynstra@gmail.com', 'password': '««TUpLYXBwbDIwMCE=»»', 'totp_key': '', 'locate_all': True}]
+01-12 16:39:45 _INIT_  
+01-12 16:39:45 _INIT_  DEVICE: Archers Apple Watch, archers_apple_watch:
+                          {'ic3_devicename': 'archers_apple_watch', 'fname': 'Archers Apple Watch', 'picture': 'None', 'unique_id': '', 'device_type': 'watch', 'inzone_interval': 15.0, 'fixed_interval': 0.0, 'tracking_mode': 'track', 'apple_account': 'michael.klynstra@gmail.com', 'famshr_devicename': "Archer's Apple Watch", 'famshr_device_id': 'AU/XP6tLZ7yTcGFf3UoXAu8T2kPvWcsrmLujrvN4qdXpGYxyscUJ3ZLIC60lRBwupXuNmNt83wWE4KPWXQNsfhNCn5dlsToemqUZBbG4YmsLibnPIiyKNrvXi/W8YGF7YD9WPh9AFTDl567ob3VGTMaDEE5q+72PD/aB1NZ2yIhMpGXQMNahRLw=', 'raw_model': 'Watch6,12', 'model': 'Apple Watch', 'model_display_name': 'Apple Watch SE', 'mobile_app_device': 'None', 'track_from_base_zone': 'home', 'track_from_zones': ['home'], 'log_zones': ['none']}
+01-12 16:39:45 _INIT_  DEVICE: Michaels iPad Pro, michaels_ipad_pro:
+                          {'ic3_devicename': 'michaels_ipad_pro', 'fname': 'Michaels iPad Pro', 'picture': 'None', 'unique_id': '', 'device_type': 'ipad', 'inzone_interval': 120.0, 'fixed_interval': 0.0, 'tracking_mode': 'monitor', 'apple_account': 'michael.klynstra@gmail.com', 'famshr_devicename': "Michael's iPad (2)", 'famshr_device_id': 'ATH0Ij7wllLMhcB5eyevI3olZZq6C1aHedfsGpYtieMB9aJ1IgEm369eBx41QQn+lXGJAUrmtAa61g==', 'raw_model': 'iPad16,5', 'model': 'iPad', 'model_display_name': 'iPad Pro', 'mobile_app_device': 'michaels_ipad', 'track_from_base_zone': 'home', 'track_from_zones': ['home'], 'log_zones': ['none']}
+01-12 16:39:45 _INIT_  DEVICE: Yellow Phone, yellow_phone:
+                          {'ic3_devicename': 'yellow_phone', 'fname': 'Yellow Phone', 'picture': 'None', 'unique_id': '', 'device_type': 'iphone', 'inzone_interval': 120.0, 'fixed_interval': 0.0, 'tracking_mode': 'track', 'apple_account': 'michael.klynstra@gmail.com', 'famshr_devicename': 'The Yellow Phone', 'famshr_device_id': 'AVqfnsswkI7u6KzBibWkF9OVyLHAxI200bRIsRaWSeIgPwkMcPCLqDzxs7dwYdZzcsFx0OwEulMXtG5X4/N+KiXWEEfo2Flz8C2YCWusHnowyvypZWqeMupmX9vj/sxGQeTEAtyGQW8Y2e0OUYTyBlhpLDrerhf6Y1mCy4MEZDpazP4kmIz2b30=', 'raw_model': 'iPhone14,7', 'model': 'iPhone', 'model_display_name': 'iPhone 14', 'mobile_app_device': 'the_yellow_phone', 'track_from_base_zone': 'home', 'track_from_zones': ['home'], 'log_zones': ['none']}
+01-12 16:39:45 _INIT_  
+01-12 16:39:45 _INIT_  Setting up iCloud3 v3.1.4.1
+01-12 16:39:45 _INIT_  ********, Initialize PyiCloud Service, Set up iCloud Location Services connection
+01-12 16:39:45 _INIT_  michael.klynstra, Initialize PyiCloud Service, Set up iCloud Location Services connection
+01-12 16:39:45 _INIT_  Verify Apple Account Username/Password
+                            • michael.klynstra@gmail.com, Valid-True
+01-12 16:39:45 _INIT_  Device Tracker Entities > Created-3
+01-12 16:39:45 _INIT_  Sensor Entities > Created-39, Excluded-0
+01-12 16:39:45 _INIT_  Set Up Waze > Server-United States, Canada (US), CountryCode-US, MinDist-1km, MaxDist-1000km, Realtime-False, HistoryDatabaseUsed-True
+01-12 16:39:45 _INIT_  Waze History Database > 
+                            • /config/.storage/icloud3/waze_location_history.db
+01-12 16:39:45 _INIT_  Configure iCloud3 Operations >
+                            • Load configuration parameters
+                            • Set Display Text As Fields (0 used)
+                            • Set Default Tracking Method (iCloud)
+                            • Initialize Debug Control (info)
+                            • Set Unit of Measure Formats (mi)
+                            • Set Event Log Record Limits (7500 Events)
+                            • Device Tracker State Value Source 
+                             (iCloud3 Zone Friendly Name)
+01-12 16:39:45 STAGE1 ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇    STAGE 1 > INITIAL PREPARATIONS
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:45  
+                         ⛔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                         ⛔    iCloud3 v3.1.4.1, Sunday, 2025-01-12 16:39:45
+                         ⛔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:45 _INIT_  PROFILE:
+                          {'version': 1, 'ic3_version': '3.1.4.1', 'version_install_date': '2025-01-08 20:14:25', 'config_update_date': '2025-01-12 16:39:45', 'event_log_version': '3.1', 'event_log_version_running': '', 'event_log_card_directory': 'www/icloud3', 'event_log_card_program': 'icloud3-event-log-card.js', 'event_log_btnconfig_url': '', 'picture_www_dirs': []}
+01-12 16:39:45 _INIT_  GENERAL CONFIGURAION:
+                          {'log_level': 'info', 'log_level_devices': ['all'], 'unit_of_measurement': 'mi', 'time_format': '12-hour', 'display_zone_format': 'fname', 'device_tracker_state_source': 'ic3_fname', 'max_interval': 240, 'offline_interval': 20, 'exit_zone_interval': 3, 'mobapp_alive_interval': 60, 'old_location_threshold': 3, 'old_location_adjustment': 0, 'gps_accuracy_threshold': 100, 'display_gps_lat_long': True, 'travel_time_factor': 0.5, 'tfz_tracking_max_distance': 8, 'passthru_zone_time': 0.5, 'track_from_base_zone_used': True, 'track_from_base_zone': 'home', 'track_from_home_zone': True, 'center_in_zone': False, 'discard_poor_gps_inzone': False, 'distance_between_devices': True, 'inzone_intervals': {'iphone': 120, 'ipad': 120, 'watch': 15, 'mac': 120, 'airpods': 15, 'no_mobapp': 15, 'other': 120}, 'waze_used': True, 'waze_region': 'us', 'waze_min_distance': 1, 'waze_max_distance': 1000, 'waze_realtime': False, 'waze_history_database_used': True, 'waze_history_max_distance': 20, 'waze_history_track_direction': 'north_south', 'stat_zone_fname': 'StatZon#', 'stat_zone_still_time': 8, 'stat_zone_inzone_interval': 30, 'stat_zone_base_latitude': 1, 'stat_zone_base_longitude': 0, 'display_text_as': ['#1', '#2', '#3', '#4', '#5', '#6', '#7', '#8', '#9', '#10'], 'away_time_zone_1_offset': 0, 'away_time_zone_1_devices': ['none'], 'away_time_zone_2_offset': 0, 'away_time_zone_2_devices': ['none']}
+                          {'country_code': 'US', 'region_code': 'MI', 'zip_code': '49423', 'region_name': 'Michigan', 'city': 'Holland', 'time_zone': 'America/Detroit', 'latitude': 42.7686, 'longitude': -86.117, 'use_metric': False}
+01-12 16:39:45 _INIT_  TRACKING:
+                          {'username': 'michael.klynstra@gmail.com', 'password': '««..................', 'encode_password': True, 'icloud_server_endpoint_suffix': 'None', 'setup_icloud_session_early': True, 'data_source': 'iCloud,MobApp', 'apple_accounts': 1, 'devices': 3}
+01-12 16:39:45 _INIT_  APPLE ACCOUNTS:
+                          [{'username': 'michael.klynstra@gmail.com', 'password': '««TUpLYXBwbDIwMCE=»»', 'totp_key': '', 'locate_all': True}]
+01-12 16:39:45 _INIT_  
+01-12 16:39:45 _INIT_  DEVICE: Archers Apple Watch, archers_apple_watch:
+                          {'ic3_devicename': 'archers_apple_watch', 'fname': 'Archers Apple Watch', 'picture': 'None', 'unique_id': '', 'device_type': 'watch', 'inzone_interval': 15.0, 'fixed_interval': 0.0, 'tracking_mode': 'track', 'apple_account': 'michael.klynstra@gmail.com', 'famshr_devicename': "Archer's Apple Watch", 'famshr_device_id': 'AU/XP6tLZ7yTcGFf3UoXAu8T2kPvWcsrmLujrvN4qdXpGYxyscUJ3ZLIC60lRBwupXuNmNt83wWE4KPWXQNsfhNCn5dlsToemqUZBbG4YmsLibnPIiyKNrvXi/W8YGF7YD9WPh9AFTDl567ob3VGTMaDEE5q+72PD/aB1NZ2yIhMpGXQMNahRLw=', 'raw_model': 'Watch6,12', 'model': 'Apple Watch', 'model_display_name': 'Apple Watch SE', 'mobile_app_device': 'None', 'track_from_base_zone': 'home', 'track_from_zones': ['home'], 'log_zones': ['none']}
+01-12 16:39:45 _INIT_  DEVICE: Michaels iPad Pro, michaels_ipad_pro:
+                          {'ic3_devicename': 'michaels_ipad_pro', 'fname': 'Michaels iPad Pro', 'picture': 'None', 'unique_id': '', 'device_type': 'ipad', 'inzone_interval': 120.0, 'fixed_interval': 0.0, 'tracking_mode': 'monitor', 'apple_account': 'michael.klynstra@gmail.com', 'famshr_devicename': "Michael's iPad (2)", 'famshr_device_id': 'ATH0Ij7wllLMhcB5eyevI3olZZq6C1aHedfsGpYtieMB9aJ1IgEm369eBx41QQn+lXGJAUrmtAa61g==', 'raw_model': 'iPad16,5', 'model': 'iPad', 'model_display_name': 'iPad Pro', 'mobile_app_device': 'michaels_ipad', 'track_from_base_zone': 'home', 'track_from_zones': ['home'], 'log_zones': ['none']}
+01-12 16:39:45 _INIT_  DEVICE: Yellow Phone, yellow_phone:
+                          {'ic3_devicename': 'yellow_phone', 'fname': 'Yellow Phone', 'picture': 'None', 'unique_id': '', 'device_type': 'iphone', 'inzone_interval': 120.0, 'fixed_interval': 0.0, 'tracking_mode': 'track', 'apple_account': 'michael.klynstra@gmail.com', 'famshr_devicename': 'The Yellow Phone', 'famshr_device_id': 'AVqfnsswkI7u6KzBibWkF9OVyLHAxI200bRIsRaWSeIgPwkMcPCLqDzxs7dwYdZzcsFx0OwEulMXtG5X4/N+KiXWEEfo2Flz8C2YCWusHnowyvypZWqeMupmX9vj/sxGQeTEAtyGQW8Y2e0OUYTyBlhpLDrerhf6Y1mCy4MEZDpazP4kmIz2b30=', 'raw_model': 'iPhone14,7', 'model': 'iPhone', 'model_display_name': 'iPhone 14', 'mobile_app_device': 'the_yellow_phone', 'track_from_base_zone': 'home', 'track_from_zones': ['home'], 'log_zones': ['none']}
+01-12 16:39:45 _INIT_  
+01-12 16:39:45 _INIT_  Set Up Waze > Server-United States, Canada (US), CountryCode-US, MinDist-1km, MaxDist-1000km, Realtime-False, HistoryDatabaseUsed-True
+01-12 16:39:45 _INIT_  Waze History Database > 
+                            • /config/.storage/icloud3/waze_location_history.db
+01-12 16:39:45 _INIT_  Configure iCloud3 Operations >
+                            • Load configuration parameters
+                            • Set Display Text As Fields (0 used)
+                            • Set Default Tracking Method (iCloud)
+                            • Initialize Debug Control (info)
+                            • Set Unit of Measure Formats (mi)
+                            • Set Event Log Record Limits (7500 Events)
+                            • Device Tracker State Value Source 
+                             (iCloud3 Zone Friendly Name)
+01-12 16:39:45 _INIT_  iCloud3 Directory > 
+                            • /config/custom_components/icloud3
+01-12 16:39:45 _INIT_  iCloud3 Configuration File > 
+                            • /config/.storage/icloud3/configuration
+01-12 16:39:45 _INIT_  iCloud3 Event Log > 
+                            • Current Version Installed-v3.1
+                            • File-/config/www/icloud3/icloud3-event-log-card.js
+01-12 16:39:45 _INIT_  Local Time Zone Offset > UTC-05:00 hrs, EST, Country Code-US
+01-12 16:39:45 STAGE2 ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇    STAGE 2 > PREPARE SUPPORT SERVICES
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:45 STAGE2  ZONE DATA - <NOT_HOME > 
+❗   items={'zone': 'not_home', 'name': 'Away'}
+01-12 16:39:45 STAGE2  ZONE DATA - <NOT_HOME > 
+❗   items={'zone': 'Not_Home', 'name': 'Away'}
+01-12 16:39:45 STAGE2  ZONE DATA - <NOT_SET > 
+❗   items={'zone': 'not_set', 'name': 'NotSet'}
+01-12 16:39:45 STAGE2  ZONE DATA - <NOT_SET > 
+❗   items={'zone': 'Not_Set', 'name': 'NotSet'}
+01-12 16:39:45 STAGE2  ZONE DATA - <── > 
+❗   items={'zone': '──', 'name': 'NotSet'}
+01-12 16:39:45 STAGE2  ZONE DATA - <NOTSET > 
+❗   items={'zone': 'NotSet', 'name': 'NotSet'}
+01-12 16:39:45 STAGE2  ZONE DATA - <STATIONARY > 
+❗   items={'zone': 'stationary', 'name': 'Stationary'}
+01-12 16:39:45 STAGE2  ZONE DATA - <STATIONARY > 
+❗   items={'zone': 'Stationary', 'name': 'Stationary'}
+01-12 16:39:45 STAGE2  ZONE DATA - <UNKNOWN > 
+❗   items={'zone': 'unknown', 'name': 'Unknown'}
+01-12 16:39:45 STAGE2  Set up Zones > zone, Display (fname)
+                            • near_home, Near Home (r3203m/2.0mi)
+                            • holland, Holland (r9229m/5.7mi)
+                            • grand_rapids, Grand Rapids (r12298m/7.6mi)
+                            • school, School (r130m/426.5ft)
+                            • home, Home (r104m/341.2ft)
+01-12 16:39:45 STAGE2  Special Zone Setup >
+                            • Enter Zone Delay > DelayTime-30 secs
+                            • Stationary Zone > StatZon# (r104m/341.2ft), 
+                               ◦ DistMoveLimit-125m, DistFromAnotherZone-200m
+01-12 16:39:45 STAGE2  Set Up Waze > Server-United States, Canada (US), CountryCode-US, MinDist-1km, MaxDist-1000km, Realtime-False, HistoryDatabaseUsed-True
+01-12 16:39:45 STAGE2  Waze History Database > 
+                            • /config/.storage/icloud3/waze_location_history.db
+01-12 16:39:45 STAGE3 ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇    STAGE 3 > DEVICE CONFIGURATION
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:45 STAGE3  Data Sources > iCloud, MobApp
+01-12 16:39:45 STAGE3  ✓ Archers Apple Watch (archers_apple_watch) > Watch, Tracked
+                            •Apple Account: michael.klynstra@gmail.com
+                            •iCloud Device: Archer's Apple Watch
+                            •MobApp Entity: ✪ NONE
+01-12 16:39:45 STAGE3  ✓ Michaels iPad Pro (michaels_ipad_pro) > iPad, Monitored
+                            •Apple Account: michael.klynstra@gmail.com
+                            •iCloud Device: Michael's iPad (2)
+                            •MobApp Entity: michaels_ipad
+01-12 16:39:45 STAGE3  ✓ Yellow Phone (yellow_phone) > iPhone, Tracked
+                            •Apple Account: michael.klynstra@gmail.com
+                            •iCloud Device: The Yellow Phone
+                            •MobApp Entity: the_yellow_phone
+01-12 16:39:45 STAGE4 ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇    STAGE 4 > DATA SOURCE DEVICE ASSIGNMENT
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:45 STAGE4  Data Source > Apple Account used-Yes
+01-12 16:39:45 STAGE4  Data Source > HA Mobile App used-Yes
+01-12 16:39:45 STAGE4  michael.klynstra, Initialize PyiCloud Service, Set up iCloud Location Services connection
+01-12 16:39:45 STAGE4  michael.klynstra, Authenticate with Token
+01-12 16:39:47 STAGE4
+🔺 MICHAEL.KLYNSTRA, POST, REQUEST, _AUTHENTICATE_WITH_TOKEN/611
+❗   items={'url': 'setup.icloud.com/setup/ws/1/accountLogin', 'retry': 0, 'json': None}
+❗   data.items={'accountCountryCode': 'USA', 'dsWebAuthToken': 'GWwPvE……iakFNy', 'extended_login': True, 'trustToken': 'HSARMT……2OSRVX'}
+01-12 16:39:49 STAGE4
+🔻 MICHAEL.KLYNSTRA, POST, RESPONSE, _AUTHENTICATE_WITH_TOKEN/611 
+❗   items={'code': 200, 'ok': True}
+❗   data.items={'hsaTrustedBrowser': True, 'hsaChallengeRequired': False}
+❗   data.dsInfo={'lastName': 'Klynstra', 'dsid': '135071557', 'hsaEnabled': True, 'locale': 'en-us_US', 'hsaVersion': 2, 'locked': False, 'appleIdEntries': [{'isPrimary': True, 'type': 'EMAIL', 'value': 'michael.klynstra@gmail.com'}, {'type': 'EMAIL', 'value': 'michaelklynstra@mac.com'}, {'type': 'EMAIL', 'value': 'michaelklynstra@icloud.com'}], 'fullName': 'Michael Klynstra', 'appleId': 'michae……il.com', 'firstName': 'Michael', 'statusCode': 2, 'familyEligible': True}
+❗   data.webservices={'findme': {'url': 'https://p158-fmipweb.icloud.com:443', 'status': 'active'}, 'contacts': {'url': 'https://p158-contactsws.icloud.com:443', 'status': 'active'}}
+01-12 16:39:50 STAGE4  Apple Acct > MichaelKlynstra, Login Successful, Token
+01-12 16:39:50 STAGE4  ⛔Apple Acct > Some Tracked Devices not Located:
+                            • Michael's MacBook Pro, Michael's Mac mini, Candy's iPad, Candy's MacBook Air, Candance's iPad, iPhone X, Candance's Apple Watch
+01-12 16:39:50 STAGE4  Apple Acct > MichaelKlynstra (michael.klynstra), 3 of 20 tracked
+                            ✓Archer's Apple Watch → Archers Apple Watch/archers_apple_watch 
+                              (Apple Watch SE)
+                            ✓Michael's iPad (2) → Michaels iPad Pro/michaels_ipad_pro 
+                              (iPad Pro)
+                               ◦ DeviceStatus-Offline/201
+                            ✓The Yellow Phone → Yellow Phone/yellow_phone 
+                              (iPhone 14)
+                            × Devices not assigned to an iCloud Device:
+                               ◦ Candance's Apple Watch, Apple Watch
+                               ◦ Candance's Apple Watch., Apple Watch 8, ⛔DUPLICATE DEVICE
+                               ◦ Candance's iPad, iPad Air
+                               ◦ Candy's AirPods, AirPods
+                               ◦ Candy's MacBook Air, MacBook Air 13"
+                               ◦ Candy's MacBook Air., MacBook Air 13", ⛔DUPLICATE DEVICE
+                               ◦ Candy's Phone, iPhone 13 Pro
+                               ◦ Candy's iPad, iPad
+                               ◦ MJK AirPods, AirPods Max
+                               ◦ MJK-iPhone, iPhone 15 Pro
+                               ◦ Michael's Apple Watch, Apple Watch 9
+                               ◦ Michael's Mac mini, Mac mini
+                               ◦ Michael's MacBook Pro, MacBook Pro, Nov 2023
+                               ◦ Michael's iPad, iPad Air 3rd Generation
+                               ◦ iPad, iPad Air
+                               ◦ iPhone X, iPhone X
+                            •  myDevices-Michael's MacBook Pro, Michael's Mac mini, MJK-iPhone, Michael's Apple Watch, Michael's iPad (2), MJK AirPods, Michael's iPad (2), Michael's iPad
+                            •  Family Devices-The Yellow Phone, Archer's Apple Watch, Candy's iPad, Candy's MacBook Air, Candy's MacBook Air., Candance's iPad, Candy's AirPods, iPhone X, Candy's Phone, Candance's Apple Watch, Candance's Apple Watch., iPad
+01-12 16:39:50 STAGE4  __ MOBAPP DEVICE_REGISTRY ENTRY - <MICHAELS_IPAD>)
+DeviceEntry(area_id=None, config_entries={'01JHCGHZFF8N431T4B0E63C468'}, configuration_url=None, connections=set(), created_at=datetime.datetime(2024, 11, 9, 0, 33, 21, 411462, tzinfo=datetime.timezone.utc), disabled_by=None, entry_type=None, hw_version=None, id='5f5d0be77fcec9fd4adfb00a0ef42488', identifiers={('mobile_app', '30DC3069-B2C9-43F9-B6F5-DFF9DBBDF34C')}, labels=set(), manufacturer='Apple', model='iPad16,5', model_id=None, modified_at=datetime.datetime(2025, 1, 12, 5, 42, 29, 122811, tzinfo=datetime.timezone.utc), name_by_user='Michaels iPad', name='Michael’s iPad (2)', primary_config_entry='01JHCGHZFF8N431T4B0E63C468', serial_number=None, suggested_area=None, sw_version='18.3', via_device_id=None, is_new=False, _cache={'json_repr': b'{"area_id":null,"configuration_url":null,"config_entries":["01JHCGHZFF8N431T4B0E63C468"],"connections":[],"created_at":1731112401.411462,"disabled_by":null,"entry_type":null,"hw_version":null,"id":"5f5d0be77fcec9fd4adfb00a0ef42488","identifiers":[["mobile_app","30DC3069-B2C9-43F9-B6F5-DFF9DBBDF34C"]],"labels":[],"manufacturer":"Apple","model":"iPad16,5","model_id":null,"modified_at":1736660549.122811,"name_by_user":"Michaels iPad","name":"Michael\xe2\x80\x99s iPad (2)","primary_config_entry":"01JHCGHZFF8N431T4B0E63C468","serial_number":null,"sw_version":"18.3","via_device_id":null}'})
+01-12 16:39:50 STAGE4  MOBAPP ENTITY_REGISTRY ENTRY - <MICHAELS_IPAD>)
+❗   items={'area_id': None, 'id': '8e9381……ee86dc', 'name': 'Michaels iPad'}
+01-12 16:39:50 STAGE4  __ MOBAPP DEVICE_REGISTRY ENTRY - <WALL_PANEL>)
+DeviceEntry(area_id='hallway', config_entries={'01JCC2MT32B9RH7N0D71YEDCVN'}, configuration_url=None, connections=set(), created_at=datetime.datetime(2024, 11, 10, 22, 20, 52, 706881, tzinfo=datetime.timezone.utc), disabled_by=<DeviceEntryDisabler.CONFIG_ENTRY: 'config_entry'>, entry_type=None, hw_version=None, id='2cb363ff91162ebe9da8fcf0f0c493e6', identifiers={('mobile_app', 'A87F41CA-2F2E-453C-9562-AD73E0D74D75')}, labels=set(), manufacturer='Apple', model='iPad11,3', model_id=None, modified_at=datetime.datetime(2024, 12, 17, 16, 25, 23, 937537, tzinfo=datetime.timezone.utc), name_by_user=None, name='Wall Panel', primary_config_entry='01JCC2MT32B9RH7N0D71YEDCVN', serial_number=None, suggested_area=None, sw_version='17.3.1', via_device_id=None, is_new=False, _cache={'json_repr': b'{"area_id":"hallway","configuration_url":null,"config_entries":["01JCC2MT32B9RH7N0D71YEDCVN"],"connections":[],"created_at":1731277252.706881,"disabled_by":"config_entry","entry_type":null,"hw_version":null,"id":"2cb363ff91162ebe9da8fcf0f0c493e6","identifiers":[["mobile_app","A87F41CA-2F2E-453C-9562-AD73E0D74D75"]],"labels":[],"manufacturer":"Apple","model":"iPad11,3","model_id":null,"modified_at":1734452723.937537,"name_by_user":null,"name":"Wall Panel","primary_config_entry":"01JCC2MT32B9RH7N0D71YEDCVN","serial_number":null,"sw_version":"17.3.1","via_device_id":null}'})
+01-12 16:39:50 STAGE4  MOBAPP ENTITY_REGISTRY ENTRY - <WALL_PANEL>)
+❗   items={'area_id': None, 'id': '6577d0……2385ea', 'name': None}
+01-12 16:39:50 STAGE4  __ MOBAPP DEVICE_REGISTRY ENTRY - <CANDYS_PHONE>)
+DeviceEntry(area_id=None, config_entries={'01JCKWNF1HQQ9S5DZVED71T062'}, configuration_url=None, connections=set(), created_at=datetime.datetime(2024, 11, 9, 2, 31, 40, 21709, tzinfo=datetime.timezone.utc), disabled_by=None, entry_type=None, hw_version=None, id='4e7d5fb39c4b35a15496d72c00ec03ad', identifiers={('mobile_app', 'B6C21673-7C77-475E-BE31-D635B273D1DA')}, labels=set(), manufacturer='Apple', model='iPhone14,2', model_id=None, modified_at=datetime.datetime(2024, 11, 14, 2, 47, 54, 20881, tzinfo=datetime.timezone.utc), name_by_user='Candys Phone', name="Candy's Phone", primary_config_entry='01JCKWNF1HQQ9S5DZVED71T062', serial_number=None, suggested_area=None, sw_version='18.1', via_device_id=None, is_new=False, _cache={'json_repr': b'{"area_id":null,"configuration_url":null,"config_entries":["01JCKWNF1HQQ9S5DZVED71T062"],"connections":[],"created_at":1731119500.021709,"disabled_by":null,"entry_type":null,"hw_version":null,"id":"4e7d5fb39c4b35a15496d72c00ec03ad","identifiers":[["mobile_app","B6C21673-7C77-475E-BE31-D635B273D1DA"]],"labels":[],"manufacturer":"Apple","model":"iPhone14,2","model_id":null,"modified_at":1731552474.020881,"name_by_user":"Candys Phone","name":"Candy\'s Phone","primary_config_entry":"01JCKWNF1HQQ9S5DZVED71T062","serial_number":null,"sw_version":"18.1","via_device_id":null}'})
+01-12 16:39:50 STAGE4  MOBAPP ENTITY_REGISTRY ENTRY - <CANDYS_PHONE>)
+❗   items={'area_id': None, 'id': '5ccaab……053c88', 'name': 'Candys Phone'}
+01-12 16:39:50 STAGE4  __ MOBAPP DEVICE_REGISTRY ENTRY - <MICHAELS_PHONE>)
+DeviceEntry(area_id=None, config_entries={'01JCM90BV8MZY61N008R8M4S0T'}, configuration_url=None, connections=set(), created_at=datetime.datetime(2024, 11, 8, 14, 19, 40, 126188, tzinfo=datetime.timezone.utc), disabled_by=None, entry_type=None, hw_version=None, id='c5cbce615132f4047474260c65868639', identifiers={('mobile_app', '6A0DBEEF-1CCD-4411-B0E3-EB4511A4D204')}, labels=set(), manufacturer='Apple', model='iPhone16,1', model_id=None, modified_at=datetime.datetime(2024, 12, 25, 19, 57, 25, 730514, tzinfo=datetime.timezone.utc), name_by_user='Michaels Phone', name='MJK-iPhone', primary_config_entry='01JCM90BV8MZY61N008R8M4S0T', serial_number=None, suggested_area=None, sw_version='18.3', via_device_id=None, is_new=False, _cache={'json_repr': b'{"area_id":null,"configuration_url":null,"config_entries":["01JCM90BV8MZY61N008R8M4S0T"],"connections":[],"created_at":1731075580.126188,"disabled_by":null,"entry_type":null,"hw_version":null,"id":"c5cbce615132f4047474260c65868639","identifiers":[["mobile_app","6A0DBEEF-1CCD-4411-B0E3-EB4511A4D204"]],"labels":[],"manufacturer":"Apple","model":"iPhone16,1","model_id":null,"modified_at":1735156645.730514,"name_by_user":"Michaels Phone","name":"MJK-iPhone","primary_config_entry":"01JCM90BV8MZY61N008R8M4S0T","serial_number":null,"sw_version":"18.3","via_device_id":null}'})
+01-12 16:39:50 STAGE4  MOBAPP ENTITY_REGISTRY ENTRY - <MICHAELS_PHONE>)
+❗   items={'area_id': None, 'id': 'ada05c……fbe864', 'name': 'Michaels Phone'}
+01-12 16:39:50 STAGE4  __ MOBAPP DEVICE_REGISTRY ENTRY - <CANDYS_PHONE_3>)
+DeviceEntry(area_id=None, config_entries={'01JEDT5N3WQFH8G402407MW8QY'}, configuration_url=None, connections=set(), created_at=datetime.datetime(2024, 11, 19, 3, 3, 44, 636252, tzinfo=datetime.timezone.utc), disabled_by=<DeviceEntryDisabler.CONFIG_ENTRY: 'config_entry'>, entry_type=None, hw_version=None, id='3b01ed85b6ec1f6d5e5b26aad771a851', identifiers={('mobile_app', 'F23609D1-ACE7-4A76-9325-9296F3BBEC59')}, labels=set(), manufacturer='Apple', model='iPhone14,2', model_id=None, modified_at=datetime.datetime(2024, 12, 6, 11, 2, 40, 17401, tzinfo=datetime.timezone.utc), name_by_user=None, name="Candy's Phone", primary_config_entry='01JEDT5N3WQFH8G402407MW8QY', serial_number=None, suggested_area=None, sw_version='18.1.1', via_device_id=None, is_new=False, _cache={'json_repr': b'{"area_id":null,"configuration_url":null,"config_entries":["01JEDT5N3WQFH8G402407MW8QY"],"connections":[],"created_at":1731985424.636252,"disabled_by":"config_entry","entry_type":null,"hw_version":null,"id":"3b01ed85b6ec1f6d5e5b26aad771a851","identifiers":[["mobile_app","F23609D1-ACE7-4A76-9325-9296F3BBEC59"]],"labels":[],"manufacturer":"Apple","model":"iPhone14,2","model_id":null,"modified_at":1733482960.017401,"name_by_user":null,"name":"Candy\'s Phone","primary_config_entry":"01JEDT5N3WQFH8G402407MW8QY","serial_number":null,"sw_version":"18.1.1","via_device_id":null}'})
+01-12 16:39:50 STAGE4  MOBAPP ENTITY_REGISTRY ENTRY - <CANDYS_PHONE_3>)
+❗   items={'area_id': None, 'id': '7cf43e……e614f1', 'name': None}
+01-12 16:39:50 STAGE4  __ MOBAPP DEVICE_REGISTRY ENTRY - <WALL_PANEL_2>)
+DeviceEntry(area_id='hallway', config_entries={'01JFARC6J7XAAJVDD5G5X4TC9Q'}, configuration_url=None, connections=set(), created_at=datetime.datetime(2024, 12, 17, 16, 49, 15, 847910, tzinfo=datetime.timezone.utc), disabled_by=None, entry_type=None, hw_version=None, id='cb8fc2eef7b4e9f9e3e63bf9696de452', identifiers={('mobile_app', '3EF46E3A-E366-46CD-8375-1C66AFB0DD31')}, labels=set(), manufacturer='Apple', model='iPad11,3', model_id=None, modified_at=datetime.datetime(2025, 1, 8, 16, 20, 58, 4893, tzinfo=datetime.timezone.utc), name_by_user='Wall Panel iPad', name='Michael’s iPad', primary_config_entry='01JFARC6J7XAAJVDD5G5X4TC9Q', serial_number=None, suggested_area=None, sw_version='17.3.1', via_device_id=None, is_new=False, _cache={'json_repr': b'{"area_id":"hallway","configuration_url":null,"config_entries":["01JFARC6J7XAAJVDD5G5X4TC9Q"],"connections":[],"created_at":1734454155.84791,"disabled_by":null,"entry_type":null,"hw_version":null,"id":"cb8fc2eef7b4e9f9e3e63bf9696de452","identifiers":[["mobile_app","3EF46E3A-E366-46CD-8375-1C66AFB0DD31"]],"labels":[],"manufacturer":"Apple","model":"iPad11,3","model_id":null,"modified_at":1736353258.004893,"name_by_user":"Wall Panel iPad","name":"Michael\xe2\x80\x99s iPad","primary_config_entry":"01JFARC6J7XAAJVDD5G5X4TC9Q","serial_number":null,"sw_version":"17.3.1","via_device_id":null}'})
+01-12 16:39:50 STAGE4  MOBAPP ENTITY_REGISTRY ENTRY - <WALL_PANEL_2>)
+❗   items={'area_id': None, 'id': 'ff3b6a……09532e', 'name': 'Wall Panel iPad'}
+01-12 16:39:50 STAGE4  __ MOBAPP DEVICE_REGISTRY ENTRY - <THE_YELLOW_PHONE>)
+DeviceEntry(area_id=None, config_entries={'01JH1211QA6T3AEF98VE2X18MG'}, configuration_url=None, connections=set(), created_at=datetime.datetime(2025, 1, 7, 18, 56, 55, 531035, tzinfo=datetime.timezone.utc), disabled_by=None, entry_type=None, hw_version=None, id='e6faf1885973c3e29462571e17307957', identifiers={('mobile_app', '38233CD3-0A45-451A-8CC9-E432237A04FF')}, labels=set(), manufacturer='Apple', model='iPhone14,7', model_id=None, modified_at=datetime.datetime(2025, 1, 7, 18, 56, 55, 531064, tzinfo=datetime.timezone.utc), name_by_user=None, name='The Yellow Phone', primary_config_entry='01JH1211QA6T3AEF98VE2X18MG', serial_number=None, suggested_area=None, sw_version='16.4.1', via_device_id=None, is_new=False, _cache={'json_repr': b'{"area_id":null,"configuration_url":null,"config_entries":["01JH1211QA6T3AEF98VE2X18MG"],"connections":[],"created_at":1736276215.531035,"disabled_by":null,"entry_type":null,"hw_version":null,"id":"e6faf1885973c3e29462571e17307957","identifiers":[["mobile_app","38233CD3-0A45-451A-8CC9-E432237A04FF"]],"labels":[],"manufacturer":"Apple","model":"iPhone14,7","model_id":null,"modified_at":1736276215.531064,"name_by_user":null,"name":"The Yellow Phone","primary_config_entry":"01JH1211QA6T3AEF98VE2X18MG","serial_number":null,"sw_version":"16.4.1","via_device_id":null}'})
+01-12 16:39:50 STAGE4  MOBAPP ENTITY_REGISTRY ENTRY - <THE_YELLOW_PHONE>)
+❗   items={'area_id': None, 'id': 'ac5982……6d9017', 'name': None}
+01-12 16:39:50 STAGE4  Mobile App Devices > 2 of 3 monitored
+                            ✓Michaels iPad → Michaels iPad Pro/michaels_ipad_pro
+                               (iPad Pro)
+                            ✓The Yellow Phone → Yellow Phone/yellow_phone
+                               (iPhone 14)
+                            × Devices not assigned to an iCloud3 Device: 
+                               ◦ Wall Panel → Not used (iPad Air 3rd Generation)
+                               ◦ Candys Phone → Not used (iPhone 13 Pro)
+                               ◦ Michaels Phone → Not used (iPhone 15 Pro)
+                               ◦ Candy's Phone → Not used (iPhone 13 Pro)
+                               ◦ Wall Panel iPad → Not used (iPad Air 3rd Generation)
+01-12 16:39:50 STAGE5 ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇    STAGE 5 > DEVICE CONFIGURATION SUMMARY
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:50 STAGE5  Archers Apple Watch (archers_apple_watch) > Watch, Tracked
+                            • iCloud Tracking Parameters:
+                               ◦ Apple Account: MichaelKlynstra (michael.klynstra)
+                               ◦ iCloud Device: Archer's Apple Watch
+                            • Mobile App Tracking Parameters: Mobile App Not Used
+                            • Other Parameters:
+                               ◦ inZone Interval: 15 mins
+01-12 16:39:50 STAGE5  Michaels iPad Pro (michaels_ipad_pro) > iPad, Monitored
+                            • iCloud Tracking Parameters:
+                               ◦ Apple Account: MichaelKlynstra (michael.klynstra)
+                               ◦ iCloud Device: Michael's iPad (2)
+                            • Mobile App Tracking Parameters:
+                               ◦ MobApp Device: Michaels Ipad
+                               ◦ Device Tracker..: device_tracker.michaels_ipad
+                               ◦ Action Trigger...: michaels_ipad_2_last_update_trigger
+                               ◦ Battery Sensor..: michaels_ipad_2_battery_level
+                               ◦ Notifications.....: mobile_app_michaels_ipad
+                            • Other Parameters:
+                               ◦ inZone Interval: 2 hrs
+01-12 16:39:50 STAGE5  Yellow Phone (yellow_phone) > iPhone, Tracked
+                            • iCloud Tracking Parameters:
+                               ◦ Apple Account: MichaelKlynstra (michael.klynstra)
+                               ◦ iCloud Device: The Yellow Phone
+                            • Mobile App Tracking Parameters:
+                               ◦ MobApp Device: The Yellow Phone
+                               ◦ Device Tracker..: device_tracker.the_yellow_phone
+                               ◦ Action Trigger...: the_yellow_phone_last_update_trigger
+                               ◦ Battery Sensor..: the_yellow_phone_battery_level
+                               ◦ Notifications.....: mobile_app_the_yellow_phone
+                            • Other Parameters:
+                               ◦ inZone Interval: 2 hrs
+01-12 16:39:50 STAGE6 ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇    ICLOUD3 INITIALIZATION COMPLETE
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:50 1stLOC  Requesting Initial Locate
+01-12 16:39:50 1stLOC  archers_apple_watch > iCloud Trigger > Initial Locate@4:39:41p
+01-12 16:39:50 1stLOC ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   ARCHERS_APPLE_WATCH⟢MICHAELKLYNSTRA, ICLOUD, TRIGGER > INITIAL LOCATE 
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 16:39:50 LOCATE ⡇ archers_apple_watch > Located > iCloud-4:39:41p (9 secs ago)
+01-12 16:39:50 1stLOC ⡇ archers_apple_watch > Zone > Near Home(1)-1.1mi > NotSet(2), GPS-(42.64473, -86.16061/±29m)
+01-12 16:39:50 1stLOC ⡇ archers_apple_watch > Results > Arrive-~@4:39p, NextUpdate-4:54:50p, Moved-0.0mi , Battery-77%, ×Went3km, WazeMsg-×Under1km
+01-12 16:39:50 1stLOC ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   ARCHERS_APPLE_WATCH⟢MICHAELKLYNSTRA, ICLOUD, CURRZONE-NEAR_HOME 
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:50 1stLOC  archers_apple_watch > Battery Info > Level-77%, NotCharging (iCloud)
+01-12 16:39:50 1stLOC  michaels_ipad_pro > iCloud Trigger > Initial Locate@4:38:58p
+01-12 16:39:50 1stLOC ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   MICHAELS_IPAD_PRO⟢MICHAELKLYNSTRA, ICLOUD, TRIGGER > INITIAL LOCATE 
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 16:39:50 LOCATE ⡇ michaels_ipad_pro > Located > iCloud-4:38:58p (52 secs ago), MobApp-4:10:31p
+01-12 16:39:50 1stLOC ⡇ michaels_ipad_pro > Zone > Home(1)-68.9ft > NotSet(1), GPS-(42.64490, -86.16213/±6m)
+01-12 16:39:50 1stLOC ⡇ michaels_ipad_pro > Results > NextUpdate-6:39:50p, Moved-0.0mi , Battery-91%, ×Went3km
+01-12 16:39:50 1stLOC ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   MICHAELS_IPAD_PRO⟢MICHAELKLYNSTRA, ICLOUD, CURRZONE-HOME 
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:50 1stLOC  michaels_ipad_pro > Battery Info > Level-91%, NotCharging (iCloud)
+01-12 16:39:50 1stLOC  yellow_phone > iCloud Trigger > Initial Locate@4:38:57p
+01-12 16:39:50 1stLOC ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   YELLOW_PHONE⟢MICHAELKLYNSTRA, ICLOUD, TRIGGER > INITIAL LOCATE 
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 16:39:50 LOCATE ⡇ yellow_phone > Located > iCloud-4:38:57p (53 secs ago), MobApp-4:10:31p
+01-12 16:39:50 1stLOC ⡇ yellow_phone > Zone > Home(2)-67.1ft > GPS-(42.64489, -86.16216/±5m)
+01-12 16:39:50 1stLOC ⡇ yellow_phone > Results > NextUpdate-6:39:50p, Moved-33.8ft , Battery-75%, ×Went3km
+01-12 16:39:50 1stLOC ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   YELLOW_PHONE⟢MICHAELKLYNSTRA, ICLOUD, CURRZONE-HOME 
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:39:50 1stLOC  yellow_phone > Battery Info > Level-75%, NotCharging (iCloud)
+01-12 16:39:50 1stLOC  archers_apple_watch > DistTo Devices >  Michaels iPad Pro--413.6ft (52 secs), Yellow Phone--423.2ft (53 secs)
+01-12 16:39:50 1stLOC  michaels_ipad_pro > DistTo Devices >  Archers Apple Watch--413.6ft, Yellow Phone--10.9ft
+01-12 16:39:50 1stLOC  yellow_phone > DistTo Devices >  Archers Apple Watch--423.2ft, Michaels iPad Pro--10.9ft
+01-12 16:39:50 ------  iCloud3 v3.1.4.1 Startup Complete
