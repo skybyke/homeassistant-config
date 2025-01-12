@@ -37409,3 +37409,90 @@ Traceback (most recent call last):
     raise OSError(err, f'Connect call failed {address}')
 ConnectionRefusedError: [Errno 111] Connect call failed ('172.30.33.8', 10400)
 2025-01-12 15:18:59.023 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2025-01-12 15:41:45.375 ERROR (MainThread) [homeassistant.components.automation.collect_bird_buddy_postcard] Collect Bird Buddy Postcard: Error executing script. Invalid data for call_service at pos 1: value should be a string for dictionary value @ data['device_id']
+2025-01-12 15:41:45.376 ERROR (MainThread) [homeassistant.components.automation.collect_bird_buddy_postcard] Error while executing automation automation.collect_bird_buddy_postcard: value should be a string for dictionary value @ data['device_id']
+2025-01-12 15:51:49.452 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 267, in _handle_refresh_interval
+    await self._async_refresh(log_failures=True, scheduled=True)
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 478, in _async_refresh
+    self.async_update_listeners()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 177, in async_update_listeners
+    update_callback()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/entity.py", line 83, in _handle_coordinator_update
+    self._async_update_attrs()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/select.py", line 188, in _async_update_attrs
+    self._attr_current_option = self._attr_options[value]
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+2025-01-12 15:53:38.169 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 267, in _handle_refresh_interval
+    await self._async_refresh(log_failures=True, scheduled=True)
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 478, in _async_refresh
+    self.async_update_listeners()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 177, in async_update_listeners
+    update_callback()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/entity.py", line 83, in _handle_coordinator_update
+    self._async_update_attrs()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/select.py", line 188, in _async_update_attrs
+    self._attr_current_option = self._attr_options[value]
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+2025-01-12 15:55:27.851 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 267, in _handle_refresh_interval
+    await self._async_refresh(log_failures=True, scheduled=True)
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 478, in _async_refresh
+    self.async_update_listeners()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 177, in async_update_listeners
+    update_callback()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/entity.py", line 83, in _handle_coordinator_update
+    self._async_update_attrs()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/select.py", line 188, in _async_update_attrs
+    self._attr_current_option = self._attr_options[value]
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+2025-01-12 15:57:18.512 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 267, in _handle_refresh_interval
+    await self._async_refresh(log_failures=True, scheduled=True)
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 478, in _async_refresh
+    self.async_update_listeners()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 177, in async_update_listeners
+    update_callback()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/entity.py", line 83, in _handle_coordinator_update
+    self._async_update_attrs()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/select.py", line 188, in _async_update_attrs
+    self._attr_current_option = self._attr_options[value]
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+2025-01-12 15:59:09.430 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 267, in _handle_refresh_interval
+    await self._async_refresh(log_failures=True, scheduled=True)
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 478, in _async_refresh
+    self.async_update_listeners()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 177, in async_update_listeners
+    update_callback()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/entity.py", line 83, in _handle_coordinator_update
+    self._async_update_attrs()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/select.py", line 188, in _async_update_attrs
+    self._attr_current_option = self._attr_options[value]
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range

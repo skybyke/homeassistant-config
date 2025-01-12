@@ -4408,3 +4408,96 @@ DeviceEntry(area_id=None, config_entries={'01JH1211QA6T3AEF98VE2X18MG'}, configu
 01-12 15:30:00 ------  archers_apple_watch > DistTo Devices >  Michaels iPad Pro--3.8mi, Yellow Phone--3.8mi
 01-12 15:30:00 ------  michaels_ipad_pro > DistTo Devices >  Archers Apple Watch--3.8mi, Yellow Phone--9.1ft
 01-12 15:30:00 ------  yellow_phone > DistTo Devices >  Archers Apple Watch--3.8mi, Michaels iPad Pro--9.1ft
+01-12 15:41:30 ICLOUD
+🔻 MICHAEL.KLYNSTRA, POST, RESPONSE, REFRESH_CLIENT/1509 
+❗   items={'code': 450, 'ok': False}
+01-12 15:41:30 ICLOUD  michael.klynstra, Authenticate with Token
+01-12 15:41:30 ICLOUD
+🔺 MICHAEL.KLYNSTRA, POST, REQUEST, _AUTHENTICATE_WITH_TOKEN/611
+❗   items={'url': 'setup.icloud.com/setup/ws/1/accountLogin', 'retry': 0, 'json': None}
+❗   params={'dsid': '135071557'}
+❗   data.items={'accountCountryCode': 'USA', 'dsWebAuthToken': 'GWwPvE……iakFNy', 'extended_login': True, 'trustToken': 'HSARMT……2OSRVX'}
+01-12 15:41:32 ICLOUD
+🔻 MICHAEL.KLYNSTRA, POST, RESPONSE, _AUTHENTICATE_WITH_TOKEN/611 
+❗   items={'code': 200, 'ok': True}
+❗   data.items={'hsaTrustedBrowser': True, 'hsaChallengeRequired': False}
+❗   data.dsInfo={'lastName': 'Klynstra', 'dsid': '135071557', 'hsaEnabled': True, 'locale': 'en-us_US', 'hsaVersion': 2, 'locked': False, 'appleIdEntries': [{'isPrimary': True, 'type': 'EMAIL', 'value': 'michael.klynstra@gmail.com'}, {'type': 'EMAIL', 'value': 'michaelklynstra@mac.com'}, {'type': 'EMAIL', 'value': 'michaelklynstra@icloud.com'}], 'fullName': 'Michael Klynstra', 'appleId': 'michae……il.com', 'firstName': 'Michael', 'statusCode': 2, 'familyEligible': True}
+❗   data.webservices={'findme': {'url': 'https://p158-fmipweb.icloud.com:443', 'status': 'active'}, 'contacts': {'url': 'https://p158-contactsws.icloud.com:443', 'status': 'active'}}
+01-12 15:41:32 ICLOUD  archers_apple_watch > Located > iCloud-3:26:17p → 3:26:29p, Old, 15 mins ago
+01-12 15:41:45 GETLOC ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 15:41:45 GETLOC ⡇ archers_apple_watch > Located > iCloud-3:26:29p → 3:41:36p, 86% → 83%
+01-12 15:41:45 LOCATE ⡇ archers_apple_watch > Located > iCloud-3:41:36p (9 secs ago)
+01-12 15:41:45 GETLOC ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 15:41:50 ICLOUD  archers_apple_watch > Trigger > Next Update Time Reached
+01-12 15:41:50 ICLOUD ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   ARCHERS_APPLE_WATCH⟢MICHAELKLYNSTRA, ICLOUD, NEXT UPDATE TIME REACHED 
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 15:41:50 ICLOUD ⡇ archers_apple_watch > Zone > StatZon1(1)-17.0ft > Near Home(2)-3.3mi, Home(2)-3.8mi, School-5.4mi, Holland-13.6mi, Grand Rapids-35.6mi, GPS-(42.59351, -86.13675/±22m)
+01-12 15:41:50 ICLOUD ⡇ Waze Results > GPS-(42.59351, -86.13675) --> (42.64471, -86.16210), Time-13.32min, Distance-14.34km
+01-12 15:41:50 ICLOUD ⡇ archers_apple_watch > Waze Route Info > TravTime-13 mins, Dist-8.9mi, Moved-71.6ft (Saved)
+01-12 15:41:50 ICLOUD ⡇ archers_apple_watch > Results > Arrive-3:55p, NextUpdate-3:56:50p, Moved-71.6ft , Battery-83%, ✓Went3km
+01-12 15:41:50 ICLOUD ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   ARCHERS_APPLE_WATCH⟢MICHAELKLYNSTRA, ICLOUD, CURRZONE-IC3_STATIONARY_1 
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 15:45:00 ------  archers_apple_watch > DistTo Devices >  Michaels iPad Pro--3.8mi, Yellow Phone--3.8mi
+01-12 15:45:00 ------  michaels_ipad_pro > DistTo Devices >  Archers Apple Watch--3.8mi, Yellow Phone--52.3ft
+01-12 15:45:00 ------  yellow_phone > DistTo Devices >  Archers Apple Watch--3.8mi, Michaels iPad Pro--52.3ft
+01-12 15:56:50 ICLOUD
+🔻 MICHAEL.KLYNSTRA, POST, RESPONSE, REFRESH_CLIENT/1509 
+❗   items={'code': 450, 'ok': False}
+01-12 15:56:50 ICLOUD  michael.klynstra, Authenticate with Token
+01-12 15:56:50 ICLOUD
+🔺 MICHAEL.KLYNSTRA, POST, REQUEST, _AUTHENTICATE_WITH_TOKEN/611
+❗   items={'url': 'setup.icloud.com/setup/ws/1/accountLogin', 'retry': 0, 'json': None}
+❗   params={'dsid': '135071557'}
+❗   data.items={'accountCountryCode': 'USA', 'dsWebAuthToken': 'GWwPvE……iakFNy', 'extended_login': True, 'trustToken': 'HSARMT……2OSRVX'}
+01-12 15:56:52 ICLOUD
+🔻 MICHAEL.KLYNSTRA, POST, RESPONSE, _AUTHENTICATE_WITH_TOKEN/611 
+❗   items={'code': 200, 'ok': True}
+❗   data.items={'hsaTrustedBrowser': True, 'hsaChallengeRequired': False}
+❗   data.dsInfo={'lastName': 'Klynstra', 'dsid': '135071557', 'hsaEnabled': True, 'locale': 'en-us_US', 'hsaVersion': 2, 'locked': False, 'appleIdEntries': [{'isPrimary': True, 'type': 'EMAIL', 'value': 'michael.klynstra@gmail.com'}, {'type': 'EMAIL', 'value': 'michaelklynstra@mac.com'}, {'type': 'EMAIL', 'value': 'michaelklynstra@icloud.com'}], 'fullName': 'Michael Klynstra', 'appleId': 'michae……il.com', 'firstName': 'Michael', 'statusCode': 2, 'familyEligible': True}
+❗   data.webservices={'findme': {'url': 'https://p158-fmipweb.icloud.com:443', 'status': 'active'}, 'contacts': {'url': 'https://p158-contactsws.icloud.com:443', 'status': 'active'}}
+01-12 15:57:05 GETLOC ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 15:57:05 GETLOC ⡇ archers_apple_watch > Located > iCloud-3:41:36p → 3:56:59p, 83% → 82%
+01-12 15:57:05 LOCATE ⡇ archers_apple_watch > Rejected  #2 > NewData-3:56:59p/±2629m vs 3:41:36p, Updated-iCloud data, Online/200
+01-12 15:57:05 GETLOC ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 15:57:10 LOCATE  archers_apple_watch > Rejected  #2 > NewData-3:56:59p/±2629m vs 3:41:36p, Updated-iCloud data, Online/200
+01-12 15:57:10 LOCATE  archers_apple_watch > Rejected  #2 > NewData-3:56:59p/±2629m vs 3:41:36p, Updated-iCloud data, Online/200
+01-12 15:57:10 ICLOUD  archers_apple_watch > iCloud Loc > Old #3, 16 mins ago, RetryAt-3:57:25p (15 secs)
+01-12 15:57:10 ICLOUD  archers_apple_watch Old Location/Other Error-iCloud Loc > Old #3, 16 mins ago, RetryAt-3:57:25p (15 secs)
+01-12 15:57:20 GETLOC ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 15:57:20 GETLOC ⡇ archers_apple_watch > iCloud Loc > Refresh Needed, Location not Updated
+01-12 15:57:20 GETLOC ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 15:57:25 ICLOUD  archers_apple_watch > iCloud Loc > Refresh Needed, Location not Updated
+01-12 15:57:25 🛑      archers_apple_watch Old Location/Other Error-iCloud Loc > Old #4, 16 mins ago, RetryAt-3:57:55p (30 secs), Over-3 mins
+01-12 15:57:40 GETLOC ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 15:57:40 GETLOC ⡇ archers_apple_watch > iCloud Loc > Refresh Needed, Location not Updated
+01-12 15:57:40 GETLOC ⡇ archers_apple_watch > Located > iCloud-3:56:59p → 3:57:32p, 83% → 82%
+01-12 15:57:40 LOCATE ⡇ archers_apple_watch > Located > iCloud-3:57:32p (8 secs ago)
+01-12 15:57:40 GETLOC ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   ARCHERS_APPLE_WATCH, ICLOUD PREFETCH,  
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 15:57:55 ICLOUD  archers_apple_watch > Trigger > Next Update Time Reached
+01-12 15:57:55 ICLOUD ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                          ⡇   ARCHERS_APPLE_WATCH⟢MICHAELKLYNSTRA, ICLOUD, NEXT UPDATE TIME REACHED 
+                                          ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+01-12 15:57:55 ICLOUD ⡇ archers_apple_watch > Zone > StatZon1(1)-22.6ft > Near Home(2)-3.3mi, Home(2)-3.8mi, School-5.4mi, Holland-13.6mi, Grand Rapids-35.6mi, GPS-(42.59346, -86.13672/±23m)
+01-12 15:57:55 ICLOUD ⡇ archers_apple_watch > Waze Route Info > Moved-21.7ft, Using previous results
+01-12 15:57:55 ICLOUD ⡇ archers_apple_watch > Results > Arrive-4:11p, NextUpdate-4:12:55p, Moved-21.7ft , Battery-82%, ✓Went3km
+01-12 15:57:55 ICLOUD ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+                                          ⡇   ARCHERS_APPLE_WATCH⟢MICHAELKLYNSTRA, ICLOUD, CURRZONE-IC3_STATIONARY_1 
+                                          ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
