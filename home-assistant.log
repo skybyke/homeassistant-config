@@ -37496,3 +37496,24 @@ Traceback (most recent call last):
     self._attr_current_option = self._attr_options[value]
                                 ~~~~~~~~~~~~~~~~~~^^^^^^^
 IndexError: list index out of range
+2025-01-12 16:00:00.566 ERROR (MainThread) [homeassistant.components.shell_command] Error running command: `python3 /config/python_scripts/grade_scraper.py 2>&1`, return code: 1
+NoneType: None
+2025-01-12 16:00:30.568 ERROR (MainThread) [homeassistant.components.automation.update_powerschool_grades] Update PowerSchool Grades: Error executing script. Invalid data for call_service at pos 3: must contain at least one of entry_id, entity_id, device_id, area_id, floor_id, label_id.
+2025-01-12 16:00:30.569 ERROR (MainThread) [homeassistant.components.automation.update_powerschool_grades] Error while executing automation automation.update_powerschool_grades: must contain at least one of entry_id, entity_id, device_id, area_id, floor_id, label_id.
+2025-01-12 16:01:00.960 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 267, in _handle_refresh_interval
+    await self._async_refresh(log_failures=True, scheduled=True)
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 478, in _async_refresh
+    self.async_update_listeners()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 177, in async_update_listeners
+    update_callback()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/entity.py", line 83, in _handle_coordinator_update
+    self._async_update_attrs()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/src/homeassistant/homeassistant/components/tesla_fleet/select.py", line 188, in _async_update_attrs
+    self._attr_current_option = self._attr_options[value]
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
