@@ -12488,12 +12488,18 @@
         "assistants": {
           "conversation": {
             "should_expose": false
+          },
+          "cloud.google_assistant": {
+            "should_expose": false
           }
         }
       },
       "sensor.grade_social_studies_2": {
         "assistants": {
           "conversation": {
+            "should_expose": false
+          },
+          "cloud.google_assistant": {
             "should_expose": false
           }
         }
@@ -12502,12 +12508,18 @@
         "assistants": {
           "conversation": {
             "should_expose": false
+          },
+          "cloud.google_assistant": {
+            "should_expose": false
           }
         }
       },
       "sensor.grade_language_arts_2": {
         "assistants": {
           "conversation": {
+            "should_expose": false
+          },
+          "cloud.google_assistant": {
             "should_expose": false
           }
         }
@@ -12536,6 +12548,9 @@
         "assistants": {
           "conversation": {
             "should_expose": false
+          },
+          "cloud.google_assistant": {
+            "should_expose": false
           }
         }
       },
@@ -12552,6 +12567,9 @@
       "sensor.tv_unauthorized_minutes_2": {
         "assistants": {
           "conversation": {
+            "should_expose": false
+          },
+          "cloud.google_assistant": {
             "should_expose": false
           }
         }

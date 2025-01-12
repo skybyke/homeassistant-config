@@ -4971,3 +4971,6 @@ DeviceEntry(area_id=None, config_entries={'01JH1211QA6T3AEF98VE2X18MG'}, configu
 01-12 16:23:40 ICLOUD ⡇⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
                                           ⡇   ARCHERS_APPLE_WATCH⟢MICHAELKLYNSTRA, ICLOUD, CURRZONE-NEAR_HOME 
                                           ⡇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+01-12 16:30:00 ------  archers_apple_watch > DistTo Devices >  Michaels iPad Pro--2.2mi, Yellow Phone--2.2mi
+01-12 16:30:00 ------  michaels_ipad_pro > DistTo Devices >  Archers Apple Watch--2.2mi (8 mins), Yellow Phone--36.9ft
+01-12 16:30:00 ------  yellow_phone > DistTo Devices >  Archers Apple Watch--2.2mi (8 mins), Michaels iPad Pro--36.9ft

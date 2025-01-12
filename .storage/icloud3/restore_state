@@ -1,20 +1,20 @@
 {
   "profile": {
     "version": 0,
-    "last_update": "2025-01-12 16:23:40",
-    "last_commit": "2025-01-12 16:23:50",
-    "recds_changed": 14
+    "last_update": "2025-01-12 16:37:00",
+    "last_commit": "2025-01-12 16:37:10",
+    "recds_changed": 2
   },
   "devices": {
     "archers_apple_watch": {
-      "last_update": "2025-01-12 16:23:40",
+      "last_update": "2025-01-12 16:37:00",
       "sensors": {
         "device_tracker_state": "Near Home",
         "name": "Archers Apple Watch (archers_apple_watch)",
         "entity_picture": "",
         "badge": "Near Home",
         "low_power_mode": false,
-        "info": "Near Home-4:34p",
+        "info": "Near Home-4:32p",
         "alert": "",
         "battery": 79,
         "battery_status": "NotCharging",
@@ -156,7 +156,7 @@
       }
     },
     "michaels_ipad_pro": {
-      "last_update": "2025-01-12 16:23:40",
+      "last_update": "2025-01-12 16:37:00",
       "sensors": {
         "device_tracker_state": "home",
         "name": "Michaels iPad Pro (michaels_ipad_pro)",
@@ -305,7 +305,7 @@
       }
     },
     "yellow_phone": {
-      "last_update": "2025-01-12 16:23:40",
+      "last_update": "2025-01-12 16:37:00",
       "sensors": {
         "device_tracker_state": "home",
         "name": "Yellow Phone (yellow_phone)",
@@ -414,9 +414,9 @@
         "secs": 1736716231,
         "time": "4:10:31p",
         "trigger": "periodic",
-        "battery_level": 76,
+        "battery_level": 75,
         "battery_status": "NotCharging",
-        "battery_update_secs": 1736711816
+        "battery_update_secs": 1736717308
       },
       "other": {
         "zone_change_secs": 1736716238,
