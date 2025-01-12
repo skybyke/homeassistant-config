@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "input_select",
+  "data": {
+    "items": [
+      {
+        "id": "screentime_mode",
+        "name": "Screentime Mode",
+        "icon": "mdi:auto-mode",
+        "options": [
+          "Default",
+          "Blocked",
+          "Granted"
+        ]
+      },
+      {
+        "id": "dev_dropdown",
+        "name": "Dev Dropdown",
+        "options": [
+          "a",
+          "b",
+          "c"
+        ]
+      }
+    ]
+  }
+}

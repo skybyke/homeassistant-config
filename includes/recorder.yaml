@@ -1,0 +1,15 @@
+# File: recorder.yaml or in configuration.yaml
+db_url: mysql://homeassistant:MJKhome200!@core-mariadb/homeassistant?charset=utf8mb4
+purge_keep_days: 365
+commit_interval: 1
+include:
+  domains:
+    - input_text
+    - input_select
+
+exclude:
+  entity_globs:
+    - sensor.*_previous_*
+  domains:
+    - automation
+    - updater

@@ -1,0 +1,27 @@
+Apple HIG Dark:
+  accent-color: rgb(48, 209, 88)
+  background-color: rgb(28, 28, 30)
+  card-background-color: rgb(44, 44, 46)
+  disabled-color: rgba(255, 255, 255, 0.3)
+  disabled-text-color: rgba(255, 255, 255, 0.3)
+  divider-color: rgba(255, 255, 255, 0.15)
+  ha-card-border-color: rgba(255, 255, 255, 0.2)
+  ha-card-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+  ha-card-header-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif
+  lovelace-background: rgb(28, 28, 30)
+  paper-slider-knob-color: rgb(48, 209, 88)
+  primary-color: rgb(10, 132, 255)
+  primary-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif
+  primary-text-color: rgb(255, 255, 255)
+  scrollbar-thumb-color: rgba(255, 255, 255, 0.2)
+  secondary-background-color: rgb(36, 36, 38)
+  secondary-text-color: rgba(235, 235, 245, 0.6)
+  sidebar-background-color: rgb(28, 28, 30)
+  state-icon-active-color: rgb(48, 209, 88)
+  state-icon-color: rgb(10, 132, 255)
+  state-icon-inactive-color: rgba(255, 255, 255, 0.4)
+  switch-checked-button-color: rgb(48, 209, 88)
+  switch-unchecked-button-color: rgba(255, 255, 255, 0.3)
+  token-opacity-ripple-hover: 0.1

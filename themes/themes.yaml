@@ -1,0 +1,8 @@
+Material:
+  primary-font-family: "Roboto"
+  ha-card-header-font-family: "Roboto"
+  code-font-family: "Roboto"
+  card-mod-theme: "my_theme"
+  styles:
+    "*":
+      font-family: "Roboto, sans-serif"

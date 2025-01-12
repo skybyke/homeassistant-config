@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "assist_pipeline.pipelines",
+  "data": {
+    "items": [
+      {
+        "conversation_engine": "conversation.home_assistant",
+        "conversation_language": "en",
+        "id": "01jc4rzcxvhrwkbass16mzn8ks",
+        "language": "en",
+        "name": "Home Assistant",
+        "stt_engine": "stt.home_assistant_cloud",
+        "stt_language": "en-US",
+        "tts_engine": "tts.home_assistant_cloud",
+        "tts_language": "en-US",
+        "tts_voice": "JennyNeural",
+        "wake_word_entity": "wake_word.openwakeword",
+        "wake_word_id": "alexa_v0.1",
+        "prefer_local_intents": false
+      },
+      {
+        "conversation_engine": "conversation.chatgpt",
+        "conversation_language": "*",
+        "id": "01jc6363pyqx1yb348zb03bbs3",
+        "language": "en",
+        "name": "Klynstra Default",
+        "stt_engine": "stt.faster_whisper",
+        "stt_language": "en",
+        "tts_engine": "tts.elevenlabs",
+        "tts_language": "en",
+        "tts_voice": "I79IzM4MtWYCiprFrFfF",
+        "wake_word_entity": "wake_word.openwakeword",
+        "wake_word_id": "hey_jarvis_v0.1",
+        "prefer_local_intents": true
+      },
+      {
+        "conversation_engine": "conversation.home_assistant",
+        "conversation_language": "en",
+        "id": "01jefnnzqna5w6a6p0g9x5zdpp",
+        "language": "en",
+        "name": "Basic",
+        "stt_engine": "stt.home_assistant_cloud",
+        "stt_language": "en-US",
+        "tts_engine": "tts.home_assistant_cloud",
+        "tts_language": "en-US",
+        "tts_voice": "JennyNeural",
+        "wake_word_entity": null,
+        "wake_word_id": null,
+        "prefer_local_intents": true
+      },
+      {
+        "conversation_engine": "conversation.wizardlm_uncensored",
+        "conversation_language": "*",
+        "id": "01jh8hg79snbsyaccb0wg38m9j",
+        "language": "en",
+        "name": "Samantha",
+        "stt_engine": "stt.home_assistant_cloud",
+        "stt_language": "en-US",
+        "tts_engine": "tts.home_assistant_cloud",
+        "tts_language": "en-US",
+        "tts_voice": "AmberNeural",
+        "wake_word_entity": null,
+        "wake_word_id": null,
+        "prefer_local_intents": true
+      }
+    ],
+    "preferred_item": "01jc6363pyqx1yb348zb03bbs3"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "http",
+  "data": {
+    "ssl_certificate": "/ssl/fullchain.pem",
+    "ssl_key": "/ssl/privkey.pem",
+    "server_host": [
+      "0.0.0.0",
+      "::"
+    ],
+    "cors_allowed_origins": [
+      "https://cast.home-assistant.io"
+    ],
+    "server_port": 8123,
+    "login_attempts_threshold": -1,
+    "use_x_frame_options": true,
+    "ip_ban_enabled": true,
+    "ssl_profile": "modern"
+  }
+}

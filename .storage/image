@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "image",
+  "data": {
+    "items": [
+      {
+        "id": "0456fb512ecb4210b3087da53c176773",
+        "filesize": 889074,
+        "content_type": "image/png",
+        "name": "car.png",
+        "uploaded_at": "2024-11-23T20:37:33.260248+00:00"
+      },
+      {
+        "id": "4d25c221e7362b9b115cbecd5cca108d",
+        "filesize": 452547,
+        "content_type": "image/png",
+        "name": "Untitled-2.png",
+        "uploaded_at": "2024-11-23T20:45:35.123096+00:00"
+      },
+      {
+        "id": "a8e1989cb701457cfc44544cf713ced0",
+        "filesize": 412549,
+        "content_type": "image/png",
+        "name": "Untitled-2.png",
+        "uploaded_at": "2024-11-23T20:45:54.903645+00:00"
+      }
+    ]
+  }
+}

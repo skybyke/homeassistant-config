@@ -1,0 +1,118 @@
+- platform: template
+  sensors:
+
+
+    windows_open:
+      friendly_name: "Windows Open"
+      device_class: window
+      value_template: >
+        {{ expand('binary_sensor.all')
+          | selectattr('entity_id', 'search', 'window')
+          | selectattr('state', 'eq', 'on')
+          | list
+          | length > 0
+        }}
+
+    doors_open:
+      friendly_name: "Doors Open"
+      device_class: door
+      value_template: >
+        {{ expand('binary_sensor.all')
+          | selectattr('entity_id', 'search', 'door')
+          | selectattr('entity_id', 'search', 'contact')
+          | selectattr('state', 'eq', 'on')
+          | list
+          | length > 0
+        }}
+
+
+    archers_bedroom_windows:
+      friendly_name: "Archer's Bedroom Windows"      
+      device_class: window
+      value_template: >
+        {{ 
+          is_state('binary_sensor.archers_bedroom_window_back', 'on') 
+          or 
+          is_state('binary_sensor.archers_bedroom_window_side', 'on') 
+        }}
+
+    downstairs_windows:
+      friendly_name: "Downstairs Windows"      
+      device_class: window
+      value_template: >
+        {{ 
+          is_state('binary_sensor.downstairs_window_1', 'on') 
+          or 
+          is_state('binary_sensor.downstairs_window_2', 'on') 
+          or 
+          is_state('binary_sensor.downstairs_window_3', 'on') 
+          or 
+          is_state('binary_sensor.downstairs_window_4', 'on') 
+          or 
+          is_state('binary_sensor.downstairs_window_5', 'on') 
+          or 
+          is_state('binary_sensor.downstairs_window_6', 'on') 
+        }}
+
+    # SCREENS 
+
+    screentime_active:
+      friendly_name: "Screentime Active"
+      value_template: >
+        {% set current_time = now() %}
+        {% set time_hour = current_time.hour %}
+        {% set remaining_screentime = states('sensor.screentime_remaining_x') | int(default=0) %}
+        {% set screentime_mode = states('input_select.screentime_mode') %}
+        {% set within_allowed_hours = time_hour >= 8 and time_hour < 22 %}
+        {% set delay_minutes = states('counter.screentime_delay') | int(default=0) %}
+        {% set todo_required = states('input_boolean.todo_completion_required') == 'on' %}
+        {{ (screentime_mode == 'Granted' or 
+            (remaining_screentime > 0 and 
+            within_allowed_hours and 
+            screentime_mode != 'Blocked')) and
+            delay_minutes == 0 and
+            not todo_required }}
+
+
+    tv_and_screentime_active:
+      value_template: >
+        {{ (is_state('media_player.tv_upstairs', 'on') or 
+            is_state('media_player.tv_downstairs', 'on')) and 
+            is_state('binary_sensor.screentime_active', 'on') and
+            not is_state('input_select.screentime_mode', 'Granted') }}
+
+    tv_and_granted:
+      value_template: >
+        {{ (is_state('media_player.tv_upstairs', 'on') or 
+            is_state('media_player.tv_downstairs', 'on')) and 
+            is_state('input_select.screentime_mode', 'Granted') }}
+
+    tv_unauthorized:
+      value_template: >
+        {{ (is_state('media_player.tv_upstairs', 'on') or 
+            is_state('media_player.tv_downstairs', 'on')) and
+            is_state('binary_sensor.screentime_active', 'off') and
+            not is_state('input_select.screentime_mode', 'Granted') }}
+
+
+    # SCREENS 
+
+    screentime_counter_incrementing:
+      friendly_name: "Screentime Counter Incrementing"
+      value_template: >
+        {% if states('counter.tv_upstairs_screentime_minutes') not in ['unavailable', 'unknown', None] 
+            and states.counter.tv_upstairs_screentime_minutes is not none %}
+          {% set last_changed = states.counter.tv_upstairs_screentime_minutes.last_changed %}
+          {% set time_diff = (now() - last_changed).total_seconds() | int %}
+          {{ time_diff < 61 }}
+        {% else %}
+          false
+        {% endif %}
+        
+    new_bird_species:
+      friendly_name: "New Bird Species Detected"
+      value_template: >
+        {% set known_species = states('input_text.known_bird_species').split(',') | map('trim') | list %}
+        {% set current_visitor = states('sensor.saugatucksparrows_bird_bud_recent_visitor') %}
+        {{ current_visitor not in known_species and current_visitor != 'unknown' 
+            and current_visitor != 'unavailable' and current_visitor != '' }}

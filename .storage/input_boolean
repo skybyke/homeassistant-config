@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_boolean",
+  "data": {
+    "items": [
+      {
+        "id": "sitter_mode",
+        "name": "Sitter Mode",
+        "icon": "mdi:baby-carriage"
+      },
+      {
+        "id": "todo_completion_required",
+        "name": "Todo Completion Required",
+        "icon": "mdi:checkbox-marked-outline"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+language: "en"
+intents:
+  CustomAgenda:
+    data:
+      - sentences:
+          - "agenda for today"
+          - "what's on my agenda"
+          - "what's my schedule today"
+          - "what's happening today"
+          - "what am I doing today"

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" >
+<head>
+<title>Grades and Attendance</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+
+<link href="/images/css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/images/css/print.css" rel="stylesheet" type="text/css" media="print" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<style>
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important; }
+</style>
+<style id="psDialogHideTillReady">
+.dialog, .dialogC, .dialogM, .dialogR, .dialogF, .dialogDiv, .dialogDivC, .dialogDivM, .replaceNext { visibility: hidden;}
+</style>
+<link media="screen" rel="stylesheet" href="/images/css/customization.css"/>
+<!-- ServerInstanceId: 6 -->
+
+<script type='text/javascript'>if(!_messages){var _messages={};}if(!_messagePrefixesAlreadyFetched){var _messagePrefixesAlreadyFetched=[];}if(!_messagePrefixesAlreadyFetched.includes("psx.js.admin_javascript.validate_date.")){_messagePrefixesAlreadyFetched.push("psx.js.admin_javascript.validate_date.");}_messages["psx.js.admin_javascript.validate_date.month_1"]="Month ";_messages["psx.js.admin_javascript.validate_date._doesnt_have_31_days"]=" doesn't have 31 days.";_messages["psx.js.admin_javascript.validate_date._doesnt_have_"]=" doesn't have ";_messages["psx.js.admin_javascript.validate_date.month_must_be_between_1_and_12"]="Month must be between 1 and 12.";_messages["psx.js.admin_javascript.validate_date.warning_invalid_date"]="Warning: Invalid Date";_messages["psx.js.admin_javascript.validate_date.date_format_must_be"]="Date format must be ({0}).";_messages["psx.js.admin_javascript.validate_date.day_must_be_between_1_and_31"]="Day must be between 1 and 31.";_messages["psx.js.admin_javascript.validate_date._days"]=" days.";_messages["psx.js.admin_javascript.validate_date.february_"]="February ";if(!_messagePrefixesAlreadyFetched.includes("psx.common.")){_messagePrefixesAlreadyFetched.push("psx.common.");}_messages["psx.common.daynamesmin_tue"]="Tu";_messages["psx.common.daynamesmin_thu"]="Th";_messages["psx.common.daynamesmin_sun"]="Su";_messages["psx.common.hijri_monthnames_rabi_thani"]="Rabi' Thani";_messages["psx.common.daynamesmin_sat"]="Sa";_messages["psx.common.daynamesshort_fri"]="Fri";_messages["psx.common.mydata_button_title"]="MyData Button";_messages["psx.common.staff_search"]="Staff Search";_messages["psx.common.legend"]="Legend";_messages["psx.common.psweblink"]="PowerSchool.com";_messages["psx.common.daynamesmin_wed"]="We";_messages["psx.common.term"]="Term:";_messages["psx.common.pm"]="PM";_messages["psx.common.am"]="AM";_messages["psx.common.daynamesshort_mon"]="Mon";_messages["psx.common.hijri_monthnames_thoul_kidah"]="Thoul Ki'dah";_messages["psx.common.daynames_fri"]="Friday";_messages["psx.common.my_tasks"]="My Tasks";_messages["psx.common.main_menu"]="Main Menu";_messages["psx.common.daynamesletter_fri"]="F";_messages["psx.common.school"]="School:";_messages["psx.common.monthnames_sep"]="September";_messages["psx.common.daynames_sun"]="Sunday";_messages["psx.common.hijri_monthnames_muharram"]="Muharram";_messages["psx.common.daynames_sat"]="Saturday";_messages["psx.common.daynamesletter_sat"]="S";_messages["psx.common.monthnames_oct"]="October";_messages["psx.common.daynamesletter_sun"]="S";_messages["psx.common.monthnames_nov"]="November";_messages["psx.common.scheduling_year"]="Scheduling Year";_messages["psx.common.selectsystemlang"]="Select System Language";_messages["psx.common.monthnames_mar"]="March";_messages["psx.common.monthnames_may"]="May";_messages["psx.common.capital_email"]="Email";_messages["psx.common.daynames_mon"]="Monday";_messages["psx.common.welcome"]="Welcome,";_messages["psx.common.data_dictionary"]="Data Dictionary";_messages["psx.common.monthnames_jul"]="July";_messages["psx.common.monthnames_jun"]="June";_messages["psx.common.daynamesmin_fri"]="Fr";_messages["psx.common.daynamesletter_mon"]="M";_messages["psx.common.monthnames_jan"]="January";_messages["psx.common.system_help_title"]="System Help";_messages["psx.common.state_reporting_help_title"]="State Reporting Help";_messages["psx.common.daynamesmin_mon"]="Mo";_messages["psx.common.district"]="District Office";_messages["psx.common.seconds"]="{0} Seconds";_messages["psx.common.monthnames_feb"]="February";_messages["psx.common.daynames_wed"]="Wednesday";_messages["psx.common.monthnames_dec"]="December";_messages["psx.common.daynamesletter_tue"]="T";_messages["psx.common.daynamesletter_thu"]="H";_messages["psx.common.daynamesletter_wed"]="W";_messages["psx.common.daynames_tue"]="Tuesday";_messages["psx.common.monthnames_aug"]="August";_messages["psx.common.monthnames_apr"]="April";_messages["psx.common.daynames_thu"]="Thursday";_messages["psx.common.privacy_policy"]="Privacy Policy";_messages["psx.common.save"]="Save";_messages["psx.common.system_help"]="System Help";_messages["psx.common.school_title"]="Change School";_messages["psx.common.selectlanguage"]="Select Language";_messages["psx.common.data_dictionary_title"]="Data Dictionary";_messages["psx.common.monthnamesshort_dec"]="Dec";_messages["psx.common.daynamesshort_tue"]="Tue";_messages["psx.common.daynamesshort_thu"]="Thu";_messages["psx.common.term_title"]="Change Term";_messages["psx.common.daynamesshort_sun"]="Sun";_messages["psx.common.daynamesshort_sat"]="Sat";_messages["psx.common.monthnamesshort_feb"]="Feb";_messages["psx.common.refresh_interval"]="Refresh Interval";_messages["psx.common.powerschool"]="PowerSchool";_messages["psx.common.student_search"]="Student Search";_messages["psx.common.daynamesshort_wed"]="Wed";_messages["psx.common.monthnamesshort_aug"]="Aug";_messages["psx.common.monthnamesshort_apr"]="Apr";_messages["psx.common.help_title"]="Help";_messages["psx.common.provincial_reporting_help_title"]="Provincial Reporting Help";_messages["psx.common.district_abbreviation"]="District";_messages["psx.common.hijri_monthnames_ramadan"]="Ramadan";_messages["psx.common.sign_out"]="Sign Out";_messages["psx.common.open_navigation"]="Open Navigation";_messages["psx.common.email"]="email";_messages["psx.common.monthnamesshort_sep"]="Sep";_messages["psx.common.unsaved_data_lost"]="Changing the language refreshes the page. All unsaved data will be lost.";_messages["psx.common.sign_in_title"]="Sign In";_messages["psx.common.monthnamesshort_mar"]="Mar";_messages["psx.common.monthnamesshort_may"]="May";_messages["psx.common.whats_new_title"]="What's New";_messages["psx.common.monthnamesshort_oct"]="Oct";_messages["psx.common.loading"]="Loading...";_messages["psx.common.monthnamesshort_nov"]="Nov";_messages["psx.common.general.problem"]="Unable to process the request.  Please contact your system administrator to review logs.";_messages["psx.common.print_title"]="Print this page";_messages["psx.common.monthnamesshort_jul"]="Jul";_messages["psx.common.monthnamesshort_jun"]="Jun";_messages["psx.common.monthnamesshort_jan"]="Jan";_messages["psx.common.changes_recorded"]="The changes have been recorded.";_messages["psx.common.daily_bulletin"]="View Daily Bulletin";_messages["psx.common.sign_out_title"]="Sign Out";_messages["psx.common.hijri_monthnames_shawwal"]="Shawwal";_messages["psx.common.state_reporting_help"]="State Reporting Help";_messages["psx.common.powerschool_sis"]="PowerSchool SIS";_messages["psx.common.settings"]="Settings";_messages["psx.common.provincial_reporting_help"]="Provincial Reporting Help";_messages["psx.common.sign_in"]="Sign In";_messages["psx.common.hijri_monthnames_jamada_el_thaniah"]="Jamada El Thaniah";_messages["psx.common.manage_profile"]="Manage Profile";_messages["psx.common.skip_to_main_content"]="Skip to main content";_messages["psx.common.minute"]="{0} Minute";_messages["psx.common.language"]="Language";_messages["psx.common.hijri_monthnames_shaban"]="Sha'ban";_messages["psx.common.hijri_monthnames_jamada_el_oula"]="Jamada El Oula";_messages["psx.common.copyright"]="Copyright &copy; 2005-2025 PowerSchool Group LLC and/or its affiliate(s). All rights reserved.<br/>All trademarks are either owned or licensed by PowerSchool Group LLC and/or its affiliates.";_messages["psx.common.include_currency_number_and_dates"]="Includes district locale settings for formatting currency, numbers and dates";_messages["psx.common.close"]="Close";_messages["psx.common.stop_refresh"]="Stop Refresh";_messages["psx.common.hijri_monthnames_rabi_awwal"]="Rabi' Awwal";_messages["psx.common.help"]="Help";_messages["psx.common.translate_page_title"]="Localize Page";_messages["psx.common.whats_new"]="What's New";_messages["psx.common.hijri_monthnames_safar"]="Safar";_messages["psx.common.hijri_monthnames_thoul_hijjah"]="Thoul Hijjah";_messages["psx.common.guardian_daily_bulletin"]="View School Bulletin";_messages["psx.common.minutes"]="{0} Minutes";_messages["psx.common.hijri_monthnames_rajab"]="Rajab";_messages["psx.common.cancel"]="Cancel";if(!_messagePrefixesAlreadyFetched.includes("psx.js.scripts.psbehaviors.")){_messagePrefixesAlreadyFetched.push("psx.js.scripts.psbehaviors.");}_messages["psx.js.scripts.psbehaviors.closetext"]="Done";_messages["psx.js.scripts.psbehaviors.off"]="Off";_messages["psx.js.scripts.psbehaviors.prevtext"]="Prev";_messages["psx.js.scripts.psbehaviors.currenttext"]="Today";_messages["psx.js.scripts.psbehaviors.yes"]="Yes";_messages["psx.js.scripts.psbehaviors.about_n_characters_left"]="Approximately {0} characters left";_messages["psx.js.scripts.psbehaviors.on"]="On";_messages["psx.js.scripts.psbehaviors.or"]="or";_messages["psx.js.scripts.psbehaviors.no"]="No";_messages["psx.js.scripts.psbehaviors.noaccess"]="No Field Access";_messages["psx.js.scripts.psbehaviors.time_entry"]="Time Entry";_messages["psx.js.scripts.psbehaviors.hide_header"]="Hide Header";_messages["psx.js.scripts.psbehaviors.added"]="Added";_messages["psx.js.scripts.psbehaviors.change_date"]="Change Date";_messages["psx.js.scripts.psbehaviors.hide_main_menu"]="Hide Main Menu";_messages["psx.js.scripts.psbehaviors.wizprevious"]="Previous";_messages["psx.js.scripts.psbehaviors.confirm_delete"]="Confirm Delete";_messages["psx.js.scripts.psbehaviors.icons"]="Icons";_messages["psx.js.scripts.psbehaviors.cancel"]="Cancel";_messages["psx.js.scripts.psbehaviors.time_entry_x"]="Time Entry ({0})";_messages["psx.js.scripts.psbehaviors.show_header"]="Show Header";_messages["psx.js.scripts.psbehaviors.interval_thirty"]="30 minute interval";_messages["psx.js.scripts.psbehaviors.restore_selections_school_and_term"]="Restore Selection(s), School and Term";_messages["psx.js.scripts.psbehaviors.interval_hour"]="hour only interval";_messages["psx.js.scripts.psbehaviors.time_icon"]="Time Entry Icon";_messages["psx.js.scripts.psbehaviors.deleted"]="Deleted";_messages["psx.js.scripts.psbehaviors.date_entry"]="Date Entry";_messages["psx.js.scripts.psbehaviors.nexttext"]="Next";_messages["psx.js.scripts.psbehaviors.show_main_menu"]="Show Main Menu";_messages["psx.js.scripts.psbehaviors.legend"]="Legend";_messages["psx.js.scripts.psbehaviors.selected"]="Selected";_messages["psx.js.scripts.psbehaviors.no_match_found"]="No match found";_messages["psx.js.scripts.psbehaviors.reload_last_page"]="Reload Last Page";_messages["psx.js.scripts.psbehaviors.would_you_like_to_reload_the_last_page_you_were_viewing"]="Your session timed out due to inactivity. Would you like to restore your previous session and reload the last page you were viewing?";_messages["psx.js.scripts.psbehaviors.n_characters_left"]="{0} characters left";_messages["psx.js.scripts.psbehaviors.main_navigation"]="Main Navigation";_messages["psx.js.scripts.psbehaviors.deleted_xx"]="Deleted: {0}";_messages["psx.js.scripts.psbehaviors.wizstep"]="Step";_messages["psx.js.scripts.psbehaviors.confirmbanner.schoolstaff_removed"]="The previously selected staff member was successfully removed from this school.";_messages["psx.js.scripts.psbehaviors.required"]="Required Field";_messages["psx.js.scripts.psbehaviors.hijri_dates"]="Hijri dates";_messages["psx.js.scripts.psbehaviors.delete"]="Delete";_messages["psx.js.scripts.psbehaviors.confirm"]="Confirm ";_messages["psx.js.scripts.psbehaviors.added_xx"]="Added: {0}";_messages["psx.js.scripts.psbehaviors.wiznext"]="Next";_messages["psx.js.scripts.psbehaviors.interval_five"]="5 minute interval";_messages["psx.js.scripts.psbehaviors.asterisk"]="An asterisk indicates that classes for the term are hidden from parents/students in the PowerSchool Student and Parent portal and PowerSchool Mobile app.";_messages["psx.js.scripts.psbehaviors.calendar_icon"]="Date Entry Icon";_messages["psx.js.scripts.psbehaviors.enrollment_alert"]="The student you are attempting to enroll has an existing record in the district. Click OK, then proceed to transfer the student to your school if necessary.";_messages["psx.js.scripts.psbehaviors.would_you_like_to_restore_your_selections_school_and_term"]="Your session timed out due to inactivity. Would you like to restore your previous session and return to the last used school, term, student and/or teacher selection?";_messages["psx.js.scripts.psbehaviors.interval_fifteen"]="15 minute interval";_messages["psx.js.scripts.psbehaviors.indicator"]="Possible duplicate student";if(typeof pss_text != 'function') { function pss_text(key, params, returnKeyIfNotFound){if(_messages[key] === undefined) { if(returnKeyIfNotFound !== undefined && returnKeyIfNotFound === true){return key;}else{return 'Message Key Was Not Found';}}if(params == null || params.length == 0){return _messages[key];}else{msg = _messages[key];for(i = 0;i < params.length;i++){token="{"+i+"}"; msg = msg.replace(token, params[i]);}return msg;}}}</script>
+
+
+	<script>localStorage.setItem('pds-app-switcher-iframe-switch', 'production');</script>
+	<script type="text/javascript">
+		var HTMLImports = {
+			IMPORT_LINK_TYPE: 'prev',
+			flags: {}
+		};
+		Object.defineProperties(HTMLImports, {'IMPORT_LINK_TYPE': { get: function() {return 'prev';}}});
+	</script>
+
+	<!-- * * * * * * * * * * PDS/Neon Setup * * * * * * * * * * -->
+	<script type="text/javascript">
+		var useCdn = {
+			value: true
+		};
+		Object.freeze(useCdn);
+	</script>
+	
+		<!-- CSS Files -->
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/tippy.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/ckeditor-style-overrides.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/pds-scope.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/individual-styles/pds-base-non-breaking.min.css"/>
+
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-app-nav-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-app-switcher-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-help-menu-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-img-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-overlay-dropdown-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-user-menu-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-user-avatar-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-checkbox-widget-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-global-search-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-dialog-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-multi-select-widget-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-text-widget-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-tooltip-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-messages-widget-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-pop-over-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-radio-button-widget-styles.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://assets.powerschool.com/pds/31.0.3/css/polymer-component-styles/pds-select-widget-styles.min.css"/>
+
+		<!-- JS Files -->
+		<script src="https://assets.powerschool.com/pds/31.0.3/js/powerschool-design-system-toolkit-bundled.min.js"></script>
+
+		<!-- HTML Files -->
+		<link rel="prev" href="https://assets.powerschool.com/pds/31.0.3/html/pds-components.html"/>
+	
+
+	<script src="/scripts/components/pds/pds-message-key-init-service.js" type="text/javascript" defer></script>
+
+	<script>
+		if (window.powerSchoolDesignSystemToolkit == null) {
+			let linkElements = document.querySelectorAll("link[href^='https://assets.powerschool.com'");
+			for (let i = 0; i < linkElements.length; i++) {
+				let element = linkElements[i];
+				if (element.href.indexOf('31.0.3') > -1) {
+					element.href = element.href.replace('https://assets.powerschool.com/pds/31.0.3', '/scripts/pds');
+				} else {
+					element.href = element.href.replace('https://assets.powerschool.com/pds', '/scripts/pds/css');
+				}
+			}
+			document.write('<script src="/scripts/pds/js/powerschool-design-system-toolkit-bundled.min.js">\x3C/script>')
+		}
+		document.addEventListener('pdsMessageKeysInitEvent', (event) => {
+			event.detail.add({
+				'global|Close': "Close",
+				'global|Yes': "Yes",
+                'global|Cancel': "Cancel",
+				'pds|app nav|Close Navigation Menu': "Close Navigation Menu",
+				'pds|app nav|Open Navigation Menu': "Open Navigation Menu",
+				'pds|app nav|Toggle User Menu': "Toggle User Menu",
+				'pds|app switcher|Open user menu': "Open user menu",
+				'pds|common|Required': "required",
+				'pds|dialog|Escape Message': "Escape Message",
+				'pds|file picker widget|Choose...': "Choose...",
+				'pds|global-search|No Results Found': "No Results Found",
+				'pds|global-search|Search': "Search",
+				'pds|global-search|Try your search again.': "Try your search again.",
+				'pds|messaging|Dismiss Message': "Dismiss Message",
+				'pds|multi select|Select': "Select",
+				'pds|popover|Backwards From First Element': "Backwards From First Element",
+				'pds|popover|Forwards From Last Element': "Forwards From Last Element",
+				'pds|search|Search': "Search",
+				'pds|user-menu|User Menu Options': "User Menu Options",
+				'pds|textarea widget|Characters Remaining': "Characters Remaining"
+			});
+		});
+
+	</script>
+	<!-- * * * * * * * * * * End PDS Setup * * * * * * * * * * -->
+	<script src="/scripts/angular/runtime.9bae3f590cca992e.js" type="module" crossorigin="anonymous""></script><script src="/scripts/angular/polyfills.761a0e7ff6b14cd2.js" type="module" crossorigin="anonymous""></script><script src="/scripts/angular/scripts.bb3ea9d75446c542.js" ></script><script src="/scripts/angular/main.ffd199ef112fa1e6.js" type="module" crossorigin="anonymous""></script>
+
+
+    <script src="/scripts/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="/scripts/jquery-3.6.1/jquery-migrate-3.4.0.min.js"></script>
+    <script src="/scripts/jquery-migrate-ps.js"></script>
+    <script src="/scripts/jquery-ui-1.13.2.custom.min.js"></script>
+    <script src="/scripts/requirejs/require.js"></script>
+
+<script type="text/javascript" >
+  var feedbackEnabled = false, recordingActivated = false;
+
+  var getRegionalMappingBaseUrl = function() {
+    return 'https://assets.powerschool.com';
+  }
+
+  var getRegionalMappingUrlPath = function() {
+    return '/calendar/hijri/sa/';
+  }
+
+  var rcsFFEnabled = function() {
+    return 'true';
+  }
+
+
+  var showRegionalToggle = function() {
+    return 'false';
+  }
+
+
+  var defaultTogglePref = function() {
+    return 'false';
+  }
+</script>
+<script src="/scripts/psDialog.js"></script>
+<script type="text/javascript">
+/**
+ * Need to configure require js before psbehaviors.
+ */
+require.config({
+        waitSeconds: 0,
+    	baseUrl: "/scripts/",
+    	paths: {
+    		'handlebars':                'handlebars/require-handlebars.1.0.0.rc3',
+    		'json2':                     'handlebars/json2',
+    		'hbs':                       'hbs/0.4.0/hbs',
+            'underscore':                'underscore/underscore-'+'min'+'-1.8.3',
+    		'backbone':                  'backbone/backbone-'+'min'+'-0.9.10',
+    		'jquery.cookie':             'jquery.cookie',
+    		'psDateValidate':            'psDateValidate',
+    		'psDateWidget':              'psDateWidget',
+    		'psDirtyStateController':    'psDirtyStateController',
+    		'psFormValidate':            'psFormValidate',
+    		'psNumWidget':               'psNumWidget',
+    		'psReloader/psReloader-min': 'psReloader/psReloader-min',
+    		'psRequired':                'psRequired',
+    		'psTextWidget':              'psTextWidget',
+    		'psValidationFunctions':     'psValidationFunctions',
+            'angular':                   'lib/angular/angular.min',
+            'angular-cookies':           'lib/angular/angular-cookies.min',
+            'angular-route':             'lib/angular/angular-route.min',
+            'angular-sanitize':          'lib/angular/angular-sanitize.min',
+            'angular-translate':         'lib/angular/angular-translate.min',
+            'angular-messages':          'lib/angular/angular-messages.min',
+            'angular-aria':              'lib/angular/angular-aria.min',
+            'angular-resource':      	 'lib/angular/angular-resource.min',
+            'encoding':               	 'lib/textencoder/encoding',
+            'filesaver':                 'lib/filesaver/FileSaver.min',
+            'psDateWidgetRegionalToggleHelper': 'psDateWidgetRegionalToggleHelper'
+        },
+        hbs: {
+            disableI18n: true
+        },
+        shim: {
+            'underscore': {
+                exports: '_'
+            },
+            'backbone': {
+                exports: 'Backbone',
+                deps: ['underscore']
+            },
+            'angular': {
+                exports: 'angular'
+            },
+            'angular-translate':{
+                deps: ['angular']
+            },
+            'angular-sanitize':{
+                deps: ['angular']
+            },
+            'angular-route':{
+                deps: ['angular']
+            },
+            'angular-cookies':{
+                deps: ['angular']
+            },
+            'angular-messages':{
+                deps: ['angular']
+            },
+            'angular-aria':{
+                deps: ['angular']
+            },
+            'angular-resource': {
+                deps: ['angular']
+            }
+        },
+        map: {
+            '*': {
+                'Handlebars': 'handlebars'
+            }
+        },
+        priority: [
+              'angular'
+        ]    });
+define('jquery', function () {
+	return jQuery;
+});
+define('jquery-ui', ['jquery'], function($) {
+	return $.ui;
+});
+</script>
+
+<script src="/scripts/psbehaviors.js"></script>
+<script src="/scripts/helpLinksMenu.js"></script>
+<script src="/scripts/keep-alive.js"></script>
+
+
+<!-- Frame type=none --><meta id="keep-alive-config" content="45"/>
+
+<script type="text/javascript">
+function get_locale() {
+  return "en_US";
+}
+
+function getHelpUrl() {
+    return "https://ps.powerschool-docs.com/pssis-student-parent/";
+}
+
+function getLastI18NCacheKey() {
+	
+		return '1734785673355_' + get_locale();
+	
+}
+
+function getEECProducts(){
+    var isEcollectFormsEnabled = "";
+    var isEnrollmentExpressEnabled = "";
+    if (isEcollectFormsEnabled == "1" && isEnrollmentExpressEnabled == "1") {
+        return "Enrollment Express, Ecollect Forms";
+    } else if (isEcollectFormsEnabled == "1") {
+        return "Ecollect Forms";
+    } else if (isEnrollmentExpressEnabled == "1") {
+        return "Enrollment Express";
+    } else {
+        return "";
+    }
+}
+
+
+if(typeof pss_text!='function'){
+function pss_text(key, params, returnKeyIfNotFound) {
+	if (_messages[key] === undefined)
+	{
+		if (returnKeyIfNotFound !== undefined && returnKeyIfNotFound === true) {
+			return key;
+		} else {
+			return "Message Key Was Not Found";
+		}
+	}
+	if(params == null || params.length == 0)
+	{
+  		return _messages[key];
+	}
+	else
+	{
+		msg = _messages[key];
+		for ( i = 0; i < params.length; i++)
+		{
+			token = "{"+i+"}";
+			msg = msg.replace(token, params[i]);
+		}
+		return msg;
+	}
+}
+}
+
+function get_localized_date(d, fmt) {
+   if (fmt === "mmdd") return ("" + ( (d.getMonth()+1) < 10 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1 ) ) + "/" + (d.getDate() < 10 ? '0' + d.getDate() : d.getDate() ) + "");
+   return ("" + ( (d.getMonth()+1) < 10 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1 ) ) + "/" + (d.getDate() < 10 ? '0' + d.getDate() : d.getDate() ) + "/" + d.getFullYear() + "");
+}
+
+
+// Format is a formatting object
+// number is number object
+function formatNumber(format, number)
+{
+	var ds = format.ds; // decimal separator
+	var result = "";
+	if (isNaN(number) == true) {
+		return number
+	} else {
+		result = number.toString();
+		result = result.replace(".",ds);
+		return result;
+	}
+}
+
+function localizeNumber(number) {
+	return formatNumber(get_numeric_format(), number);
+}
+
+function deLocalizeNumber(number) {
+	return removeNumberFormat(get_numeric_format(), number);
+}
+
+function removeNumberFormat(format, number) {
+	// IE does not like instantiating RegExp objects with empty values, so we have to
+	// check for valid values in the grouping separator before using it in a RegExp.
+	var gsNotBlank = (format.gs == "." || format.gs == "," || format.gs == " ");
+	number = number.toString();
+	// We also want to check that only valid characters are present.
+	var regexString = "^" + format.regex + "$";
+	var validNumber = new RegExp(regexString, "g");
+	if (number != "" && number.match(validNumber) != null) {
+		if (gsNotBlank) {
+			var gs = new RegExp("\\"+format.gs, "g");
+			number = number.replace(gs, "")
+		}
+		var ds = new RegExp("\\"+format.ds, "g"); //The decimal separator is not expected to be empty
+		number = parseFloat(number.replace(ds, "."));
+	} else {
+		return null;
+	}
+	return (isNaN(number)) ? null : number;
+}
+
+function localizeCurrency(number) {
+	return formatNumber(get_currency_format(), number);
+}
+
+<!-- This function return a json object with numeric formatting info -->
+function get_numeric_format() {
+   return  { format: '#,##0.#########', 
+ size: '3', 
+ gs: ',', 
+ ds: '.', 
+ regex: '([-]?(([0-9]{1,3}(,[0-9]{3})*(\\.[0-9]+)?|\\.[0-9]+)|([0-9]*(\\.[0-9]+)?)))' }; 
+;
+}
+
+<!-- This function return a json object with currency formating info -->
+function get_currency_format() {
+   return  { format: '#,##0.00', 
+ size: '3', 
+ gs: ',', 
+ ds: '.', 
+ regex: '([-]?(([0-9]{1,3}(,[0-9]{3})*(\\.[0-9]+)?|\\.[0-9]+)|([0-9]*(\\.[0-9]+)?)))' }; 
+;
+}
+
+<!-- This function return date format in machine readable form -->
+function get_short_date_format() {
+   return "M/d/yy";
+}
+<!-- This function return date format in machine readable form -->
+function get_date_format() {
+   return "MM/dd/yyyy";
+}
+
+<!-- This function return date format in human readable form -->
+function get_date_text(){
+  	return "MM/DD/YYYY";
+}
+<!-- This function return date format in human readable form -->
+function get_short_date_text(){
+	return "MM/DD/YY";
+}
+
+<!-- This function return time format in machine readable form without seconds-->
+function get_HHMMTime_format() {
+   return "hh:mm a";
+}
+
+<!-- This function return time format in machine readable form with seconds-->
+function get_HHMMSSTime_format() {
+   return "hh:mm:ss a";
+}
+
+<!-- This function return ante/post meridian in machine readable form -->
+function get_AMPM(ampm) {
+	if(ampm == "am")
+   		return "AM";
+   	else
+   		return "PM";
+}
+
+if(!_messages) var _messages = {};
+if(!_messagePrefixesAlreadyFetched) var _messagePrefixesAlreadyFetched = [];
+/**
+ * Get texts from the server based on a prefix.
+ * @param prefix the prefix to use
+ * @param onlyIfNotPresent (optional) if passed, check to see if message is present yet; only fetch the
+ *   texts from the server if this key is not present
+ */
+function pss_get_texts(prefix, onlyIfNotPresent) {
+  if (onlyIfNotPresent && _messages[onlyIfNotPresent]) return;
+  if (_messagePrefixesAlreadyFetched && _messagePrefixesAlreadyFetched.includes(prefix.toLowerCase())) return;
+
+  jQuery.ajax ({async: false,
+    url:'/ws/i18n/messageKeys',
+    data:{_: getLastI18NCacheKey(), keys: prefix},
+    dataType:'json',
+	cache:true,
+    success: function (msgs) {
+      jQuery.each(msgs, function (key, value) {
+        _messages[key] = value;
+      });
+	  _messagePrefixesAlreadyFetched.push(prefix.toLowerCase());
+    }
+  });
+}
+
+function $(id) {
+	return document.getElementById(id);
+}
+</script>
+<script src="/scripts/commonscripts_misc.js"></script>
+<script src="/scripts/commonscripts_changeHistory.js"></script>
+
+<script type="application/x-javascript">
+addEventListener("load", function() {
+	setTimeout(function() {
+		hideURLbar();
+		adjustFrameStyles();
+	}, 0);
+	enableScreenReader();
+}, false);
+
+function adjustFrameStyles() {
+	var containerFrame = document.querySelector('#container-frame');
+	if (containerFrame && containerFrame.classList.contains('pds')) {
+		var containerFrameMenu = document.querySelector('#container-frame-menu');
+		if (containerFrameMenu) {
+			document.body.classList.add('noScroll', 'backgroundAdjusted');
+			var contentMain = document.querySelector('#content-main');
+			if (contentMain) {
+				contentMain.classList.add('autoScroll');
+			}
+		}
+	}
+}
+
+function hideURLbar() {
+	window.scrollTo(0,1);
+	var appNav = document.querySelector('pds-app-nav');
+	if (appNav) {
+		document.getElementById('content-main').scrollTop = 0;
+	}
+}
+
+//This function is used to convert the time string to the format HH:MM AM/PM
+function convertTimeString(timeString) {
+    if (timeString) {
+        var timeParts = timeString.split(":");
+        var hours = timeParts[0];
+        if(timeParts[1] && timeParts[1].length > 2) {
+            var minutes = timeParts[1].substring(0, 2);
+            var meridiem = timeParts[1].substring(2).trim();
+            var isPM = window.get_AMPM('pm');
+            if (meridiem) {
+                return hours + ':' + minutes + ' ' + (isPM === meridiem ? 'PM' : 'AM');
+            } else {
+                return timeString;
+            }
+        } else {
+            return timeString;
+        }
+    }
+}
+
+// This function converts a time string to "HH:MM" with locale-specific AM/PM values.
+function convertTimeStringWithLocaleAMPM(timeString) {
+    if (timeString) {
+        var timeParts = timeString.split(":");
+        var hours = timeParts[0];
+        if(timeParts[1] && timeParts[1].length > 2) {
+            var minutes = timeParts[1].substring(0, 2);
+            var meridiem = timeParts[1].substring(2).trim();
+            if (meridiem) {
+                return hours + ':' + minutes + ' ' + (meridiem === 'PM' ? window.get_AMPM('pm') : window.get_AMPM('am'));
+            } else {
+                return timeString;
+            }
+        } else {
+            return timeString;
+        }
+    }
+}
+
+// This function converts a time string to "HH:MM" format with locale-specific AM/PM values.
+function convertTo12HourTimeWithLocaleModifier(time) {
+    if (time == undefined) {
+        return time;
+    }
+    if (get_HHMMTime_format() === 'HH:mm') {
+        var rTime;
+        var timeParts = time.split(':');
+        var hours = timeParts[0];
+        var minutes = timeParts[1];
+        var hour = parseInt(hours);
+        var modifier = get_AMPM('am');
+
+        // Determine AM/PM modifier based on the hour
+        if (hour > 11) {
+            modifier = get_AMPM('pm');
+        }
+
+        // Adjust hour for 12-hour format
+        if (hour === 0) {
+            hour = 12;
+        } else if (hour > 12) {
+            hour -= 12;
+        }
+
+        // Format the return time string with leading zero for single-digit hours
+        rTime = hour.toString() + ':' + minutes + ' ' + modifier;
+        if (hour < 10) {
+            rTime = '0' + rTime;
+        }
+
+        return rTime;
+    } else {
+        return time;
+    }
+}
+
+//code block to enable screen reader when any action error occurs
+function enableScreenReader(){
+	require(['underscore'], function (_) {
+		setTimeout(function(){
+			if(jQuery(".feedback-alert").is(":visible")){
+			jQuery(".feedback-alert li").attr("role","alert");
+			jQuery(".feedback-alert li").attr("aria-live","polite");
+			}
+		},0);
+	});
+}
+
+// Converts a time string in "HH:MM AM/PM" 12-hour format to "HH:MM" 24-hour format.
+function convert12HourTo24Hour(timeString) {
+    if (!timeString) {
+        return timeString; // Return as is if the input is empty or invalid
+    }
+
+    var timeParts = timeString.split(":");
+    if (timeParts.length < 2) {
+        return timeString; // Return as is if the format is incorrect
+    }
+
+    var hours = parseInt(timeParts[0], 10);
+    var minutesPart = timeParts[1];
+    var minutes = minutesPart.substring(0, 2);
+    var localizedMeridiem = minutesPart.substring(2).trim(); // Extract localized AM/PM
+
+    // Convert localized AM/PM back to standard AM/PM using the window.get_AMPM function
+    var standardMeridiem =
+        localizedMeridiem === window.get_AMPM('am') ? 'AM' :
+        localizedMeridiem === window.get_AMPM('pm') ? 'PM' : null;
+
+    if (!standardMeridiem) {
+        return timeString;
+    }
+
+    // Convert hours to 24-hour format based on standard AM/PM
+    if (standardMeridiem === 'PM' && hours !== 12) {
+        hours += 12;
+    } else if (standardMeridiem === 'AM' && hours === 12) {
+        hours = 0;
+    }
+
+    // Construct the 24-hour format time string
+    return hours.toString().padStart(2, '0') + ':' + minutes;
+}
+
+</script>
+<script language="JavaScript" type="text/javascript" src="/scripts/validate_date.js"></script>
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192" />
+<link rel="icon" type="image/png" href="/android-chrome-512x512.png" sizes="512x512" />
+<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />
+
+<meta name="application-name" content="PowerSchool"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
+<link rel="shortcut icon" href="/favicon.ico" >
+
+
+
+
+
+   
+
+
+
+
+    <script>
+        let hideNavigation = getURLParameter('hideNavigation');
+
+        if (hideNavigation === 'true') {
+            // set session storage to hide the navigation
+            sessionStorage.setItem('hideNavigation', 'true');
+        } else if (hideNavigation === 'false') {
+            // clear session storage that hides the navigation
+            sessionStorage.removeItem('hideNavigation');
+        }
+
+        window.hideAllNav = sessionStorage.getItem('hideNavigation');
+    </script>
+
+
+    <script type="text/javascript">
+    var cacheZoom = Math.round(((window.outerWidth) / window.innerWidth)*100) / 100;
+    $j(window).resize(function() {
+        var innerZoom = Math.round(((window.outerWidth) / window.innerWidth)*100) / 100;
+        if(cacheZoom !== innerZoom){
+            require(['jquery','jquery.cookie'], function($, cookie){
+                if(innerZoom >= 2.5 && $.cookie('uiStateNav') !== 'expanded'){
+                    $j("#btnNoNav").click();
+                }else if(innerZoom < 2.5 && $.cookie('uiStateNav') === 'expanded'){
+                     $j("#btnNoNav").click();
+                }
+            });
+            }
+    	});
+
+    	 $j(window).on("load", function(){
+                var titleText = document.querySelector('title');
+                if(titleText.textContent === 'Site Map'){
+                    $j('body').addClass('uiNoNav');
+                    $j('#btnNoNav').removeClass('collapsed').addClass('expanded');
+                    $j('#btnNoNav').attr('title','Show Main Menu');
+                    $j('#btnNoNav').attr('aria-expanded','false');
+                }
+            });
+    </script>
+
+</head>
+<body id="parentPageTemp" class="psparent Parent">
+<script>
+    if (window.hideAllNav) {
+        //new hideall class on body
+        document.body.classList.add('hideAllNav');
+        //hide left nav class
+        document.body.classList.add('uiNoNav');
+        //hide top nav class
+        document.body.classList.add('uiContMax');
+    }
+</script>
+
+    <input type="text" value="0" id="ismobile" hidden>
+<div id="container">
+
+<!-- start of shell for entire page  -->
+<!-- start logo, school, term, logoff, help -->
+<div id="header" role="banner">
+	<div id="branding-powerschool">
+        <a href="/guardian/home.html" tabindex="0"><span class="screen_readers_only">PowerSchool</span></a>
+    </div>
+	<ul id="tools">
+		<li id="userName" class="header-name" title="Klynstra, Michael
+ (Last Sign In:&nbsp;01/10/2025 at 02:15 PM was signed out because multiple, concurrent sessions are not allowed. 68.34.17.22)">Welcome,
+			<span id="firstlast">Michael Klynstra<span>
+		</li>
+		<li><span aria-hidden="true"></span><a href="https://ps.powerschool-docs.com/pssis-student-parent/" title="Help" target="_blank">Help</a>
+		<span class="concealed"><a href="https://ps.powerschool-docs.com/pssis-student-parent/" title="Help" target="_blank" accesskey="?">Help</a></span>
+		</li>
+		<li><span aria-hidden="true"></span><a href="/guardian/sitemap.html" title="Site Map" target="_top">Site Map</a>
+        <span class="concealed"><a href="/guardian/sitemap.html" title="Site Map" target="_top" accesskey="l">Site Map</a></span>
+        </li>
+		<li><span aria-hidden="true"></span><a href="home.html?ac=logoff" id="btnLogout" title="Sign Out" target="_top">Sign Out</a>
+		<span class="concealed"><a href="home.html?ac=logoff" id="btnLogoutConcealed" title="Sign Out" target="_top" accesskey="l">Sign Out</a></span>
+		</li>
+	</ul>
+	<div id="cust-content-header">
+// guardian
+
+</div>
+</div>
+<div id="print-school">Saugatuck Public Schools<br><span>Saugatuck Middle School</span></div>
+<!-- end logo, school, term, logoff, help -->
+<div id="usercontext-bar">
+    <a href="#content-main" id="skip-to-main">&nbsp;<span class="screen_readers_only">Skip to main content</span></a>
+	<a href="/guardian/home.html" id="linkBrandingHome" target="_top"><span class="screen_readers_only">PowerSchool</span></a>
+	
+		     <ul id="students-list">
+	        <li  class="selected">
+	              <a href="javascript:switchStudent(9053);">James</a>
+	        </li>
+	</ul>				
+
+        <form id="switch_student_form" action="home.html" method="post">
+            <input type="hidden" name="selected_student_id"/>
+        </form>
+
+
+    <script type="text/javascript">
+        function switchStudent(studentId){
+           var switchStudentForm = document.getElementById('switch_student_form');
+           switchStudentForm.selected_student_id.value=studentId;
+           switchStudentForm.submit();
+        }
+    </script>
+
+	
+
+	<ul id="tools2">
+		
+			
+
+
+		    
+		        
+					<li class="icon-btn-mydata"><a href="/guardian/studentRecordDownload.action" title="MyData Button"><span class="screen_readers_only">MyData Button</span>&nbsp;</a></li>
+		        
+		    
+		
+		
+		
+		<li id="notifIcon">
+    <a href="/guardian/notification/notificationDetailAJAX.action" onclick="return false;" target="_top" id="btnNotifications" class="dialogC" title="System Alerts">
+        <em class="screen_readers_only">System Alerts</em>&nbsp;
+    </a>
+</li>
+		<li class="icon-btn-print"><a href="javascript:window.print()" title="Print this page"><span class="screen_readers_only">Print this page</span>&nbsp;</a></li>
+	</ul>
+</div>
+
+<div id="content">
+
+<div id="nav-main" role="navigation">
+	<h2>Navigation</h2>
+	<ul role="menu">
+		<li id="btn-gradesAttendance" role="menuitem"><a href="/guardian/home.html"><span class="screen_readers_only"></span>Grades and Attendance</a></li>
+		
+		
+			<li id="btn-gradesHistory" role="menuitem"><a href="/guardian/termgrades.html"><span class="screen_readers_only"></span>Grade History</a></li>
+		
+		
+			<li id="btn-attendanceHistory" role="menuitem"><a href="/guardian/attendance.html"><span class="screen_readers_only"></span>Attendance History</a></li>
+		
+		
+			
+		    	<li id="btn-emailNotification" role="menuitem"><a href="/guardian/autoemailsetup.html"><span class="screen_readers_only"></span>Email Notification</a></li>
+			
+		
+		<li id="btn-teacherComments" role="menuitem"><a href="/guardian/teachercomments.html"><span class="screen_readers_only"></span>Teacher Comments</a></li>
+		<li id="btn-schoolBulletin" role="menuitem"><a href="/guardian/bulletin_popup.html" class="dialogM" title="View School Bulletin"><span class="screen_readers_only"></span>School Bulletin</a></li>
+		<li id="btn-classRegistration" role="menuitem"><a href="/guardian/requestform.html"><span class="screen_readers_only"></span>Class Registration</a></li>
+		
+			
+		
+		<li id="btn-mySchedule" role="menuitem"><a href="/guardian/myschedule.html"><span class="screen_readers_only"></span>My Schedule</a></li>
+		<li id="btn-schoolInformation" role="menuitem"><a href="/guardian/schoolinformation.html"><span class="screen_readers_only"></span>School Information</a></li>
+		
+    	
+		
+		    <li id="btn-accountPreferences" role="menuitem"><a href="/guardian/accountmanagement_profile.html"><span class="screen_readers_only"></span>Account Preferences</a></li>
+		
+		
+
+		
+			
+		
+		
+	</ul>
+	<div id="cust-leftnav-footer"><!-- Start of Section Code -->
+<script>
+$j('#cust-leftnav-footer').append('<li><a style="background-image: url(/images/img/custom_schoology.png)" href="/guardian/guardian_schoology.html">Schoology</a></li>');
+</script>
+<!-- End of Section Code MDW -->
+<ul>
+	<li id="liSMMessageSenderAdmin"><a href="/admin/messagesender/msgsndr.html" id="navSMMessageSenderAdmin" title="Message Sender">Message Sender</a></li>
+</ul>
+
+<script>
+	var liMessageSenderAdmin = document.getElementById("liSMMessageSenderAdmin");
+
+	if (liMessageSenderAdmin != null) {
+		var pathname = window.location.pathname; // returns path only        
+		if (pathname.toLowerCase().indexOf("/admin/home.html") == 0) {
+			var ul = document.getElementById("left_nav_functions");        
+			if (ul != null) 
+			 	// Move to "Functions" section
+				ul.appendChild(liMessageSenderAdmin);
+		} else 
+			// Hide
+			liMessageSenderAdmin.style.display = "none";
+	}
+</script><!-- Start of Section Code -->
+<script>
+$j();
+</script>
+<!-- End of Section Code MDW --></div>
+	
+	
+		<iframe title="District Code and App Download Links" frameBorder="0" scrolling="no" allowtransparency="true" src="https://support.powerschool.com/public/ios/powerschool_parent.html?districtCode=BLDB" width="100%" height="150"></iframe>
+	
+	
+</div>
+
+<div id="content-main" role="main">
+
+
+
+
+<h1>Grades and Attendance: Klynstra, James Archer</h1>
+    <!-- start of tabs -->
+<ul class="tabs" id="nav-secondary" role="tablist">
+		<li class="selected">
+           <a role="tab" aria-selected="true" id="Grades and Attendance" href="#">
+           <span for="Grades and Attendance" class="multitabs-common-label">Grades and Attendance</span></a>
+        </li>
+     	<li tabindex="-1">
+           <a role="tab" aria-selected="false" id="Standards Grades" href="/guardian/standardGrades.html">
+           <span for="Standards Grades" class="multitabs-common-label">Standards Grades</span></a>
+        </li>
+</ul>
+<!-- end of tabs -->
+
+<div class="box-round">
+<!-- start student content -->
+<div id="quickLookup" style="overflow: hidden; overflow:auto">
+
+
+
+
+	
+		
+			
+		
+	
+
+
+
+<div id="tableDesc" class="screen_readers_only">
+The Grades and Attendance page displays comprehensive information about a student's grades and attendance for the current term. The Course column displays the classes the student is currently enrolled in.
+</div>
+<table class="linkDescList grid" aria-describedby="tableDesc"><caption id="attByClass" class="center">Attendance By Class</caption><tr class="center th2"><th rowspan="2" scope="col">Exp</th><th colspan="5" scope="colgroup">Last Week</th><th colspan="5" scope="colgroup">This Week</th><th rowspan="2" scope="col">Course</th><th rowspan="2" scope="col">R1</th><th rowspan="2" scope="col">E1</th><th rowspan="2" scope="col">R2</th><th rowspan="2" scope="col">T1</th><th rowspan="2" scope="col">R3</th><th rowspan="2" scope="col">E2</th><th rowspan="2" scope="col">R4</th><th rowspan="2" scope="col">T2</th><th rowspan="2" scope="col">R5</th><th rowspan="2" scope="col">E3</th><th rowspan="2" scope="col">R6</th><th rowspan="2" scope="col">T3</th><th rowspan="2" scope="col">Absences</th><th rowspan="2" scope="col">Tardies</th></tr><tr class="center th2"><th title="Mon, Dec 30, 2024 :  Not in Session" scope="col">M</th><th title="Tue, Dec 31, 2024 :  Not in Session" scope="col">T</th><th title="Wed, Jan 01, 2025 :  Not in Session" scope="col">W</th><th title="Thu, Jan 02, 2025" scope="col">H</th><th title="Fri, Jan 03, 2025" scope="col">F</th><th title="Mon, Jan 06, 2025" scope="col">M</th><th title="Tue, Jan 07, 2025" scope="col">T</th><th title="Wed, Jan 08, 2025" scope="col">W</th><th title="Thu, Jan 09, 2025" scope="col">H</th><th title="Fri, Jan 10, 2025" scope="col">F</th></tr><tr class="center" id="ccid_269939"><td>1(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">Math 6 A&nbsp;<br><a href="teacherinfo.html?frn=0051802&nolink=true" title="Details about Campbell, Jordan" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:jcampbell@saugatuckps.com" target="_top">Email Campbell, Jordan</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;38</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004269943&begdate=11/13/2024&enddate=11/15/2024&fg=E1&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004269943&begdate=08/27/2024&enddate=11/15/2024&fg=T1&schoolid=8889" class="bold">D+<br>67</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="attendancedates.html?frn=004269943&codes=*abs&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval" class="bold">3</a></td><td>0</td></tr><tr class="center" id="ccid_278595"><td>1(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="table-element-text-align-start">Math 6 B&nbsp;<br><a href="teacherinfo.html?frn=0051802&nolink=true" title="Details about Campbell, Jordan" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:jcampbell@saugatuckps.com" target="_top">Email Campbell, Jordan</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;38</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278599&fg=E2&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278599&begdate=11/18/2024&enddate=03/07/2025&fg=T2&schoolid=8889" class="bold">C+<br>78</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>0</td><td>0</td></tr><tr class="center" id="ccid_269962"><td>2(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">Science 6 A&nbsp;<br><a href="teacherinfo.html?frn=005107&nolink=true" title="Details about Hankins, Katie" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:khankins@saugatuckps.com" target="_top">Email Hankins, Katie</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;7</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004269966&begdate=11/13/2024&enddate=11/15/2024&fg=E1&schoolid=8889" class="bold">D+<br>67</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004269966&begdate=08/27/2024&enddate=11/15/2024&fg=T1&schoolid=8889" class="bold">B+<br>89</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="attendancedates.html?frn=004269966&codes=*abs&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval" class="bold">3</a></td><td>0</td></tr><tr class="center" id="ccid_278690"><td>2(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="table-element-text-align-start">Social Studies 6&nbsp;<br><a href="teacherinfo.html?frn=005107&nolink=true" title="Details about Hankins, Katie" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:khankins@saugatuckps.com" target="_top">Email Hankins, Katie</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;1107</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278694&fg=E2&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278694&begdate=11/18/2024&enddate=03/07/2025&fg=T2&schoolid=8889" class="bold">B+<br>88</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>0</td><td>0</td></tr><tr class="center" id="ccid_269824"><td>3(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">Band 6&nbsp;<br><a href="teacherinfo.html?frn=0052147&nolink=true" title="Details about Holtz, Andrew" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:aholtz@saugatuckps.com" target="_top">Email Holtz, Andrew</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;11</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004269828&fg=E1&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004269828&begdate=08/27/2024&enddate=11/15/2024&fg=T1&schoolid=8889" class="bold">B<br>83</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="attendancedates.html?frn=004269828&codes=*abs&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval" class="bold">5</a></td><td>0</td></tr><tr class="center" id="ccid_278920"><td>3(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>EA</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="table-element-text-align-start">Band 6&nbsp;<br><a href="teacherinfo.html?frn=0052147&nolink=true" title="Details about Holtz, Andrew" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:aholtz@saugatuckps.com" target="_top">Email Holtz, Andrew</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;11</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278924&fg=E2&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278924&begdate=11/18/2024&enddate=03/07/2025&fg=T2&schoolid=8889" class="bold">C<br>74</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="attendancedates.html?frn=004278924&codes=*abs&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval" class="bold">2</a></td><td>0</td></tr><tr class="center" id="ccid_278961"><td>3(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">Band 6&nbsp;<br><a href="teacherinfo.html?frn=0052147&nolink=true" title="Details about Holtz, Andrew" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:aholtz@saugatuckps.com" target="_top">Email Holtz, Andrew</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;11</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278965&fg=E3&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278965&fg=T3&schoolid=8889">[ i ]</a></td><td>0</td><td>0</td></tr><tr class="center" id="ccid_270603"><td>4(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">PE 6 A&nbsp;<a title="Section Teachers" class="dialogC" id="uniqueID32410" href="/guardian/coteach/showSectionTeachersAJAX.action?sectionId=32410&psPortal=guardian"> <img src="/images/img/coteach.png" width="16px" height="16px" alt="Show details"/></a><br><a href="teacherinfo.html?frn=0052130&nolink=true" title="Details about Dunn, Bill" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:wedunn@saugatuckps.com" target="_top">Email Dunn, Bill</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;MS GYM</span></span></td><td><a href="scores.html?frn=031386486&fg=R1&schoolid=8889" class="bold">A-<br>90</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="attendancedates.html?frn=004270607&codes=*abs&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval" class="bold">3</a></td><td>0</td></tr><tr class="center" id="ccid_270616"><td>4(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">Spanish 6 A&nbsp;<br><a href="teacherinfo.html?frn=0052133&nolink=true" title="Details about Bauer, Angelina" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:abauer@saugatuckps.com" target="_top">Email Bauer, Angelina</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;32</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004270620&begdate=10/14/2024&enddate=11/15/2024&fg=R2&schoolid=8889" class="bold">C<br>73</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="attendancedates.html?frn=004270620&codes=*abs&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval" class="bold">3</a></td><td><a href="attendancedates.html?frn=004270620&codes=*tar&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval" class="bold">4</a></td></tr><tr class="center" id="ccid_270629"><td>4(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="table-element-text-align-start">Art 6&nbsp;<br><a href="teacherinfo.html?frn=0053507&nolink=true" title="Details about Pawlak, Melissa" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:mpawlak@saugatuckps.com" target="_top">Email Pawlak, Melissa</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;31</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004270633&begdate=11/18/2024&enddate=01/17/2025&fg=R3&schoolid=8889" class="bold">C<br>76</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>0</td><td>0</td></tr><tr class="center" id="ccid_270642"><td>4(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">PE 6 B&nbsp;<br><a href="teacherinfo.html?frn=0052130&nolink=true" title="Details about Dunn, Bill" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:wedunn@saugatuckps.com" target="_top">Email Dunn, Bill</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;GYM</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004270646&fg=R4&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>0</td><td>0</td></tr><tr class="center" id="ccid_270901"><td>4(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">Spanish 6 B&nbsp;<br><a href="teacherinfo.html?frn=0052133&nolink=true" title="Details about Bauer, Angelina" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:abauer@saugatuckps.com" target="_top">Email Bauer, Angelina</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;7</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004270905&fg=R5&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>0</td><td>0</td></tr><tr class="center" id="ccid_270668"><td>4(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">Technology 6&nbsp;<br><a href="teacherinfo.html?frn=0052136&nolink=true" title="Details about Baumann, Nicole" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:nbaumann@saugatuckps.com" target="_top">Email Baumann, Nicole</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;25</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004270672&fg=R6&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>0</td><td>0</td></tr><tr class="center" id="ccid_271024"><td>5(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="table-element-text-align-start">Language Arts 6 A&nbsp;<a title="Section Teachers" class="dialogC" id="uniqueID32296" href="/guardian/coteach/showSectionTeachersAJAX.action?sectionId=32296&psPortal=guardian"> <img src="/images/img/coteach.png" width="16px" height="16px" alt="Show details"/></a><br><a href="teacherinfo.html?frn=0051552&nolink=true" title="Details about Prutch, Aubrey" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:aprutch@saugatuckps.com" target="_top">Email Prutch, Aubrey</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;39</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004271028&fg=E1&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004271028&begdate=08/27/2024&enddate=11/15/2024&fg=T1&schoolid=8889" class="bold">C<br>75</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="attendancedates.html?frn=004271028&codes=*abs&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval" class="bold">5</a></td><td>0</td></tr><tr class="center" id="ccid_278668"><td>5(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="table-element-text-align-start">Language Arts 6 B&nbsp;<br><a href="teacherinfo.html?frn=0051552&nolink=true" title="Details about Prutch, Aubrey" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:aprutch@saugatuckps.com" target="_top">Email Prutch, Aubrey</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;9</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278672&fg=E2&schoolid=8889">[ i ]</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="scores.html?frn=004278672&begdate=11/18/2024&enddate=03/07/2025&fg=T2&schoolid=8889" class="bold">A-<br>91</a></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>0</td><td>0</td></tr><tr class="center" id="ccid_277978"><td>7(A)</td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td>EA</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="table-element-text-align-start">Advisory&nbsp;<a title="Section Teachers" class="dialogC" id="uniqueID32817" href="/guardian/coteach/showSectionTeachersAJAX.action?sectionId=32817&psPortal=guardian"> <img src="/images/img/coteach.png" width="16px" height="16px" alt="Show details"/></a><br><a href="teacherinfo.html?frn=0051552&nolink=true" title="Details about Prutch, Aubrey" class="button mini dialogM"><em class="ui-icon ui-icon-white ui-icon-contact"></em></a>&nbsp;<a href="mailto:aprutch@saugatuckps.com" target="_top">Email Prutch, Aubrey</a>&nbsp;<span class="display-flex"><span>-&nbsp;Rm:</span><span>&nbsp;339</span></span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td class="notInSession">&nbsp;<span class="screen_readers_only">Not available</span></td><td><a href="attendancedates.html?frn=004277982&codes=*abs&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval" class="bold">3</a></td><td>0</td></tr><tr>
+<td id="attTotal" class="right" colspan="24">Attendance Totals</td>
+<td id="termAbsTotal" class="center"><a href="attendancedatesall.html?frn=0019003&codes=*abs&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval">27</a></td>
+<td id="termTarTotal" class="center"><a href="attendancedatesall.html?frn=0019003&codes=*tar&term=24-25&mode=ATT_ModeMeeting&mode=ATT_ModeInterval">4</a></td>
+
+</tr></table>
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
+
+
+<tr>
+<td align="center">Current weighted GPA (T2): </td>
+</tr>
+
+
+<tr>
+<td align="center"><a href="home.html?schoolid=8889&showdropped=true&22599081618090023517">Show dropped classes also</a><span class="screen_readers_only" role="alert" aria-live="assertive">Showing only current classes</span></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+</div>
+<!-- end student content -->
+</div>
+<!-- legend-->
+<div id="legend" role="presentation">
+<h2>Legend</h2>
+	<p><strong>Attendance Codes:</strong>&nbsp; Blank=PRESENT<span class="disclaimer"> | </span> EA=EXCUSED ABSENCE<span class="disclaimer"> | </span> UA=UNEXCUSED ABSENCE<span class="disclaimer"> | </span> ET=EXCUSED TARDY<span class="disclaimer"> | </span> EM=EXCUSED MEDICAL<span class="disclaimer"> | </span> LAE=LATE ARRIVAL EXCUSED<span class="disclaimer"> | </span> LEU=LEFT EARLY UNEXCUSED<span class="disclaimer"> | </span> UT=UNEXCUSED TARDY<span class="disclaimer"> | </span> LEE=LEFT EARLY EXCUSED<span class="disclaimer"> | </span> PRE=PRE-ARRANGED<span class="disclaimer"> | </span> 25=Section 25 E 1st Day in Attendance<span class="disclaimer"> | </span> OSS=OUT OF SCHOOL SUSPENSION<span class="disclaimer"> | </span> ISS=IN SCHOOL SUSPENSION<span class="disclaimer"> | </span> SR=SCHOOL RELATED<span class="disclaimer"> | </span> H=HOME BOUND/HOSPITALIZED<span class="disclaimer"> | </span></p>
+    
+</div>
+
+<input id="activeNav" type="hidden" value="#btn-gradesAttendance"/>
+<div id="cust-content-footer">
+<li id="btn-digitalequity" style="background:url('/images/btn_backpack.gif');background-repeat:no-repeat;background-position:10px">
+	<a href="/guardian/digitalequity.html">Digital Equity and Learning Preference</a>
+</li>
+<script>
+			
+$j(document).ready(function() {
+
+
+	if ($j("#btn-accountPreferences").length){
+	
+		$j("#btn-accountPreferences").before( $j("#btn-digitalequity") );
+	}
+	else{
+		$j('#nav-main ul > li').last().after($j("#btn-digitalequity"));
+	}
+	
+
+	
+
+});
+
+</script>
+
+</div>
+</div>
+<div id="print-disclaimer">
+DISCLAIMER: This system is provided as a convenience. Grades and other information provided by this system are not official records and may or may not be accurate. Neither this institution nor PowerSchool Group LLC or its affiliates accepts any responsibility for information provided by this system and/or for any damages resulting from information provided by this system. For official grades and student records contact your school.
+</div>
+<!--end content-->
+<!-- end of shell for entire page -->
+<!-- Start of copyright table -->
+</div>
+</div>
+<!--end container-->
+<div id="master-drawer-content-div">
+    
+
+
+	
+</div>
+<div id="footer">
+	<div id="legal">
+  <p>Copyright &copy; 2005-2025 PowerSchool Group LLC and/or its affiliate(s). All rights reserved.<br/>All trademarks are either owned or licensed by PowerSchool Group LLC and/or its affiliates.</p>
+</div>
+
+</div>
+
+
+<!--<iframe style="height:0px;width:0px;visibility:hidden" src="javascript:false" id="disablecache"></iframe>-->
+
+
+
+
+</body>
+</html>

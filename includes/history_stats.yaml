@@ -1,0 +1,246 @@
+
+
+- platform: history_stats
+  name: TV Upstairs Screentime Hours
+  entity_id: binary_sensor.tv_and_screentime_active
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+        
+
+- platform: history_stats
+  name: TV Upstairs Screentime Hours
+  entity_id: binary_sensor.tv_and_screentime_active
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: TV Upstairs Granted Hours  
+  entity_id: binary_sensor.tv_and_granted
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: TV Upstairs Unauthorized Hours
+  entity_id: binary_sensor.tv_unauthorized
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: TV Upstairs Total Hours
+  entity_id: media_player.tv_upstairs
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: northern_cardinal_visits_today
+  name: "Northern Cardinal Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Northern Cardinal"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: black_capped_chickadee_visits_today
+  name: "Black-capped Chickadee Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Black-capped Chickadee"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: blue_jay_visits_today
+  name: "Blue Jay Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Blue Jay"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+
+- platform: history_stats
+  unique_id: common_starling_visits_today
+  name: "Common Starling Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Common Starling"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+
+- platform: history_stats
+  unique_id: american_goldfinch_visits_today
+  name: "American Goldfinch Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "American Goldfinch"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: house_finch_visits_today
+  name: "House Finch Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "House Finch"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: downy_woodpecker_visits_today
+  name: "Downy Woodpecker Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Downy Woodpecker"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: white_breasted_nuthatch_visits_today
+  name: "White-breasted Nuthatch Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "White-breasted Nuthatch"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: house_sparrow_visits_today
+  name: "House Sparrow Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "House Sparrow"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: tufted_titmouse_visits_today
+  name: "Tufted Titmouse Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Tufted Titmouse"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: great_tit_visits_today
+  name: "Great Tit Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Great Tit"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: red_bellied_woodpecker_visits_today
+  name: "Red-bellied Woodpecker Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Red-bellied Woodpecker"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+  
+# Seasonal visitors and migrants
+- platform: history_stats
+  unique_id: dark_eyed_junco_visits_today
+  name: "Dark-eyed Junco Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Dark-eyed Junco"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: american_robin_visits_today
+  name: "American Robin Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "American Robin"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: mourning_dove_visits_today
+  name: "Mourning Dove Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Mourning Dove"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: european_starling_visits_today
+  name: "European Starling Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "European Starling"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: common_grackle_visits_today
+  name: "Common Grackle Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Common Grackle"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: red_winged_blackbird_visits_today
+  name: "Red-winged Blackbird Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Red-winged Blackbird"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: carolina_wren_visits_today
+  name: "Carolina Wren Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Carolina Wren"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: purple_finch_visits_today
+  name: "Purple Finch Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Purple Finch"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: pine_siskin_visits_today
+  name: "Pine Siskin Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Pine Siskin"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: white_throated_sparrow_visits_today
+  name: "White-throated Sparrow Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "White-throated Sparrow"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+
+  

@@ -1,0 +1,615 @@
+- platform: pirateweather
+  api_key: XoSA3p00b0XnYxGebrQskV63Ja0Cl8r3
+  scan_interval: '00:15:00'
+  monitored_conditions:
+    - temperature
+    - precip_probability
+    - precip_type
+    - humidity
+    - cloud_cover
+    - nearest_storm_distance
+    - precip_intensity
+    - wind_speed      
+
+- platform: template
+  sensors:
+    todays_agenda:
+      friendly_name: "Today's Agenda"
+      unique_id: todays_agenda  
+      value_template: >-
+        {% macro format_time(dt) %}
+          {%- if dt | as_timestamp | timestamp_custom('%-I') | int == 12 and dt | as_timestamp | timestamp_custom('%p') == 'PM' -%}
+            noon
+          {%- elif dt | as_timestamp | timestamp_custom('%-I') | int == 12 and dt | as_timestamp | timestamp_custom('%p') == 'AM' -%}
+            midnight
+          {%- else -%}
+            {{ dt | as_timestamp | timestamp_custom('%-I:%M %p') | replace('AM', 'A.M.') | replace('PM', 'P.M.') }}
+          {%- endif -%}
+        {% endmacro %}
+
+        {% set events = namespace(list=[]) %}
+        {% for calendar in states.calendar %}
+          {% if calendar.attributes.all_day is defined %}
+            {% if calendar.attributes.all_day %}
+              {% set events.list = events.list + [{'start': calendar.attributes.start_time, 'summary': calendar.attributes.message, 'all_day': true}] %}
+            {% else %}
+              {% set events.list = events.list + [{'start': calendar.attributes.start_time, 'summary': calendar.attributes.message, 'all_day': false}] %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% set sorted_events = events.list | sort(attribute='start') %}
+        {% if sorted_events | length == 0 %}
+          There are no events scheduled for today.
+        {% else %}
+          Today's schedule: 
+          {% for event in sorted_events %}
+            {% if event.all_day %}
+              {{ event.summary }} all day.
+            {% else %}
+              {{ event.summary }} at {{ format_time(event.start) }}.
+            {% endif %}
+            {% if not loop.last %} Then {% endif %}
+          {% endfor %}
+        {% endif %}
+
+    open_windows_list:
+      friendly_name: "Open Windows List"
+      value_template: >
+        {{ expand('binary_sensor.all')
+          | selectattr('entity_id', 'search', 'window')
+          | selectattr('state', 'eq', 'on')
+          | map(attribute='name')
+          | list
+          | join(', ')
+        }}    
+
+    open_doors_list:
+      friendly_name: "Open Doors List"
+      value_template: >
+        {% set open_doors = expand('binary_sensor.all')
+          | selectattr('entity_id', 'search', 'door')
+          | selectattr('entity_id', 'search', 'contact')
+          | selectattr('state', 'eq', 'on')
+          | map(attribute='name')
+          | list
+        %}
+        {{ open_doors | join(', ') if open_doors else 'All Doors Closed' }}
+
+    overall_living_area_illuminance:
+      unique_id: overall_living_area_illuminance
+      friendly_name: "Overall Living Area Illuminance"
+      unit_of_measurement: "lx"
+      value_template: >
+        {{ ((states('sensor.illuminance_front_entry') | float + states('sensor.illuminance_dining_room') | float) / 2) | round(1) }}
+
+    grade_math:
+      value_template: >
+        {% set grades = state_attr('sensor.powerschool_grades', 'grades') %}
+        {% if grades %}
+          {% for grade in grades %}
+            {% if 'Math' in grade.class %}
+              {{ grade.grade }} ({{ grade.percentage }})
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          Unknown
+        {% endif %}
+
+    grade_social_studies:
+      value_template: >
+        {% set grades = state_attr('sensor.powerschool_grades', 'grades') %}
+        {% if grades %}
+          {% for grade in grades %}
+            {% if 'Social Studies' in grade.class %}
+              {{ grade.grade }} ({{ grade.percentage }})
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          Unknown
+        {% endif %}
+
+    grade_band:
+      value_template: >
+        {% set grades = state_attr('sensor.powerschool_grades', 'grades') %}
+        {% if grades %}
+          {% for grade in grades %}
+            {% if 'Band' in grade.class %}
+              {{ grade.grade }} ({{ grade.percentage }})
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          Unknown
+        {% endif %}
+
+    grade_language_arts:
+      value_template: >
+        {% set grades = state_attr('sensor.powerschool_grades', 'grades') %}
+        {% if grades %}
+          {% for grade in grades %}
+            {% if 'Language Arts' in grade.class %}
+              {{ grade.grade }} ({{ grade.percentage }})
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          Unknown
+        {% endif %}
+
+
+    screentime_remaining_x:
+      friendly_name: "Remaining Screentime"
+      unit_of_measurement: "min"
+      value_template: >
+        {% set starting = states('input_number.screentime_starting_minutes') | float(0) %}
+        {% set tv_time = states('counter.tv_screentime_minutes') | float(0) %}
+        {% set iphone_time = states('counter.iphone_minutes') | float(0) %}
+        {% set non_tv = states('counter.tv_nonscreentime_minutes') | float(0) %}
+        {% set total_screentime_used = states('sensor.total_actual_screentime') | float(0) %}
+        {% set switch_time = states('number.nintendo_switch_play_time_limit') | float(0) %}
+        {{ [starting - total_screentime_used, 0] | max | round(0) }}
+
+    total_actual_screentime:
+      friendly_name: "Total Actual Screentime"
+      unit_of_measurement: "min"
+      value_template: >-
+        {% set tv_time = states('counter.tv_total_minutes') | float(0) %}
+        {% set iphone_time = states('counter.iphone_minutes') | float(0) %}
+        {% set switch_time = states('number.nintendo_switch_play_time_limit') | float(0) %}
+        {{ [tv_time + switch_time + iphone_time, 0] | max | round(0) }}
+
+    screentime_block_reason_text:
+      unique_id: screentime_block_reason_text
+      friendly_name: "Screentime Block Reason"
+      value_template: >-
+        {% set current_time = now() %}
+        {% set time_hour = current_time.hour %}
+        {% set time_minute = current_time.minute %}
+        {% set weekday = current_time.weekday() %}
+        {% set outside_hours = (
+            time_hour >= 21 or 
+            (time_hour < 8) or 
+            (time_hour == 8 and time_minute < 15)
+        ) %}
+        {% if states('sensor.screentime_remaining_x') | float(0) <= 0 %}
+          All time has been used today
+        {% elif weekday < 5 and current_time.hour < 8 %}
+          No screentime before school
+        {% elif states('input_boolean.todo_completion_required') == 'on' %}
+          Todo completion required
+        {% elif states('counter.screentime_delay') | int(0) > 0 %}
+          Screentime delay
+        {% elif outside_hours %}
+          It is outside of screentime hours.
+        {% elif is_state('input_select.screentime_mode', 'Blocked') %}
+          Manually blocked
+        {% else %}
+          reason unavailable
+        {% endif %}
+      attribute_templates:
+        granted: "{{ states('input_number.screentime_starting_minutes') | int(0) }}"
+        remaining: "{{ states('sensor.screentime_remaining_x') | int(0) }}"
+
+    bird_bud_visitor_retained:
+      friendly_name: "Bird Bud Visitor Retained"
+      value_template: >
+        {% if states('sensor.saugatucksparrows_bird_bud_recent_visitor') == 'unknown' %}
+          {{ states.sensor.saugatucksparrows_bird_bud_recent_visitor.last_known_state or 'No visitors to show' }}
+        {% else %}
+          {{ states('sensor.saugatucksparrows_bird_bud_recent_visitor') }}
+        {% endif %}
+
+    bird_buddy_latest_image:
+      unique_id: bird_buddy_latest_image
+      friendly_name: "Bird Buddy Latest Image"
+      value_template: >
+        {% set img = state_attr('sensor.saugatucksparrows_bird_bud_recent_visitor', 'entity_picture') %}
+        {{ (img[:250] + '...') if img and img|length > 255 else img }}
+
+    bird_buddy_image_url:
+      unique_id: bird_buddy_image_url
+      friendly_name: "Bird Buddy Image URL"
+      value_template: >
+        {% set url = state_attr('sensor.saugatucksparrows_bird_bud_recent_visitor', 'entity_picture') %}
+        {{ url[:250] if url else '' }}
+
+    archers_watch_combined_info:
+      unique_id: archers_watch_combined_info
+      friendly_name: "Archers Watch Combined Info"
+      value_template: >-
+        {% set battery = states('sensor.archers_watch_battery') %}
+        {% set status = states('sensor.archers_watch_battery_status') %}
+        {% set badge = states('sensor.archers_watch_badge') %}
+        {% set status_display = 'Not Charging' if status == 'NotCharging' else status %}
+        {{ battery }}% • {{ status_display }} • {{ badge }}
+
+    other_bird_species_visits_today:
+      unique_id: other_bird_species_visits_today
+      friendly_name: "Other Bird Species Visits Today"
+      value_template: >
+        {% set known_species = [
+          "Northern Cardinal", "Black-capped Chickadee", "Blue Jay", 
+          "American Goldfinch", "House Finch", "Downy Woodpecker",
+          "White-breasted Nuthatch", "House Sparrow", "Tufted Titmouse",
+          "Red-bellied Woodpecker", "Dark-eyed Junco", "American Robin",
+          "Mourning Dove", "European Starling", "Common Grackle",
+          "Red-winged Blackbird", "Carolina Wren", "Purple Finch",
+          "Pine Siskin", "White-throated Sparrow", "Great Tit", "Common Starling"
+        ] %}
+        {% set current = states('sensor.saugatucksparrows_bird_bud_recent_visitor') %}
+        {% if current not in known_species 
+          and current != 'unknown' 
+          and current != 'unavailable' 
+          and current != '' %}
+          1
+        {% else %}
+          0
+        {% endif %}
+        attributes:
+          species: "{{ states('sensor.saugatucksparrows_bird_bud_recent_visitor') }}"
+
+    unique_bird_species_today:
+      unique_id: unique_bird_species_today
+      friendly_name: "Unique Bird Species Today"
+      value_template: >
+        {% set unique_species = namespace(list=[]) %}
+        {% for state in states %}
+          {% if state.entity_id.endswith('_visits_today') 
+              and state.entity_id != 'sensor.total_bird_visits_today'
+              and state.state not in ['unavailable', 'unknown', ''] %}
+            {% if state.state | int(0) > 0 %}
+              {% set unique_species.list = unique_species.list + [state.name | replace(' Visits Today', '')] %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {{ unique_species.list | length }}
+
+    most_frequent_visitor_today:
+      unique_id: most_frequent_visitor_today
+      friendly_name: "Most Frequent Visitor Today"
+      value_template: >
+        {% set max_visits = namespace(count=0, species='None') %}
+        {% for state in states %}
+          {% if state.entity_id.endswith('_visits_today') 
+              and state.entity_id != 'sensor.total_bird_visits_today' 
+              and state.state not in ['unavailable', 'unknown', ''] %}
+            {% if (state.state | int(0)) > max_visits.count %}
+              {% set max_visits.count = state.state | int(0) %}
+              {% set max_visits.species = state.name | replace(' Visits Today', '') %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {{ max_visits.species }}
+        
+
+    time_since_last_bird:
+      unique_id: time_since_last_bird
+      friendly_name: "Time Since Last Bird Visit"
+      unit_of_measurement: "seconds"
+      value_template: >
+        {% set last_visit = state_attr('sensor.saugatucksparrows_bird_bud_recent_visitor', 'last_changed') %}
+        {% if last_visit is not none %}
+          {{ ((now() - last_visit).total_seconds()) | round(0) }}
+        {% else %}
+          0
+        {% endif %}
+
+    peak_bird_hour_today:
+      value_template: >
+        {% if states('sensor.total_bird_visits_today') != 'unknown' and states('sensor.total_bird_visits_today') | int(0) > 0 %}
+          {{ now().strftime("%-I %p") }}
+        {% else %}
+          No visits
+        {% endif %}
+
+    bird_visit_streak:
+      unique_id: bird_visit_streak
+      friendly_name: "Current Bird Visit Streak"
+      unit_of_measurement: "minutes"
+      value_template: >
+        {% set current = states('sensor.saugatucksparrows_bird_bud_recent_visitor') %}
+        {% if current != 'unknown' and current != 'unavailable' and current != '' %}
+          {% set last_changed = states.sensor.saugatucksparrows_bird_bud_recent_visitor.last_changed %}
+          {% set time_diff = (now() - last_changed).total_seconds() | int %}
+          {% if time_diff < 300 %}
+            {{ (time_diff / 60) | round(1) }}
+          {% else %}
+            0
+          {% endif %}
+        {% else %}
+          0
+        {% endif %}
+
+    daily_bird_summary:
+      unique_id: daily_bird_summary
+      friendly_name: "Today's Bird Summary"
+      value_template: >
+        {% set total = states('sensor.total_bird_visits_today') | int(0) %}
+        {% set unique = states('sensor.bird_unique_species_today') | int(0) %}
+        {% set popular = states('sensor.most_frequent_bird_today') %}
+        {{ total }} visits from {{ unique }} species. Most frequent: {{ popular }}
+
+    total_bird_visits_today:
+      unique_id: total_bird_visits_today
+      friendly_name: "Total Bird Visits Today"
+      value_template: >
+        {% set count = namespace(total=0) %}
+        {% for state in states %}
+          {% if state.entity_id.endswith('_visits_today') 
+              and state.entity_id != 'sensor.total_bird_visits_today'
+              and state.entity_id != 'sensor.bird_unique_species_today'
+              and state.entity_id != 'sensor.most_frequent_visitor_today'
+              and state.entity_id != 'sensor.peak_bird_hour_today'
+              and state.state not in ['unavailable', 'unknown', ''] %}
+            {% set count.total = count.total + (state.state | int(0)) %}
+          {% endif %}
+        {% endfor %}
+        {{ count.total }}
+
+
+    tv_screentime_minutes:
+      unit_of_measurement: "min"
+      value_template: >
+        {{ (states('sensor.tv_upstairs_screentime_hours') | float * 60) | round(0) }}
+
+    tv_granted_minutes:
+      unit_of_measurement: "min"  
+      value_template: >
+        {{ (states('sensor.tv_upstairs_granted_hours') | float * 60) | round(0) }}
+
+    tv_unauthorized_minutes:
+      unit_of_measurement: "min"
+      value_template: >
+        {{ (states('sensor.tv_upstairs_unauthorized_hours') | float * 60) | round(0) }}
+
+    tv_total_minutes:
+      unit_of_measurement: "min"
+      value_template: >
+        {{ (states('sensor.tv_upstairs_total_hours') | float * 60) | round(0) }}
+
+# History stats to track time
+
+
+- platform: history_stats
+  name: TV Upstairs Screentime Hours
+  entity_id: binary_sensor.tv_and_screentime_active
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+        
+
+- platform: history_stats
+  name: TV Upstairs Screentime Hours
+  entity_id: binary_sensor.tv_and_screentime_active
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: TV Upstairs Granted Hours  
+  entity_id: binary_sensor.tv_and_granted
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: TV Upstairs Unauthorized Hours
+  entity_id: binary_sensor.tv_unauthorized
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: TV Upstairs Total Hours
+  entity_id: media_player.tv_upstairs
+  state: 'on'
+  type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: northern_cardinal_visits_today
+  name: "Northern Cardinal Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Northern Cardinal"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: black_capped_chickadee_visits_today
+  name: "Black-capped Chickadee Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Black-capped Chickadee"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: blue_jay_visits_today
+  name: "Blue Jay Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Blue Jay"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+
+- platform: history_stats
+  unique_id: common_starling_visits_today
+  name: "Common Starling Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Common Starling"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+
+- platform: history_stats
+  unique_id: american_goldfinch_visits_today
+  name: "American Goldfinch Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "American Goldfinch"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: house_finch_visits_today
+  name: "House Finch Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "House Finch"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: downy_woodpecker_visits_today
+  name: "Downy Woodpecker Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Downy Woodpecker"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: white_breasted_nuthatch_visits_today
+  name: "White-breasted Nuthatch Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "White-breasted Nuthatch"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: house_sparrow_visits_today
+  name: "House Sparrow Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "House Sparrow"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: tufted_titmouse_visits_today
+  name: "Tufted Titmouse Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Tufted Titmouse"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: great_tit_visits_today
+  name: "Great Tit Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Great Tit"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: red_bellied_woodpecker_visits_today
+  name: "Red-bellied Woodpecker Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Red-bellied Woodpecker"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+  
+# Seasonal visitors and migrants
+- platform: history_stats
+  unique_id: dark_eyed_junco_visits_today
+  name: "Dark-eyed Junco Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Dark-eyed Junco"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: american_robin_visits_today
+  name: "American Robin Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "American Robin"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: mourning_dove_visits_today
+  name: "Mourning Dove Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Mourning Dove"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: european_starling_visits_today
+  name: "European Starling Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "European Starling"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: common_grackle_visits_today
+  name: "Common Grackle Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Common Grackle"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: red_winged_blackbird_visits_today
+  name: "Red-winged Blackbird Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Red-winged Blackbird"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: carolina_wren_visits_today
+  name: "Carolina Wren Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Carolina Wren"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: purple_finch_visits_today
+  name: "Purple Finch Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Purple Finch"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: pine_siskin_visits_today
+  name: "Pine Siskin Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "Pine Siskin"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+- platform: history_stats
+  unique_id: white_throated_sparrow_visits_today
+  name: "White-throated Sparrow Visits Today"
+  entity_id: sensor.saugatucksparrows_bird_bud_recent_visitor
+  state: "White-throated Sparrow"
+  type: count
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
+
+
+  

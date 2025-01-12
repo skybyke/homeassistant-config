@@ -1,0 +1,34 @@
+
+# Alerts
+alert_message:
+  name: Alert Message
+  initial: ""
+active_alerts:
+  name: Active Alerts
+  initial: "[]"
+
+# Custom ToDo
+todo_item_1:
+  name: Todo Item 1
+  max: 140
+todo_item_2:
+  name: Todo Item 2
+  max: 140
+todo_item_3:
+  name: Todo Item 3
+  max: 140
+todo_item_4:
+  name: Todo Item 4
+  max: 140
+todo_item_5:
+  name: Todo Item 5
+  max: 140
+todo_item_6:
+  name: Todo Item 6
+  max: 140
+todo_item_7:
+  name: Todo Item 7
+  max: 140
+todo_item_8:
+  name: Todo Item 8
+  max: 140

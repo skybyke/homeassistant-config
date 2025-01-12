@@ -1,0 +1,284 @@
+{
+  "version": 1,
+  "minor_version": 7,
+  "key": "core.area_registry",
+  "data": {
+    "areas": [
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:sofa",
+        "id": "living_room",
+        "labels": [],
+        "name": "Living Room",
+        "picture": null,
+        "created_at": "2024-11-08T02:17:43.972575+00:00",
+        "modified_at": "2024-11-16T21:50:57.879479+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:fridge",
+        "id": "kitchen",
+        "labels": [],
+        "name": "Kitchen",
+        "picture": null,
+        "created_at": "2024-11-08T02:17:43.972639+00:00",
+        "modified_at": "2024-11-16T21:50:48.946280+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:bed-king",
+        "id": "bedroom",
+        "labels": [],
+        "name": "Bedroom",
+        "picture": null,
+        "created_at": "2024-11-08T02:17:43.972686+00:00",
+        "modified_at": "2024-11-16T21:49:48.488178+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:desk-lamp",
+        "id": "michaels_office",
+        "labels": [],
+        "name": "Michaels Office",
+        "picture": null,
+        "created_at": "2024-11-08T14:39:40.015796+00:00",
+        "modified_at": "2024-11-08T14:39:40.015799+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "outside",
+        "icon": "mdi:palm-tree",
+        "id": "porch",
+        "labels": [],
+        "name": "Porch",
+        "picture": null,
+        "created_at": "2024-11-08T14:53:51.417479+00:00",
+        "modified_at": "2024-11-08T14:53:51.417483+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:garage-open",
+        "id": "garage",
+        "labels": [],
+        "name": "Garage",
+        "picture": null,
+        "created_at": "2024-11-08T18:15:16.214159+00:00",
+        "modified_at": "2024-11-16T21:50:39.968367+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:toilet",
+        "id": "archers_bathroom",
+        "labels": [],
+        "name": "Archers Bathroom",
+        "picture": null,
+        "created_at": "2024-11-08T18:52:55.021846+00:00",
+        "modified_at": "2024-11-16T21:49:34.853080+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:silverware-fork-knife",
+        "id": "dining_room",
+        "labels": [],
+        "name": "Dining Room",
+        "picture": null,
+        "created_at": "2024-11-08T20:34:41.542677+00:00",
+        "modified_at": "2024-11-16T21:49:54.262697+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:candy",
+        "id": "candys_office",
+        "labels": [],
+        "name": "Candys Office",
+        "picture": null,
+        "created_at": "2024-11-08T20:51:09.142019+00:00",
+        "modified_at": "2024-11-08T20:51:09.142021+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:teddy-bear",
+        "id": "archers_bedroom",
+        "labels": [],
+        "name": "Archers Bedroom",
+        "picture": null,
+        "created_at": "2024-11-08T20:51:35.866166+00:00",
+        "modified_at": "2024-11-08T20:51:35.866169+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "lower",
+        "icon": "mdi:billiards",
+        "id": "billiard_area",
+        "labels": [],
+        "name": "Billiard Area",
+        "picture": null,
+        "created_at": "2024-11-08T20:55:57.404331+00:00",
+        "modified_at": "2024-11-08T20:55:57.404335+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:floor-plan",
+        "id": "hallway",
+        "labels": [],
+        "name": "Hallway",
+        "picture": null,
+        "created_at": "2024-11-08T22:45:19.448122+00:00",
+        "modified_at": "2024-11-08T22:45:19.448126+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "outside",
+        "icon": "mdi:pine-tree",
+        "id": "front",
+        "labels": [],
+        "name": "Front",
+        "picture": null,
+        "created_at": "2024-11-08T23:35:40.040857+00:00",
+        "modified_at": "2024-11-16T21:50:29.040881+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:stairs",
+        "id": "stairway",
+        "labels": [],
+        "name": "Stairway",
+        "picture": null,
+        "created_at": "2024-11-08T23:39:05.789787+00:00",
+        "modified_at": "2024-11-16T21:52:59.033615+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "lower",
+        "icon": "mdi:television",
+        "id": "downstairs_tv_area",
+        "labels": [],
+        "name": "Downstairs TV Area",
+        "picture": null,
+        "created_at": "2024-11-08T23:41:56.259315+00:00",
+        "modified_at": "2024-11-08T23:41:56.259319+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "lower",
+        "icon": "mdi:bike",
+        "id": "downstairs_peloton_area",
+        "labels": [],
+        "name": "Downstairs Peloton Area",
+        "picture": null,
+        "created_at": "2024-11-08T23:48:46.220532+00:00",
+        "modified_at": "2024-11-08T23:48:46.220536+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:faucet",
+        "id": "powder_room",
+        "labels": [],
+        "name": "Powder Room",
+        "picture": null,
+        "created_at": "2024-11-08T23:53:21.524676+00:00",
+        "modified_at": "2024-11-08T23:53:21.524679+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:faucet-variant",
+        "id": "bathroom",
+        "labels": [],
+        "name": "Bathroom",
+        "picture": null,
+        "created_at": "2024-11-08T23:58:44.043179+00:00",
+        "modified_at": "2024-11-08T23:58:44.043182+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": "mdi:floor-plan",
+        "id": "hallway_small",
+        "labels": [],
+        "name": "Hallway Small",
+        "picture": null,
+        "created_at": "2024-11-08T23:59:59.551534+00:00",
+        "modified_at": "2024-11-08T23:59:59.551537+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": null,
+        "id": "mudroom",
+        "labels": [],
+        "name": "Mudroom",
+        "picture": null,
+        "created_at": "2024-11-09T03:13:19.530148+00:00",
+        "modified_at": "2024-11-09T03:13:19.530152+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "outside",
+        "icon": "mdi:pine-tree",
+        "id": "driveway",
+        "labels": [],
+        "name": "Driveway",
+        "picture": null,
+        "created_at": "2024-11-09T06:12:00.272589+00:00",
+        "modified_at": "2024-11-16T21:50:20.776597+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "lower",
+        "icon": "mdi:stairs-down",
+        "id": "downstairs",
+        "labels": [],
+        "name": "Downstairs",
+        "picture": null,
+        "created_at": "2024-11-09T06:12:00.282088+00:00",
+        "modified_at": "2024-11-16T21:50:05.693454+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "outside",
+        "icon": "mdi:pine-tree",
+        "id": "back_yard",
+        "labels": [],
+        "name": "Back Yard",
+        "picture": null,
+        "created_at": "2024-11-14T14:19:22.142339+00:00",
+        "modified_at": "2024-11-14T14:19:22.142342+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "icon": null,
+        "id": "office",
+        "labels": [],
+        "name": "Office",
+        "picture": null,
+        "created_at": "2024-11-16T23:53:00.406146+00:00",
+        "modified_at": "2024-11-16T23:53:00.406149+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "icon": null,
+        "id": "outside",
+        "labels": [],
+        "name": "Outside",
+        "picture": null,
+        "created_at": "2025-01-09T00:52:26.828826+00:00",
+        "modified_at": "2025-01-09T00:52:26.828829+00:00"
+      }
+    ]
+  }
+}

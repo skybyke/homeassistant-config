@@ -1,0 +1,166 @@
+Material:
+
+  primary-font-family: "Roboto"
+  ha-card-header-font-family: "Roboto"
+  code-font-family: "Roboto"
+  card-mod-theme: "my_theme"
+
+
+  primary-background-color: rgb(var(--m3-scheme-background))
+  lovelace-background: var(--primary-background-color)
+  sidebar-background-color: var(--primary-background-color)
+  sidebar-text-color: var(--secondary-text-color)
+  app-header-background-color: var(--primary-background-color)
+  app-header-text-color: var(--primary-text-color)
+  app-header-selection-bar-color: var(--primary-color)
+  app-header-edit-background-color: rgb(var(--m3-scheme-primary-container))
+  app-header-edit-text-color: rgb(var(--m3-scheme-on-primary-container))
+  secondary-background-color: rgb(var(--m3-scheme-surface-container-highest))
+  card-background-color: rgb(var(--m3-scheme-surface-container))
+  mdc-ripple-color: var(--primary-color)
+  input-fill-color: var(--secondary-background-color)
+  input-label-ink-color: var(--secondary-text-color)
+  input-ink-color: var(--primary-text-color)
+  input-dropdown-icon-color: var(--primary-text-color)
+  input-idle-line-color: var(--secondary-text-color)
+  input-hover-line-color: var(--secondary-text-color)
+
+  primary-text-color: rgb(var(--m3-scheme-on-background))
+  secondary-text-color: rgb(var(--m3-scheme-on-surface-variant))
+  disabled-text-color: rgb(var(--m3-scheme-outline))
+
+  primary-color: rgb(var(--m3-scheme-primary))
+  text-primary-color: rgb(var(--m3-scheme-on-primary))
+  mdc-checkbox-ink-color: rgb(var(--m3-scheme-on-primary))
+  link-text-color: var(--primary-color)
+
+  light-primary-color: rgb(var(--m3-scheme-primary-container))
+  text-light-primary-color: rgb(var(--m3-scheme-on-primary-container))
+  accent-color: rgb(var(--m3-scheme-primary-container))
+  text-accent-color: rgb(var(--m3-scheme-on-primary-container))
+
+  switch-unchecked-track-color: rgb(var(--m3-scheme-outline))
+  switch-unchecked-button-color: rgb(var(--m3-scheme-on-surface-variant))
+
+  divider-color: transparent
+  ha-card-background: rgb(var(--m3-scheme-surface-container))
+  ha-card-border-color: transparent
+  ha-card-border-radius: 1.25rem
+
+  rgb-primary-background-color: var(--m3-scheme-background)
+  rgb-primary-text-color: var(--m3-scheme-on-background)
+  rgb-primary-color: var(--m3-scheme-primary)
+  md-sys-color-primary: rgb(var(--m3-scheme-primary))
+  md-sys-color-on-primary: rgb(var(--m3-scheme-on-primary))
+  md-sys-color-primary-container: rgb(var(--m3-scheme-primary-container))
+  md-sys-color-on-primary-container: rgb(var(--m3-scheme-on-primary-container))
+  md-sys-color-inverse-primary: rgb(var(--m3-scheme-inverse-primary))
+  md-sys-color-secondary: rgb(var(--m3-scheme-secondary))
+  md-sys-color-on-secondary: rgb(var(--m3-scheme-on-secondary))
+  md-sys-color-secondary-container: rgb(var(--m3-scheme-secondary-container))
+  md-sys-color-on-secondary-container: rgb(var(--m3-scheme-on-secondary-container))
+  md-sys-color-tertiary: rgb(var(--m3-scheme-tertiary))
+  md-sys-color-on-tertiary: rgb(var(--m3-scheme-on-tertiary))
+  md-sys-color-tertiary-container: rgb(var(--m3-scheme-tertiary-container))
+  md-sys-color-on-tertiary-container: rgb(var(--m3-scheme-on-tertiary-container))
+  md-sys-color-error: rgb(var(--m3-scheme-error))
+  md-sys-color-on-error: rgb(var(--m3-scheme-on-error))
+  md-sys-color-error-container: rgb(var(--m3-scheme-error-container))
+  md-sys-color-on-error-container: rgb(var(--m3-scheme-on-error-container))
+  md-sys-color-background: rgb(var(--m3-scheme-background))
+  md-sys-color-on-background: rgb(var(--m3-scheme-on-background))
+  md-sys-color-surface: rgb(var(--m3-scheme-surface))
+  md-sys-color-on-surface: rgb(var(--m3-scheme-on-surface))
+  md-sys-color-surface-variant: rgb(var(--m3-scheme-surface-variant))
+  md-sys-color-on-surface-variant: rgb(var(--m3-scheme-on-surface-variant))
+  md-sys-color-inverse-surface: rgb(var(--m3-scheme-inverse-surface))
+  md-sys-color-inverse-on-surface: rgb(var(--m3-scheme-inverse-on-surface))
+  md-sys-color-outline: rgb(var(--m3-scheme-outline))
+  md-sys-color-outline-variant: rgb(var(--m3-scheme-outline-variant))
+  md-sys-color-shadow: rgb(var(--m3-scheme-shadow))
+  md-sys-color-scrim: rgb(var(--m3-scheme-scrim))
+  md-sys-color-surface-dim: rgb(var(--m3-scheme-surface-dim))
+  md-sys-color-surface-bright: rgb(var(--m3-scheme-surface-bright))
+  md-sys-color-surface-container-lowest: rgb(var(--m3-scheme-surface-container-lowest))
+  md-sys-color-surface-container-low: rgb(var(--m3-scheme-surface-container-low))
+  md-sys-color-surface-container: rgb(var(--m3-scheme-surface-container))
+  md-sys-color-surface-container-high: rgb(var(--m3-scheme-surface-container-high))
+  md-sys-color-surface-container-highest: rgb(var(--m3-scheme-surface-container-highest))
+  md-sys-color-surface-tint: rgb(var(--m3-scheme-surface-tint))
+  modes:
+    light:
+      m3-scheme-primary: 48, 98, 140
+      m3-scheme-on-primary: 255, 255, 255
+      m3-scheme-primary-container: 207, 229, 255
+      m3-scheme-on-primary-container: 0, 29, 51
+      m3-scheme-inverse-primary: 156, 203, 251
+      m3-scheme-secondary: 82, 96, 112
+      m3-scheme-on-secondary: 255, 255, 255
+      m3-scheme-secondary-container: 213, 228, 247
+      m3-scheme-on-secondary-container: 14, 29, 42
+      m3-scheme-tertiary: 105, 87, 121
+      m3-scheme-on-tertiary: 255, 255, 255
+      m3-scheme-tertiary-container: 239, 219, 255
+      m3-scheme-on-tertiary-container: 35, 21, 51
+      m3-scheme-error: 186, 26, 26
+      m3-scheme-on-error: 255, 255, 255
+      m3-scheme-error-container: 255, 218, 214
+      m3-scheme-on-error-container: 65, 0, 2
+      m3-scheme-background: 247, 249, 255
+      m3-scheme-on-background: 24, 28, 32
+      m3-scheme-surface: 247, 249, 255
+      m3-scheme-on-surface: 24, 28, 32
+      m3-scheme-surface-variant: 222, 227, 235
+      m3-scheme-on-surface-variant: 66, 71, 78
+      m3-scheme-inverse-surface: 45, 49, 53
+      m3-scheme-inverse-on-surface: 239, 241, 246
+      m3-scheme-outline: 114, 119, 127
+      m3-scheme-outline-variant: 194, 199, 207
+      m3-scheme-shadow: 0, 0, 0
+      m3-scheme-scrim: 0, 0, 0
+      m3-scheme-surface-dim: 216, 218, 224
+      m3-scheme-surface-bright: 247, 249, 255
+      m3-scheme-surface-container-lowest: 255, 255, 255
+      m3-scheme-surface-container-low: 242, 243, 249
+      m3-scheme-surface-container: 236, 238, 244
+      m3-scheme-surface-container-high: 230, 232, 238
+      m3-scheme-surface-container-highest: 224, 226, 232
+      m3-scheme-surface-tint: 48, 98, 140
+    dark:
+      m3-scheme-primary: 156, 203, 251
+      m3-scheme-on-primary: 0, 51, 84
+      m3-scheme-primary-container: 17, 74, 115
+      m3-scheme-on-primary-container: 207, 229, 255
+      m3-scheme-inverse-primary: 48, 98, 140
+      m3-scheme-secondary: 185, 200, 218
+      m3-scheme-on-secondary: 36, 50, 64
+      m3-scheme-secondary-container: 58, 72, 87
+      m3-scheme-on-secondary-container: 213, 228, 247
+      m3-scheme-tertiary: 212, 190, 230
+      m3-scheme-on-tertiary: 57, 42, 73
+      m3-scheme-tertiary-container: 80, 64, 97
+      m3-scheme-on-tertiary-container: 239, 219, 255
+      m3-scheme-error: 255, 180, 171
+      m3-scheme-on-error: 105, 0, 5
+      m3-scheme-error-container: 147, 0, 10
+      m3-scheme-on-error-container: 255, 218, 214
+      m3-scheme-background: 16, 20, 24
+      m3-scheme-on-background: 224, 226, 232
+      m3-scheme-surface: 16, 20, 24
+      m3-scheme-on-surface: 224, 226, 232
+      m3-scheme-surface-variant: 66, 71, 78
+      m3-scheme-on-surface-variant: 194, 199, 207
+      m3-scheme-inverse-surface: 224, 226, 232
+      m3-scheme-inverse-on-surface: 45, 49, 53
+      m3-scheme-outline: 140, 145, 153
+      m3-scheme-outline-variant: 66, 71, 78
+      m3-scheme-shadow: 0, 0, 0
+      m3-scheme-scrim: 0, 0, 0
+      m3-scheme-surface-dim: 16, 20, 24
+      m3-scheme-surface-bright: 54, 57, 62
+      m3-scheme-surface-container-lowest: 11, 14, 18
+      m3-scheme-surface-container-low: 24, 28, 32
+      m3-scheme-surface-container: 28, 32, 36
+      m3-scheme-surface-container-high: 39, 42, 47
+      m3-scheme-surface-container-highest: 50, 53, 57
+      m3-scheme-surface-tint: 156, 203, 251

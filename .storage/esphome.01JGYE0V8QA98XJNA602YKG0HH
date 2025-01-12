@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01JGYE0V8QA98XJNA602YKG0HH",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "home-assistant-voice-092cc1",
+      "friendly_name": "Home Assistant Voice 092cc1",
+      "mac_address": "20:F8:3B:09:2C:C1",
+      "compilation_time": "Jan  2 2025, 13:34:55",
+      "model": "esp32-s3-devkitc-1",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2024.12.2",
+      "project_name": "Nabu Casa.Home Assistant Voice PE",
+      "project_version": "25.1.0",
+      "webserver_port": 0,
+      "legacy_voice_assistant_version": 1,
+      "voice_assistant_feature_flags": 29,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "select": [],
+    "binary_sensor": [],
+    "switch": [
+      {
+        "object_id": "mute",
+        "key": 2974103762,
+        "name": "Mute",
+        "unique_id": "home-assistant-voice-092cc1switchmute",
+        "disabled_by_default": false,
+        "icon": "mdi:microphone-off",
+        "entity_category": 1,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "wake_sound",
+        "key": 3517166597,
+        "name": "Wake sound",
+        "unique_id": "home-assistant-voice-092cc1switchwake_sound",
+        "disabled_by_default": false,
+        "icon": "mdi:bullhorn",
+        "entity_category": 1,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "beta_firmware",
+        "key": 3963827797,
+        "name": "Beta firmware",
+        "unique_id": "home-assistant-voice-092cc1switchbeta_firmware",
+        "disabled_by_default": true,
+        "icon": "mdi:test-tube",
+        "entity_category": 1,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "event": [
+      {
+        "object_id": "button_press",
+        "key": 2698747613,
+        "name": "Button press",
+        "unique_id": "home-assistant-voice-092cc1eventbutton_press",
+        "disabled_by_default": false,
+        "icon": "mdi:button-pointer",
+        "entity_category": 0,
+        "device_class": "button",
+        "event_types": [
+          "double_press",
+          "easter_egg_press",
+          "long_press",
+          "triple_press"
+        ]
+      }
+    ],
+    "update": [
+      {
+        "object_id": "home_assistant_voice_092cc1",
+        "key": 3844977253,
+        "name": "",
+        "unique_id": "home-assistant-voice-092cc1updatehome_assistant_voice_092cc1",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 1,
+        "device_class": ""
+      }
+    ],
+    "light": [
+      {
+        "object_id": "led_ring",
+        "key": 1459351809,
+        "name": "LED Ring",
+        "unique_id": "home-assistant-voice-092cc1lightled_ring",
+        "disabled_by_default": false,
+        "icon": "mdi:circle-outline",
+        "entity_category": 1,
+        "supported_color_modes": [
+          35
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": true,
+        "legacy_supports_rgb": true,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "media_player": [
+      {
+        "object_id": "media_player",
+        "key": 2232357057,
+        "name": "Media Player",
+        "unique_id": "home-assistant-voice-092cc1media_playermedia_player",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "supports_pause": true,
+        "supported_formats": [
+          {
+            "format": "flac",
+            "sample_rate": 48000,
+            "num_channels": 2,
+            "purpose": 0,
+            "sample_bytes": 2
+          },
+          {
+            "format": "flac",
+            "sample_rate": 48000,
+            "num_channels": 1,
+            "purpose": 1,
+            "sample_bytes": 2
+          }
+        ]
+      }
+    ]
+  }
+}

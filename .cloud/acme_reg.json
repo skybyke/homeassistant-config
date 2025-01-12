@@ -1,0 +1,15 @@
+{
+    "body": {
+        "contact": [
+            "mailto:mjk@klynstra.com"
+        ],
+        "key": {
+            "e": "AQAB",
+            "kty": "RSA",
+            "n": "t-zK6RW8Ju6tRBkKH69Grt-fI32WEB_hKUghLb7_-9elshbih_euEiQx0gOfm2nal3BZP65MTSsQISMxki_9T442afceKlzgsaLNrpBzEozY5tXRI2y034PjZ6OVWRp3TDAQFdwSqHGLKEhUF4EbooooRI72FukhKqWZBsy1RWNFHFuGlzoPg6H-WRb-v6GRhwEly6ZAoDbz2xmJxH94O1QPNZ9Byus-hvmjRphlHIopVjRe918WJ1LG719mE56jH8KFawAPJZm_DGxekzoKxAaD-VXiwLzfbtYyIZK4mluPtn6Dv9lYpIIKaYucUAXFuUKAnFu0e370nPjbHz5rkw"
+        },
+        "status": "valid"
+    },
+    "terms_of_service": "https://letsencrypt.org/documents/LE-SA-v1.4-April-3-2024.pdf",
+    "uri": "https://acme-v02.api.letsencrypt.org/acme/acct/2045597107"
+}

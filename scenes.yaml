@@ -1,0 +1,4271 @@
+- id: '1731115207245'
+  name: Living Area Movie Time
+  entities:
+    light.kitchen_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - rgb
+      color_mode: rgb
+      brightness: 2
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 247.925
+      - 83.137
+      rgb_color:
+      - 71
+      - 43
+      - 255
+      xy_color:
+      - 0.163
+      - 0.064
+      entity_id:
+      - light.kitchen_overhead_lights
+      - light.kitchen_counter_lights
+      icon: mdi:lightbulb-group
+      friendly_name: Kitchen Lights
+      supported_features: 32
+      state: 'on'
+    light.dining_room_bulb_1:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 138
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 1
+      supported_features: 4
+      state: 'on'
+    light.dining_room_bulb_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 130
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 2
+      supported_features: 4
+      state: 'on'
+    light.dining_room_bulb_3:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 122
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 3
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_1:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 125
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 273.882
+      - 100
+      rgb_color:
+      - 144
+      - 0
+      - 255
+      xy_color:
+      - 0.238
+      - 0.087
+      rgbw_color:
+      - 144
+      - 0
+      - 255
+      - 0
+      friendly_name: Stairway Bulb 1
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 240
+      - 100
+      rgb_color:
+      - 0
+      - 0
+      - 122
+      xy_color:
+      - 0.136
+      - 0.04
+      rgbw_color:
+      - 0
+      - 0
+      - 122
+      - 0
+      friendly_name: Stairway Bulb 2
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_3:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 140
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 273.645
+      - 100
+      rgb_color:
+      - 60
+      - 0
+      - 107
+      xy_color:
+      - 0.246
+      - 0.091
+      rgbw_color:
+      - 60
+      - 0
+      - 107
+      - 0
+      friendly_name: Stairway Bulb 3
+      supported_features: 4
+      state: 'on'
+    light.living_room_lamp:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: hs
+      brightness: 26
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 245.197
+      - 100
+      rgb_color:
+      - 22
+      - 0
+      - 255
+      xy_color:
+      - 0.139
+      - 0.042
+      friendly_name: Living Room Lamp
+      supported_features: 32
+      state: 'on'
+    light.living_room_bulb_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 13
+      friendly_name: Living Room Bulb 1
+      supported_features: 40
+      state: 'on'
+    light.living_room_bulb_2:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Living Room Bulb 2
+      supported_features: 40
+      state: 'off'
+    light.living_room_bulb_3:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Living Room Bulb 3
+      supported_features: 40
+      state: 'off'
+    light.living_room_bulb_4:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Living Room Bulb 4
+      supported_features: 40
+      state: 'off'
+    light.living_room_bulb_5:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Living Room Bulb 5
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 38
+      friendly_name: Hallway Bulb 2
+      supported_features: 40
+      state: 'on'
+    light.hallway_bulb_1:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 1
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_4:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 4
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_3:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 3
+      supported_features: 40
+      state: 'off'
+    light.kitchen_overhead_lights:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 3
+      friendly_name: 'Kitchen Overhead Lights '
+      supported_features: 32
+      state: 'on'
+    light.kitchen_counter_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - rgb
+      color_mode: rgb
+      brightness: 2
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 247.925
+      - 83.137
+      rgb_color:
+      - 71
+      - 43
+      - 255
+      xy_color:
+      - 0.163
+      - 0.064
+      friendly_name: Kitchen Counter Lights
+      supported_features: 0
+      state: 'on'
+  icon: mdi:movie-roll
+  metadata:
+    light.kitchen_lights:
+      entity_only: true
+    light.dining_room_bulb_1:
+      entity_only: true
+    light.dining_room_bulb_2:
+      entity_only: true
+    light.dining_room_bulb_3:
+      entity_only: true
+    light.stairway_bulb_1:
+      entity_only: true
+    light.stairway_bulb_2:
+      entity_only: true
+    light.stairway_bulb_3:
+      entity_only: true
+    light.living_room_lamp:
+      entity_only: true
+    light.living_room_bulb_1:
+      entity_only: true
+    light.living_room_bulb_2:
+      entity_only: true
+    light.living_room_bulb_3:
+      entity_only: true
+    light.living_room_bulb_4:
+      entity_only: true
+    light.living_room_bulb_5:
+      entity_only: true
+    light.hallway_bulb_2:
+      entity_only: true
+    light.hallway_bulb_1:
+      entity_only: true
+    light.hallway_bulb_4:
+      entity_only: true
+    light.hallway_bulb_3:
+      entity_only: true
+    light.kitchen_counter_lights:
+      entity_only: true
+- id: '1731121150189'
+  name: Living Area Low
+  entities:
+    light.kitchen_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - rgb
+      color_mode: rgb
+      brightness: 1
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 247.925
+      - 83.137
+      rgb_color:
+      - 71
+      - 43
+      - 255
+      xy_color:
+      - 0.163
+      - 0.064
+      entity_id:
+      - light.kitchen_overhead_lights
+      - light.kitchen_counter_lights
+      icon: mdi:lightbulb-group
+      friendly_name: Kitchen Lights
+      supported_features: 32
+      state: 'on'
+    light.dining_room_bulb_1:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 1
+      supported_features: 4
+      state: 'on'
+    light.dining_room_bulb_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 2
+      supported_features: 4
+      state: 'on'
+    light.dining_room_bulb_3:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 3
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_1:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 2202
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      rgbw_color:
+      friendly_name: Stairway Bulb 1
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 2202
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      rgbw_color:
+      friendly_name: Stairway Bulb 2
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_3:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 2202
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      rgbw_color:
+      friendly_name: Stairway Bulb 3
+      supported_features: 4
+      state: 'on'
+    light.living_room_lamp:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 33
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Living Room Lamp
+      supported_features: 32
+      state: 'on'
+    light.living_room_bulb_1:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Living Room Bulb 1
+      supported_features: 40
+      state: 'off'
+    light.living_room_bulb_2:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Living Room Bulb 2
+      supported_features: 40
+      state: 'off'
+    light.living_room_bulb_3:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Living Room Bulb 3
+      supported_features: 40
+      state: 'off'
+    light.living_room_bulb_4:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Living Room Bulb 4
+      supported_features: 40
+      state: 'off'
+    light.living_room_bulb_5:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Living Room Bulb 5
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_2:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 2
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_1:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 1
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_4:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 4
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_3:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 3
+      supported_features: 40
+      state: 'off'
+    light.kitchen_overhead_lights:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 3
+      friendly_name: 'Kitchen Overhead Lights '
+      supported_features: 32
+      state: 'on'
+    light.kitchen_counter_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - rgb
+      color_mode: rgb
+      brightness: 0
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 247.925
+      - 83.137
+      rgb_color:
+      - 71
+      - 43
+      - 255
+      xy_color:
+      - 0.163
+      - 0.064
+      friendly_name: Kitchen Counter Lights
+      supported_features: 0
+      state: 'on'
+    light.garage_entry_lamp:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 69
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Garage Entry Lamp
+      supported_features: 32
+      state: 'on'
+  icon: mdi:lightbulb-on-20
+  metadata:
+    light.kitchen_lights:
+      entity_only: true
+    light.dining_room_bulb_1:
+      entity_only: true
+    light.dining_room_bulb_2:
+      entity_only: true
+    light.dining_room_bulb_3:
+      entity_only: true
+    light.stairway_bulb_1:
+      entity_only: true
+    light.stairway_bulb_2:
+      entity_only: true
+    light.stairway_bulb_3:
+      entity_only: true
+    light.living_room_lamp:
+      entity_only: true
+    light.living_room_bulb_1:
+      entity_only: true
+    light.living_room_bulb_2:
+      entity_only: true
+    light.living_room_bulb_3:
+      entity_only: true
+    light.living_room_bulb_4:
+      entity_only: true
+    light.living_room_bulb_5:
+      entity_only: true
+    light.hallway_bulb_2:
+      entity_only: true
+    light.hallway_bulb_1:
+      entity_only: true
+    light.hallway_bulb_4:
+      entity_only: true
+    light.hallway_bulb_3:
+      entity_only: true
+    light.kitchen_counter_lights:
+      entity_only: true
+    light.garage_entry_lamp:
+      entity_only: true
+- id: '1731121395331'
+  name: Front Low
+  entities:
+    light.front_porch_overhead_light_2:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 63
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Front Porch Overhead Light
+      supported_features: 32
+      state: 'on'
+    light.front_porch_side_light:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 87
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Front Porch Side Light
+      supported_features: 32
+      state: 'on'
+    light.front_candys_office:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: unknown
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Front Candys Office
+      supported_features: 44
+      state: 'on'
+    light.front_michaels_office:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      friendly_name: Front Michaels Office
+      supported_features: 44
+      state: 'on'
+    light.garage_bulb_left:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 120
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      friendly_name: Garage Bulb Left
+      supported_features: 44
+      state: 'on'
+    light.garage_bulb_right:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 107
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      friendly_name: Garage Bulb Right
+      supported_features: 44
+      state: 'on'
+  metadata:
+    light.front_porch_overhead_light_2:
+      entity_only: true
+    light.front_porch_side_light:
+      entity_only: true
+    light.front_candys_office:
+      entity_only: true
+    light.front_michaels_office:
+      entity_only: true
+    light.garage_bulb_left:
+      entity_only: true
+    light.garage_bulb_right:
+      entity_only: true
+- id: '1731121492452'
+  name: Bedroom Low
+  entities:
+    light.bedroom_lights:
+      effect_list:
+      - blink
+      - breathe
+      - candle
+      - channel_change
+      - finish_effect
+      - okay
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 64
+      entity_id:
+      - light.bedroom_cck_bedside
+      - light.bedroom_dresser
+      - light.bedroom_mjk_bedside
+      icon: mdi:lightbulb-group
+      friendly_name: Bedroom Lights
+      supported_features: 44
+      state: 'on'
+    light.bathroom_overhead_lights_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 3
+      friendly_name: 'Bathroom Overhead Lights '
+      supported_features: 32
+      state: 'on'
+  metadata:
+    light.bedroom_lights:
+      entity_only: true
+    light.bathroom_overhead_lights_2:
+      entity_only: true
+  icon: mdi:lightbulb-on-20
+- id: '1731122353554'
+  name: Michaels Office Low
+  entities:
+    light.michaels_office_desk_lamp:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 54
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      friendly_name: Michael's Office Desk Lamp
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_globe:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 31
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 167
+      - 88
+      xy_color:
+      - 0.524
+      - 0.388
+      friendly_name: Michael's Office Globe Light
+      supported_features: 32
+      state: 'on'
+    light.michaels_office_nanoleaf:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 833
+      effect_list:
+      - Aphrodites Garden
+      - Color Burst
+      - Cotton Candy
+      - Dancing Garden
+      - Fireworks
+      - Flames
+      - Forest
+      - Free Falling
+      - Ghouls Goblins
+      - Inner Peace
+      - LightCycle
+      - Meteor Shower
+      - Nemo
+      - Nightclub
+      - Northern Lights
+      - Paint Splatter
+      - Pulse Pop Beats
+      - Rhythmic Northern Lights
+      - Ripple
+      - Romantic
+      - Shooting Stars
+      - Snowfall
+      - Soft
+      - Sound Bar
+      - Spring Meadow
+      - Starlight
+      - Streaking Notes
+      - Try this before you skip it
+      - Vintage Modern
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: Aphrodites Garden
+      color_mode: hs
+      brightness: 15
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      friendly_name: Michaels Office Nanoleaf
+      supported_features: 36
+      state: 'on'
+    light.michaels_office_overhead_back_wall_bulb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 33
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      friendly_name: Michael's Office Overhead Back Wall Bulb
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_overhead_closet_bulb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 51
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      friendly_name: Michael's Office Overhead Closet Bulb
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_overhead_desk_bulb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 64
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      friendly_name: Michael's Office Overhead Desk Bulb
+      supported_features: 44
+      state: 'on'
+  icon: mdi:lightbulb-on-20
+  metadata:
+    light.michaels_office_desk_lamp:
+      entity_only: true
+    light.michaels_office_globe:
+      entity_only: true
+    light.michaels_office_nanoleaf:
+      entity_only: true
+    light.michaels_office_overhead_back_wall_bulb:
+      entity_only: true
+    light.michaels_office_overhead_closet_bulb:
+      entity_only: true
+    light.michaels_office_overhead_desk_bulb:
+      entity_only: true
+- id: '1731122755954'
+  name: Michaels Office Groovy
+  entities:
+    light.michaels_office_desk_lamp:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 54
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 293.525
+      - 54.51
+      rgb_color:
+      - 240
+      - 116
+      - 255
+      xy_color:
+      - 0.353
+      - 0.188
+      friendly_name: Michaels Office Desk Lamp
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_globe:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: hs
+      brightness: 31
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 277.795
+      - 100
+      rgb_color:
+      - 160
+      - 0
+      - 255
+      xy_color:
+      - 0.259
+      - 0.096
+      friendly_name: Michaels Office Globe
+      supported_features: 32
+      state: 'on'
+    light.michaels_office_overhead_back_wall:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 15
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 116.68
+      - 99.216
+      rgb_color:
+      - 16
+      - 255
+      - 2
+      xy_color:
+      - 0.175
+      - 0.744
+      friendly_name: Michaels Office Overhead Back Wall
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_nanoleaf:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Aphrodites Garden
+      - Color Burst
+      - Cotton Candy
+      - Dancing Garden
+      - Fireworks
+      - Flames
+      - Forest
+      - Free Falling
+      - Ghouls Goblins
+      - Inner Peace
+      - LightCycle
+      - Meteor Shower
+      - Nemo
+      - Nightclub
+      - Northern Lights
+      - Paint Splatter
+      - Pulse Pop Beats
+      - Rhythmic Northern Lights
+      - Ripple
+      - Romantic
+      - Shooting Stars
+      - Snowfall
+      - Soft
+      - Sound Bar
+      - Spring Meadow
+      - Starlight
+      - Streaking Notes
+      - Try this before you skip it
+      - Vintage Modern
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: Aphrodites Garden
+      color_mode: hs
+      brightness: 15
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      friendly_name: Michaels Office Nanoleaf
+      supported_features: 36
+      state: 'on'
+    light.michaels_office_overhead_closet:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 18
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      friendly_name: Michaels Office Overhead Closet
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_overhead_desk:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 89
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 237.468
+      - 92.941
+      rgb_color:
+      - 18
+      - 28
+      - 255
+      xy_color:
+      - 0.137
+      - 0.044
+      friendly_name: Michaels Office Overhead Desk
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_uplight:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 66
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 196.941
+      - 100
+      rgb_color:
+      - 0
+      - 183
+      - 255
+      xy_color:
+      - 0.145
+      - 0.223
+      friendly_name: Michaels Office Uplight
+      supported_features: 44
+      state: 'on'
+  icon: mdi:peace
+  metadata:
+    light.michaels_office_desk_lamp:
+      entity_only: true
+    light.michaels_office_globe:
+      entity_only: true
+    light.michaels_office_overhead_back_wall:
+      entity_only: true
+    light.michaels_office_nanoleaf:
+      entity_only: true
+    light.michaels_office_overhead_closet:
+      entity_only: true
+    light.michaels_office_overhead_desk:
+      entity_only: true
+    light.michaels_office_uplight:
+      entity_only: true
+- id: '1731158576796'
+  name: Michaels Office Medium
+  entities:
+    light.michaels_office_desk_lamp:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 133
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      friendly_name: Michael's Office Desk Lamp
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_globe:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 102
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 167
+      - 88
+      xy_color:
+      - 0.524
+      - 0.388
+      friendly_name: Michael's Office Globe Light
+      supported_features: 32
+      state: 'on'
+    light.michaels_office_nanoleaf:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 833
+      effect_list:
+      - Aphrodites Garden
+      - Color Burst
+      - Cotton Candy
+      - Dancing Garden
+      - Fireworks
+      - Flames
+      - Forest
+      - Free Falling
+      - Ghouls Goblins
+      - Inner Peace
+      - LightCycle
+      - Meteor Shower
+      - Nemo
+      - Nightclub
+      - Northern Lights
+      - Paint Splatter
+      - Pulse Pop Beats
+      - Rhythmic Northern Lights
+      - Ripple
+      - Romantic
+      - Shooting Stars
+      - Snowfall
+      - Soft
+      - Sound Bar
+      - Spring Meadow
+      - Starlight
+      - Streaking Notes
+      - Try this before you skip it
+      - Vintage Modern
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: Vintage Modern
+      color_mode: hs
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      friendly_name: Michaels Office Nanoleaf
+      supported_features: 36
+      state: 'on'
+    light.michaels_office_overhead_back_wall_bulb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 110
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      friendly_name: Michael's Office Overhead Back Wall Bulb
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_overhead_closet_bulb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 122
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      friendly_name: Michael's Office Overhead Closet Bulb
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_overhead_desk_bulb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 115
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      friendly_name: Michael's Office Overhead Desk Bulb
+      supported_features: 44
+      state: 'on'
+  icon: mdi:lightbulb-on-60
+  metadata:
+    light.michaels_office_desk_lamp:
+      entity_only: true
+    light.michaels_office_globe:
+      entity_only: true
+    light.michaels_office_nanoleaf:
+      entity_only: true
+    light.michaels_office_overhead_back_wall_bulb:
+      entity_only: true
+    light.michaels_office_overhead_closet_bulb:
+      entity_only: true
+    light.michaels_office_overhead_desk_bulb:
+      entity_only: true
+- id: '1731158657827'
+  name: Michaels Office Bright
+  entities:
+    light.michaels_office_desk_lamp:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      friendly_name: Michaels Office Desk Lamp
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_globe:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Michaels Office Globe
+      supported_features: 32
+      state: 'on'
+    light.michaels_office_overhead_back_wall:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2777
+      color_temp: 360
+      hs_color:
+      - 28.233
+      - 63.317
+      rgb_color:
+      - 255
+      - 169
+      - 93
+      xy_color:
+      - 0.518
+      - 0.386
+      friendly_name: Michaels Office Overhead Back Wall
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_nanoleaf:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Aphrodites Garden
+      - Color Burst
+      - Cotton Candy
+      - Dancing Garden
+      - Fireworks
+      - Flames
+      - Forest
+      - Free Falling
+      - Ghouls Goblins
+      - Inner Peace
+      - LightCycle
+      - Meteor Shower
+      - Nemo
+      - Nightclub
+      - Northern Lights
+      - Paint Splatter
+      - Pulse Pop Beats
+      - Rhythmic Northern Lights
+      - Ripple
+      - Romantic
+      - Shooting Stars
+      - Snowfall
+      - Soft
+      - Sound Bar
+      - Spring Meadow
+      - Starlight
+      - Streaking Notes
+      - Try this before you skip it
+      - Vintage Modern
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: Vintage Modern
+      color_mode: hs
+      brightness: 254
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      friendly_name: Michaels Office Nanoleaf
+      supported_features: 36
+      state: 'on'
+    light.michaels_office_overhead_closet:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      friendly_name: Michaels Office Overhead Closet
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_overhead_desk:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2793
+      color_temp: 358
+      hs_color:
+      - 28.201
+      - 62.83
+      rgb_color:
+      - 255
+      - 170
+      - 94
+      xy_color:
+      - 0.516
+      - 0.387
+      friendly_name: Michaels Office Overhead Desk
+      supported_features: 44
+      state: 'on'
+    light.michaels_office_uplight:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2793
+      color_temp: 358
+      hs_color:
+      - 28.201
+      - 62.83
+      rgb_color:
+      - 255
+      - 170
+      - 94
+      xy_color:
+      - 0.516
+      - 0.387
+      friendly_name: Michaels Office Uplight
+      supported_features: 44
+      state: 'on'
+  icon: mdi:lightbulb-on
+  metadata:
+    light.michaels_office_desk_lamp:
+      entity_only: true
+    light.michaels_office_globe:
+      entity_only: true
+    light.michaels_office_overhead_back_wall:
+      entity_only: true
+    light.michaels_office_nanoleaf:
+      entity_only: true
+    light.michaels_office_overhead_closet:
+      entity_only: true
+    light.michaels_office_overhead_desk:
+      entity_only: true
+    light.michaels_office_uplight:
+      entity_only: true
+- id: '1731172232342'
+  name: Living Area High
+  entities:
+    light.kitchen_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - rgb
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 4333
+      color_temp: 230
+      hs_color:
+      - 26.723
+      - 29.152
+      rgb_color:
+      - 255
+      - 213
+      - 180
+      xy_color:
+      - 0.403
+      - 0.359
+      entity_id:
+      - light.kitchen_overhead_lights
+      - light.kitchen_counter_lights
+      icon: mdi:lightbulb-group
+      friendly_name: Kitchen Lights
+      supported_features: 32
+      state: 'on'
+    light.dining_room_bulb_1:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 1
+      supported_features: 4
+      state: 'on'
+    light.dining_room_bulb_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect: Warm White
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 2
+      supported_features: 4
+      state: 'on'
+    light.dining_room_bulb_3:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 3
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_1:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 178
+      color_temp_kelvin: 3649
+      color_temp: 274
+      hs_color:
+      - 27.037
+      - 41.629
+      rgb_color:
+      - 255
+      - 196
+      - 148
+      xy_color:
+      - 0.444
+      - 0.371
+      rgbw_color:
+      friendly_name: Stairway Bulb 1
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 184
+      color_temp_kelvin: 3649
+      color_temp: 274
+      hs_color:
+      - 27.037
+      - 41.629
+      rgb_color:
+      - 255
+      - 196
+      - 148
+      xy_color:
+      - 0.444
+      - 0.371
+      rgbw_color:
+      friendly_name: Stairway Bulb 2
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_3:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 163
+      color_temp_kelvin: 3649
+      color_temp: 274
+      hs_color:
+      - 27.037
+      - 41.629
+      rgb_color:
+      - 255
+      - 196
+      - 148
+      xy_color:
+      - 0.444
+      - 0.371
+      rgbw_color:
+      friendly_name: Stairway Bulb 3
+      supported_features: 4
+      state: 'on'
+    light.living_room_lamp:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Living Room Lamp
+      supported_features: 32
+      state: 'on'
+    light.living_room_bulb_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Living Room Bulb 1
+      supported_features: 40
+      state: 'on'
+    light.living_room_bulb_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Living Room Bulb 2
+      supported_features: 40
+      state: 'on'
+    light.living_room_bulb_3:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Living Room Bulb 3
+      supported_features: 40
+      state: 'on'
+    light.living_room_bulb_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Living Room Bulb 4
+      supported_features: 40
+      state: 'on'
+    light.living_room_bulb_5:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Living Room Bulb 5
+      supported_features: 40
+      state: 'on'
+    light.hallway_bulb_2:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 2
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_1:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 1
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_4:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 4
+      supported_features: 40
+      state: 'off'
+    light.hallway_bulb_3:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Hallway Bulb 3
+      supported_features: 40
+      state: 'off'
+    light.kitchen_overhead_lights:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: 'Kitchen Overhead Lights '
+      supported_features: 32
+      state: 'on'
+    light.kitchen_counter_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - rgb
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 4333
+      color_temp: 230
+      hs_color:
+      - 26.723
+      - 29.152
+      rgb_color:
+      - 255
+      - 213
+      - 180
+      xy_color:
+      - 0.403
+      - 0.359
+      friendly_name: Kitchen Counter Lights
+      supported_features: 0
+      state: 'on'
+    light.garage_entry_lamp:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 138
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Garage Entry Lamp
+      supported_features: 32
+      state: 'on'
+  icon: mdi:lightbulb-on-20
+  metadata:
+    light.kitchen_lights:
+      entity_only: true
+    light.dining_room_bulb_1:
+      entity_only: true
+    light.dining_room_bulb_2:
+      entity_only: true
+    light.dining_room_bulb_3:
+      entity_only: true
+    light.stairway_bulb_1:
+      entity_only: true
+    light.stairway_bulb_2:
+      entity_only: true
+    light.stairway_bulb_3:
+      entity_only: true
+    light.living_room_lamp:
+      entity_only: true
+    light.living_room_bulb_1:
+      entity_only: true
+    light.living_room_bulb_2:
+      entity_only: true
+    light.living_room_bulb_3:
+      entity_only: true
+    light.living_room_bulb_4:
+      entity_only: true
+    light.living_room_bulb_5:
+      entity_only: true
+    light.hallway_bulb_2:
+      entity_only: true
+    light.hallway_bulb_1:
+      entity_only: true
+    light.hallway_bulb_4:
+      entity_only: true
+    light.hallway_bulb_3:
+      entity_only: true
+    light.kitchen_counter_lights:
+      entity_only: true
+    light.garage_entry_lamp:
+      entity_only: true
+- id: '1731194330413'
+  name: Living Area Medium
+  entities:
+    light.kitchen_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - rgb
+      color_mode: color_temp
+      brightness: 130
+      color_temp_kelvin: 4347
+      color_temp: 230
+      hs_color:
+      - 26.722
+      - 28.925
+      rgb_color:
+      - 255
+      - 214
+      - 181
+      xy_color:
+      - 0.401
+      - 0.359
+      entity_id:
+      - light.kitchen_overhead_lights
+      - light.kitchen_counter_lights
+      icon: mdi:lightbulb-group
+      friendly_name: Kitchen Lights
+      supported_features: 32
+      state: 'on'
+    light.dining_room_bulb_1:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 143
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 1
+      supported_features: 4
+      state: 'on'
+    light.dining_room_bulb_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 130
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 2
+      supported_features: 4
+      state: 'on'
+    light.dining_room_bulb_3:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 135
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Dining Room Bulb 3
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_1:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 66
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Stairway Bulb 1
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 54
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Stairway Bulb 2
+      supported_features: 4
+      state: 'on'
+    light.stairway_bulb_3:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 51
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      rgbw_color:
+      friendly_name: Stairway Bulb 3
+      supported_features: 4
+      state: 'on'
+    light.living_room_lamp:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 56
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Living Room Lamp
+      supported_features: 32
+      state: 'on'
+    light.living_room_bulb_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 64
+      friendly_name: Living Room Bulb 1
+      supported_features: 40
+      state: 'on'
+    light.living_room_bulb_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 41
+      friendly_name: Living Room Bulb 2
+      supported_features: 40
+      state: 'on'
+    light.living_room_bulb_3:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 56
+      friendly_name: Living Room Bulb 3
+      supported_features: 40
+      state: 'on'
+    light.living_room_bulb_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 54
+      friendly_name: Living Room Bulb 4
+      supported_features: 40
+      state: 'on'
+    light.living_room_bulb_5:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 56
+      friendly_name: Living Room Bulb 5
+      supported_features: 40
+      state: 'on'
+    light.hallway_bulb_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 31
+      friendly_name: Hallway Bulb 2
+      supported_features: 40
+      state: 'on'
+    light.hallway_bulb_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 28
+      friendly_name: Hallway Bulb 1
+      supported_features: 40
+      state: 'on'
+    light.hallway_bulb_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 3
+      friendly_name: Hallway Bulb 4
+      supported_features: 40
+      state: 'on'
+    light.hallway_bulb_3:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 28
+      friendly_name: Hallway Bulb 3
+      supported_features: 40
+      state: 'on'
+    light.kitchen_overhead_lights:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 131
+      friendly_name: 'Kitchen Overhead Lights '
+      supported_features: 32
+      state: 'on'
+    light.kitchen_counter_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - rgb
+      color_mode: color_temp
+      brightness: 130
+      color_temp_kelvin: 4347
+      color_temp: 230
+      hs_color:
+      - 26.722
+      - 28.925
+      rgb_color:
+      - 255
+      - 214
+      - 181
+      xy_color:
+      - 0.401
+      - 0.359
+      friendly_name: Kitchen Counter Lights
+      supported_features: 0
+      state: 'on'
+    light.garage_entry_lamp:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: color_temp
+      brightness: 105
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Garage Entry Lamp
+      supported_features: 32
+      state: 'on'
+  icon: mdi:lightbulb-on-60
+  metadata:
+    light.kitchen_lights:
+      entity_only: true
+    light.dining_room_bulb_1:
+      entity_only: true
+    light.dining_room_bulb_2:
+      entity_only: true
+    light.dining_room_bulb_3:
+      entity_only: true
+    light.stairway_bulb_1:
+      entity_only: true
+    light.stairway_bulb_2:
+      entity_only: true
+    light.stairway_bulb_3:
+      entity_only: true
+    light.living_room_lamp:
+      entity_only: true
+    light.living_room_bulb_1:
+      entity_only: true
+    light.living_room_bulb_2:
+      entity_only: true
+    light.living_room_bulb_3:
+      entity_only: true
+    light.living_room_bulb_4:
+      entity_only: true
+    light.living_room_bulb_5:
+      entity_only: true
+    light.hallway_bulb_2:
+      entity_only: true
+    light.hallway_bulb_1:
+      entity_only: true
+    light.hallway_bulb_4:
+      entity_only: true
+    light.hallway_bulb_3:
+      entity_only: true
+    light.kitchen_counter_lights:
+      entity_only: true
+    light.garage_entry_lamp:
+      entity_only: true
+- id: '1731966877454'
+  name: Archer Reading Time
+  entities:
+    light.archers_bedroom_bed_light:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: unknown
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Bed Light
+      supported_features: 44
+      state: 'on'
+    light.archers_bedroom_dresser:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Dresser
+      supported_features: 44
+      state: 'off'
+    light.archers_bedroom_overhead_light_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 31
+      friendly_name: Overhead Light
+      supported_features: 32
+      state: 'on'
+  icon: mdi:book
+  metadata:
+    light.archers_bedroom_bed_light:
+      entity_only: true
+    light.archers_bedroom_dresser:
+      entity_only: true
+    light.archers_bedroom_overhead_light_4:
+      entity_only: true
+- id: '1731966938401'
+  name: Archer Sleep Time
+  entities:
+    light.archers_bedroom_bed_light:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: unknown
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Bed Light
+      supported_features: 44
+      state: 'on'
+    light.archers_bedroom_dresser:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Dresser
+      supported_features: 44
+      state: 'off'
+    light.archers_bedroom_overhead_light_4:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Overhead Light
+      supported_features: 32
+      state: 'off'
+  icon: mdi:sleep
+  metadata:
+    light.archers_bedroom_bed_light:
+      entity_only: true
+    light.archers_bedroom_dresser:
+      entity_only: true
+    light.archers_bedroom_overhead_light_4:
+      entity_only: true
+- id: '1732976668432'
+  name: Bedroom Medium
+  entities:
+    light.bedroom_lights:
+      effect_list:
+      - blink
+      - breathe
+      - candle
+      - channel_change
+      - finish_effect
+      - okay
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 135
+      entity_id:
+      - light.bedroom_cck_bedside
+      - light.bedroom_dresser
+      - light.bedroom_mjk_bedside
+      icon: mdi:lightbulb-group
+      friendly_name: Bedroom Lights
+      supported_features: 44
+      state: 'on'
+    light.bathroom_overhead_lights_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 149
+      friendly_name: 'Bathroom Overhead Lights '
+      supported_features: 32
+      state: 'on'
+  metadata:
+    light.bedroom_lights:
+      entity_only: true
+    light.bathroom_overhead_lights_2:
+      entity_only: true
+  icon: mdi:lightbulb-on-50
+- id: '1732976713467'
+  name: Bedroom Off
+  entities:
+    light.bedroom_lights:
+      effect_list:
+      - blink
+      - breathe
+      - candle
+      - channel_change
+      - finish_effect
+      - okay
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      entity_id:
+      - light.bedroom_cck_bedside
+      - light.bedroom_dresser
+      - light.bedroom_mjk_bedside
+      icon: mdi:lightbulb-group
+      friendly_name: Bedroom Lights
+      supported_features: 44
+      state: 'off'
+    light.bathroom_overhead_lights_2:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: 'Bathroom Overhead Lights '
+      supported_features: 32
+      state: 'off'
+  metadata:
+    light.bedroom_lights:
+      entity_only: true
+    light.bathroom_overhead_lights_2:
+      entity_only: true
+  icon: mdi:lightbulb-off
+- id: '1733022676115'
+  name: Bedroom High
+  entities:
+    light.bedroom_lights:
+      effect_list:
+      - blink
+      - breathe
+      - candle
+      - channel_change
+      - finish_effect
+      - okay
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      entity_id:
+      - light.bedroom_cck_bedside
+      - light.bedroom_dresser
+      - light.bedroom_mjk_bedside
+      icon: mdi:lightbulb-group
+      friendly_name: Bedroom Lights
+      supported_features: 44
+      state: 'on'
+    light.bathroom_overhead_lights_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: 'Bathroom Overhead Lights '
+      supported_features: 32
+      state: 'on'
+  metadata:
+    light.bedroom_lights:
+      entity_only: true
+    light.bathroom_overhead_lights_2:
+      entity_only: true
+  icon: mdi:lightbulb-on-80
+- id: '1733067011480'
+  name: Archers Bedroom - Bright
+  entities:
+    light.archers_bedroom_bed_light:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 276.923
+      - 40.784
+      rgb_color:
+      - 215
+      - 151
+      - 255
+      xy_color:
+      - 0.313
+      - 0.21
+      friendly_name: Bed Light
+      supported_features: 44
+      state: 'on'
+    light.archers_bedroom_dresser:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      friendly_name: Dresser
+      supported_features: 44
+      state: 'on'
+    light.archers_bedroom_overhead_light_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Overhead Light
+      supported_features: 32
+      state: 'on'
+  icon: mdi:lightbulb-on
+  metadata:
+    light.archers_bedroom_bed_light:
+      entity_only: true
+    light.archers_bedroom_dresser:
+      entity_only: true
+    light.archers_bedroom_overhead_light_4:
+      entity_only: true
+- id: '1733621692475'
+  name: Front Christmas
+  entities:
+    light.garage_bulb_left:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 5.532
+      - 55.294
+      rgb_color:
+      - 255
+      - 127
+      - 114
+      xy_color:
+      - 0.544
+      - 0.324
+      friendly_name: Garage Bulb Left
+      supported_features: 44
+      state: 'on'
+    light.garage_bulb_right:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 104.043
+      - 73.725
+      rgb_color:
+      - 117
+      - 255
+      - 67
+      xy_color:
+      - 0.249
+      - 0.639
+      friendly_name: Garage Bulb Right
+      supported_features: 44
+      state: 'on'
+    light.front_candys_office:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 195.187
+      - 94.51
+      rgb_color:
+      - 14
+      - 194
+      - 255
+      xy_color:
+      - 0.147
+      - 0.242
+      friendly_name: Front Candys Office
+      supported_features: 44
+      state: 'on'
+    light.front_michaels_office:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 190.32
+      - 98.039
+      rgb_color:
+      - 5
+      - 212
+      - 255
+      xy_color:
+      - 0.148
+      - 0.273
+      friendly_name: Front Michaels Office
+      supported_features: 44
+      state: 'on'
+    light.front_porch_overhead_light_2:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: hs
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 352.913
+      - 81.89
+      rgb_color:
+      - 255
+      - 46
+      - 71
+      xy_color:
+      - 0.648
+      - 0.291
+      friendly_name: Front Porch Overhead Light
+      supported_features: 32
+      state: 'on'
+    light.front_porch_side_light:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: hs
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 107.717
+      - 76.772
+      rgb_color:
+      - 99
+      - 255
+      - 59
+      xy_color:
+      - 0.229
+      - 0.662
+      friendly_name: Front Porch Side Light
+      supported_features: 32
+      state: 'on'
+  icon: mdi:pine-tree
+  metadata:
+    light.garage_bulb_left:
+      entity_only: true
+    light.garage_bulb_right:
+      entity_only: true
+    light.front_candys_office:
+      entity_only: true
+    light.front_michaels_office:
+      entity_only: true
+    light.front_porch_overhead_light_2:
+      entity_only: true
+    light.front_porch_side_light:
+      entity_only: true

@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "id": "michael",
+        "name": "Michael",
+        "user_id": "7bf1665ea85f41c680000f9639d96615",
+        "device_trackers": [
+          "device_tracker.michaels_ipad",
+          "device_tracker.michaels_phone"
+        ],
+        "picture": null
+      },
+      {
+        "id": "candy",
+        "name": "Candy",
+        "device_trackers": [
+          "device_tracker.candy_s_phone",
+          "device_tracker.candys_phone_3",
+          "device_tracker.candys_phone"
+        ],
+        "user_id": "703aa31567814f1eb1b850d6a75e230a",
+        "picture": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_number",
+  "data": {
+    "items": [
+      {
+        "id": "screentime_starting_minutes",
+        "min": 0.0,
+        "max": 360.0,
+        "name": "Screentime Starting Minutes",
+        "icon": "mdi:timer",
+        "mode": "box",
+        "unit_of_measurement": "min",
+        "step": 1.0
+      }
+    ]
+  }
+}

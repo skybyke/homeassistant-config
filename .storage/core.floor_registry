@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "core.floor_registry",
+  "data": {
+    "floors": [
+      {
+        "aliases": [],
+        "floor_id": "main",
+        "icon": null,
+        "level": null,
+        "name": "Main",
+        "created_at": "2024-11-08T14:39:33.100569+00:00",
+        "modified_at": "2024-11-08T14:39:33.100572+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "outside",
+        "icon": "mdi:tree",
+        "level": null,
+        "name": "Outside",
+        "created_at": "2024-11-08T14:53:50.121020+00:00",
+        "modified_at": "2024-11-08T14:53:50.121023+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "lower",
+        "icon": "mdi:stairs-down",
+        "level": null,
+        "name": "Lower",
+        "created_at": "2024-11-08T20:55:53.801067+00:00",
+        "modified_at": "2024-11-08T20:55:53.801069+00:00"
+      }
+    ]
+  }
+}

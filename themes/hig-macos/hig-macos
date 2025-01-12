@@ -1,0 +1,57 @@
+apple_hig_theme:
+  primary-color: "#007AFF" # Apple's signature blue
+  light-primary-color: "#EBF5FF" # Light shade of blue for accents
+  dark-primary-color: "#005BB5" # Darker shade for highlights
+
+  text-primary-color: "#000000" # Black for primary text
+  text-secondary-color: "#3C3C43" # Apple's secondary gray text
+  disabled-text-color: "#C7C7CC" # Light gray for disabled elements
+
+  background-color: "#FFFFFF" # Pure white background
+  secondary-background-color: "#F2F2F7" # Off-white for secondary backgrounds
+
+  card-background-color: "#FFFFFF" # White for cards
+  card-shadow-color: "rgba(0, 0, 0, 0.2)" # Subtle shadow for cards
+
+  divider-color: "#C7C7CC" # Apple's light gray for dividers
+
+  icon-color: "#007AFF" # Blue for primary icons
+  icon-secondary-color: "#8E8E93" # Gray for secondary icons
+
+  input-background-color: "#FFFFFF" # White for input fields
+  input-border-color: "#D1D1D6" # Light gray for input borders
+  input-text-color: "#000000" # Black for input text
+
+  success-color: "#34C759" # Green for success states
+  warning-color: "#FFCC00" # Yellow for warnings
+  error-color: "#FF3B30" # Red for errors
+  info-color: "#007AFF" # Blue for info states
+
+  accent-color: "#5856D6" # Purple accent (Apple's alternate accent color)
+  secondary-accent-color: "#5AC8FA" # Light blue accent
+
+  border-radius: "10px" # Rounded corners for controls
+  border-width: "1px" # Thin borders for delineation
+  shadow-elevation: "0px 2px 4px rgba(0, 0, 0, 0.2)" # Light shadow for depth
+
+  # Button Styles
+  button-text-color: "#FFFFFF" # White text on buttons
+  button-background-color: "#007AFF" # Apple's blue for buttons
+  button-hover-background-color: "#005BB5" # Darker blue for hover
+  button-disabled-background-color: "#C7C7CC" # Light gray for disabled buttons
+
+  # Slider Styles
+  slider-track-color: "#C7C7CC" # Light gray for track
+  slider-thumb-color: "#007AFF" # Blue for thumb
+  slider-active-track-color: "#007AFF" # Blue for active track
+
+  # Switch Styles
+  switch-checked-color: "#34C759" # Green for checked state
+  switch-unchecked-color: "#C7C7CC" # Gray for unchecked state
+  switch-thumb-color: "#FFFFFF" # White for the thumb
+
+  # Font Styles
+  font-family: "SF Pro Text, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+  font-size: "16px" # Default font size
+  font-weight-regular: "400" # Regular font weight
+  font-weight-bold: "600" # Bold font weight

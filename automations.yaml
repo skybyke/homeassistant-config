@@ -1,0 +1,2233 @@
+- id: '1731128375644'
+  alias: Allocate 15 min to Switch
+  description: ''
+  triggers: []
+  conditions:
+  - condition: numeric_state
+    entity_id: sensor.screentime_remaining
+    above: 14
+  actions:
+  - data:
+      entity_id: number.nintendo_switch_play_time_limit
+      value: '{{ states(''number.nintendo_switch_play_time_limit'') | int + 15 }}
+
+        '
+    action: number.set_value
+  mode: single
+- id: '1731130387608'
+  alias: Screentime Enforcer
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - media_player.tv_upstairs
+    to: 'on'
+  - trigger: state
+    entity_id:
+    - media_player.tv_downstairs
+    to: 'on'
+  - trigger: state
+    entity_id:
+    - media_player.tv_upstairs
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 15
+  - trigger: state
+    entity_id:
+    - media_player.tv_upstairs
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+  - trigger: numeric_state
+    entity_id:
+    - sensor.screentime_remaining_x
+    below: 1
+  - trigger: state
+    entity_id:
+    - input_select.screentime_mode
+    to: Blocked
+  - trigger: state
+    entity_id:
+    - media_player.tv_downstairs
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 15
+  - trigger: state
+    entity_id:
+    - media_player.tv_downstairs
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+  conditions:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.screentime_active
+      state: 'off'
+    - condition: state
+      entity_id: input_select.screentime_mode
+      state: Blocked
+  actions:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: media_player.tv_upstairs
+        state: 'on'
+      sequence:
+      - action: media_player.play_media
+        metadata: {}
+        data:
+          media_content_id: KEY_POWER
+          media_content_type: send_key
+        target:
+          entity_id: media_player.tv_upstairs
+    - conditions:
+      - condition: state
+        entity_id: media_player.tv_downstairs
+        state: 'on'
+      sequence:
+      - action: media_player.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: media_player.tv_downstairs
+  mode: single
+- id: '1731131867794'
+  alias: Daily Screentime Reset
+  description: ''
+  triggers:
+  - at: 03:00:00
+    trigger: time
+  conditions: []
+  actions:
+  - data: {}
+    target:
+      entity_id:
+      - counter.tv_screentime_minutes
+      - counter.tv_nonscreentime_minutes
+      - counter.tv_granted_minutes
+      - counter.tv_total_minutes
+      - counter.tv_upstairs_granted_minutes
+      - counter.tv_upstairs_on_minutes
+      - counter.tv_upstairs_screentime_minutes
+      - counter.tv_upstairs_unauthorized_minutes
+      - counter.tv_upstairs_time_used
+      - counter.iphone_minutes
+    action: counter.reset
+  - data:
+      value: '0'
+    target:
+      entity_id: number.nintendo_switch_play_time_limit
+    action: number.set_value
+  - choose:
+    - conditions:
+      - condition: time
+        weekday:
+        - sat
+        - sun
+      sequence:
+      - data:
+          value: '150'
+        target:
+          entity_id: input_number.screentime_starting_minutes
+        action: number.set_value
+    - conditions:
+      - condition: time
+        weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+      sequence:
+      - data:
+          value: '120'
+        target:
+          entity_id: input_number.screentime_starting_minutes
+        action: number.set_value
+  mode: single
+- id: '1731132075484'
+  alias: Daily Coffee Switch Reset
+  description: ''
+  triggers:
+  - trigger: time
+    at: '13:00:00'
+  - trigger: time
+    at: '15:00:00'
+  - trigger: time
+    at: '17:00:00'
+  conditions:
+  - condition: state
+    entity_id: switch.coffee_switch
+    state: 'on'
+  actions:
+  - type: turn_off
+    device_id: 6b6b6be2fad8618769cbef579c361022
+    entity_id: ad461298a45a78e74868e9d94c461cd2
+    domain: switch
+  mode: single
+- id: '1731135341883'
+  alias: All Lights Out
+  description: ''
+  triggers: []
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data:
+      transition: 10
+    target:
+      area_id:
+      - candys_office
+      - hallway
+      - mudroom
+      - michaels_office
+      - archers_bedroom
+      - porch
+      - archers_bathroom
+      - bedroom
+      - dining_room
+      - front
+      - living_room
+      - kitchen
+      - stairway
+      floor_id:
+      - lower
+      - main
+  mode: single
+- id: '1731173064348'
+  alias: Collect Bird Buddy Postcard
+  description: Automatically collects Bird Buddy postcards when new sightings occur
+  triggers:
+  - event_type: birdbuddy_new_postcard_sighting
+    trigger: event
+  conditions:
+  - condition: template
+    value_template: "{{ \n  trigger.event.data is defined \n  and trigger.event.data.postcard
+      is defined \n  and trigger.event.data.sighting is defined \n}}\n"
+  actions:
+  - target:
+      device_id: c581ed260120c5d6eed0b17cb8870546
+    data:
+      strategy: best_guess
+      best_guess_confidence: 10
+      share_media: false
+      postcard:
+        id: '{{ trigger.event.data.postcard.id }}'
+        device_id: c581ed260120c5d6eed0b17cb8870546
+      sighting:
+        id: '{{ trigger.event.data.sighting.id }}'
+        device_id: c581ed260120c5d6eed0b17cb8870546
+        feeder:
+          id: 9456cc6a-adc5-4700-91ce-66a18ef71603
+          name: Bird Buddy Feeder
+        sightingReport: '{{ trigger.event.data.sighting.sightingReport }}'
+    action: birdbuddy.collect_postcard
+- id: '1731205049434'
+  alias: Michaels 4-Button Controller
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id: sensor.michaels_office_4_button_controller_action
+    to: 1_single
+    id: 1_single
+  - trigger: state
+    entity_id: sensor.michaels_office_4_button_controller_action
+    to: 1_double
+    id: 1_double
+  - trigger: state
+    entity_id: sensor.michaels_office_4_button_controller_action
+    to: 2_single
+    id: 2_single
+  - trigger: state
+    entity_id: sensor.michaels_office_4_button_controller_action
+    to: 2_double
+    id: 2_double
+  - trigger: state
+    entity_id: sensor.michaels_office_4_button_controller_action
+    to: 3_single
+    id: 3_single
+  - trigger: state
+    entity_id: sensor.michaels_office_4_button_controller_action
+    to: 3_double
+    id: 3_double
+  - trigger: state
+    entity_id: sensor.michaels_office_4_button_controller_action
+    to: 4_single
+    id: 4_single
+  - trigger: state
+    entity_id: sensor.michaels_office_4_button_controller_action
+    to: 4_double
+    id: 4_double
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: 1_single
+      sequence:
+      - action: scene.turn_on
+        metadata: {}
+        target:
+          entity_id: scene.michaels_office_low
+    - conditions:
+      - condition: trigger
+        id: 1_double
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          rgb_color:
+          - 4
+          - 255
+          - 0
+        target:
+          entity_id: light.michaels_office_desk_lamp
+    - conditions:
+      - condition: trigger
+        id: 2_single
+      sequence:
+      - action: scene.turn_on
+        metadata: {}
+        target:
+          entity_id: scene.michaels_office_medium
+    - conditions:
+      - condition: trigger
+        id: 2_double
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          rgb_color:
+          - 255
+          - 255
+          - 0
+        target:
+          entity_id: light.michaels_office_desk_lamp
+    - conditions:
+      - condition: trigger
+        id: 3_single
+      sequence:
+      - action: scene.turn_on
+        metadata: {}
+        target:
+          entity_id: scene.michaels_office_high
+    - conditions:
+      - condition: trigger
+        id: 3_double
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          rgb_color:
+          - 0
+          - 255
+          - 255
+        target:
+          entity_id: light.michaels_office_desk_lamp
+    - conditions:
+      - condition: trigger
+        id: 4_single
+      sequence:
+      - action: scene.turn_on
+        metadata: {}
+        target:
+          entity_id: scene.michaels_office_groovy
+    - conditions:
+      - condition: trigger
+        id: 4_double
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          rgb_color:
+          - 255
+          - 165
+          - 0
+        target:
+          entity_id: light.michaels_office_desk_lamp
+  mode: single
+- id: '1731212667632'
+  alias: Lights Out - Except MJK
+  description: ''
+  triggers: []
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data:
+      transition: 5
+    target:
+      area_id:
+      - candys_office
+      - hallway
+      - mudroom
+      - archers_bedroom
+      - porch
+      - archers_bathroom
+      - bedroom
+      - dining_room
+      - front
+      - living_room
+      - kitchen
+      - stairway
+      - garage
+      - hallway_small
+      - bathroom
+      floor_id:
+      - lower
+  - action: fan.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - fan.archers_bathroom_fan
+      - fan.porch_fan_speed
+  mode: single
+- id: '1731281341623'
+  alias: Enter TV Upstairs Code
+  description: ''
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    metadata: {}
+    data:
+      media_content_id: KEY_5+700+KEY_1+700+KEY_5+700+KEY_0
+      media_content_type: send_key
+    target:
+      entity_id: media_player.tv_upstairs
+  mode: single
+- id: '1731281845125'
+  alias: Bedroom Auto On-Off
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.bedroom_door_contact
+    id: door-open
+    to: 'on'
+  - trigger: state
+    entity_id:
+    - binary_sensor.bedroom_motion_occupancy
+    to: 'off'
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+    id: clear
+  conditions:
+  - condition: state
+    entity_id: binary_sensor.bedroom_motion_occupancy
+    state: 'off'
+  - condition: time
+    after: 09:00:00
+    before: '21:30:00'
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - door-open
+      sequence:
+      - choose:
+        - conditions:
+          - condition: time
+            after: 05:00:00
+            before: 07:00:00
+            weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              brightness_pct: 41
+            target:
+              area_id: bedroom
+        - conditions:
+          - condition: time
+            after: 07:00:00
+            weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+            - sat
+            - sun
+            before: '18:00:00'
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              brightness_pct: 100
+            target:
+              area_id:
+              - bedroom
+              - bathroom
+        - conditions:
+          - condition: time
+            after: '18:00:00'
+            weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+            - sat
+            - sun
+            before: '22:00:00'
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              brightness_pct: 40
+            target:
+              area_id:
+              - bedroom
+              - bathroom
+        - conditions:
+          - condition: time
+            after: '22:00:00'
+            weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+            - sat
+            - sun
+            before: 04:00:00
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              brightness_pct: 1
+              transition: 3
+            target:
+              entity_id: light.bedroom_mjk_bedside
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 30
+              milliseconds: 0
+          - action: light.turn_off
+            metadata: {}
+            data: {}
+            target:
+              floor_id:
+              - lower
+              - main
+    - conditions:
+      - condition: trigger
+        id:
+        - clear
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id:
+          - bedroom
+          - bathroom
+  mode: single
+- id: '1731333323876'
+  alias: Garage Lights - Auto On-Off
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.garage_entry_door
+    to: 'on'
+    id: 'on'
+  - trigger: state
+    entity_id:
+    - binary_sensor.garage_entry_door
+    to: 'off'
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+    id: 'off'
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - 'on'
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.garage_overhead_lights_2
+    - conditions:
+      - condition: trigger
+        id:
+        - 'off'
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.garage_overhead_lights_2
+  mode: single
+- id: '1731333630935'
+  alias: Schoolday Routine
+  description: ''
+  triggers:
+  - trigger: time
+    at: 06:55:00
+    id: '6:55'
+  - trigger: time
+    at: 08:20:00
+    id: '8:20'
+  conditions:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - '6:55'
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          transition: 300
+        target:
+          entity_id:
+          - light.bedroom_cck_bedside
+          - light.bedroom_mjk_bedside
+          - light.bedroom_dresser
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 71
+        target:
+          entity_id:
+          - light.kitchen_overhead_lights
+          area_id: dining_room
+      - action: light.turn_on
+        metadata: {}
+        data:
+          transition: 120
+        target:
+          area_id: archers_bedroom
+    default:
+    - action: light.turn_off
+      metadata: {}
+      data: {}
+      target:
+        area_id:
+        - archers_bedroom
+        - archers_bathroom
+    - action: fan.turn_off
+      metadata: {}
+      data: {}
+      target:
+        entity_id: fan.archers_bathroom_fan
+    - action: light.turn_on
+      metadata: {}
+      data:
+        kelvin: 3198
+        brightness_pct: 100
+      target:
+        entity_id: light.kitchen_counter_lights
+  mode: single
+- id: '1731360098357'
+  alias: Auto Eve Assist
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.front_door
+    to: 'on'
+  conditions:
+  - condition: numeric_state
+    entity_id: sun.sun
+    below: 10
+    attribute: elevation
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 100
+      transition: 3
+    target:
+      area_id:
+      - garage
+      - front
+      entity_id:
+      - light.archers_bathroom_light_5
+      - light.porch_lights
+      device_id:
+      - 236f39a821c9bfef7f19a4ceb1ea5066
+      - 5299ce2dd2a4efa4fd54c8272f60f4b4
+      - 32ea6d839fba704deed56f3c87b5d44c
+      - 3bd49fd2a10fcae25c52fe5fad75eba4
+      - 0998bf022d693f5520eabaa7074eeff3
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
+  - action: light.turn_off
+    metadata: {}
+    data:
+      transition: 3
+    target:
+      area_id:
+      - garage
+      - porch
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 48
+      transition: 5
+    target:
+      area_id: front
+  mode: single
+- id: '1731363273605'
+  alias: Alert - Archers Watch Low Battery Alert
+  description: Archer's Watch Low Battery Alert
+  triggers:
+  - entity_id:
+    - sensor.archers_apple_watch_battery
+    below: 26
+    trigger: numeric_state
+  - entity_id:
+    - sensor.archers_apple_watch_battery
+    below: 21
+    trigger: numeric_state
+  - entity_id:
+    - sensor.archers_apple_watch_battery
+    below: 16
+    trigger: numeric_state
+  - trigger: state
+    entity_id:
+    - sensor.archers_apple_watch_battery_status
+    to: Charging
+    id: charging
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - charging
+      - condition: numeric_state
+        entity_id: sensor.archers_watch_battery
+        below: 25
+      sequence:
+      - data:
+          message: Archer's watch is now charging.
+        action: notify.mobile_app_mjk_iphone
+      - data:
+          message: Archer's watch is now charging.
+        action: notify.mobile_app_candy_s_phone
+        enabled: false
+    default:
+    - data:
+        title: Archer's Watch Battery Alert
+        message: Archer's watch battery is low at {{ trigger.to_state.state }}%  ({{
+          'Not Charging' if states('sensor.archers_apple_watch_battery_status') ==
+          'NotCharging'  else states('sensor.archers_apple_watch_battery_status')
+          }}).
+      action: notify.mobile_app_mjk_iphone
+    - action: tts.speak
+      target:
+        entity_id: tts.home_assistant_cloud
+      data:
+        media_player_entity_id: media_player.archers_bedroom_speaker_2
+        message: Archer, your watch battery is low at {{ trigger.to_state.state }}%.
+          Please plug it in.
+    - data:
+        message: Archer's watch battery is low at {{ trigger.to_state.state }}%  ({{
+          'Not Charging' if states('sensor.archers_watch_battery_status') == 'NotCharging'  else
+          states('sensor.archers_watch_battery_status') }}).
+      action: notify.mobile_app_candy_s_phone
+      enabled: false
+  mode: single
+- id: '1731412649533'
+  alias: Dogs Were Fed
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.dog_food_container
+    to: 'off'
+    for:
+      hours: 0
+      minutes: 1
+      seconds: 0
+    from: 'on'
+  conditions: []
+  actions:
+  - action: script.dogs_last_fed
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1731413955104'
+  alias: Living Room Auto On
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.sensor_presence_group_entryway
+    - binary_sensor.sensor_presence_group_dining_room
+    from: 'off'
+    to: 'on'
+    id: detected
+  - trigger: state
+    entity_id:
+    - binary_sensor.sensor_presence_group_entryway
+    - binary_sensor.sensor_presence_group_dining_room
+    from: 'on'
+    to: 'off'
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+    id: clear
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - detected
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          area_id:
+          - living_room
+          - kitchen
+          - dining_room
+      - if:
+        - condition: numeric_state
+          entity_id: sensor.overall_living_area_illuminance
+          above: 27
+        then:
+        - action: light.turn_on
+          metadata: {}
+          data:
+            brightness_pct: 100
+          target:
+            area_id:
+            - living_room
+            - kitchen
+            - dining_room
+        else:
+        - action: light.turn_on
+          metadata: {}
+          data:
+            brightness_pct: 52
+          target:
+            area_id:
+            - living_room
+            - kitchen
+            - dining_room
+    - conditions:
+      - condition: trigger
+        id:
+        - clear
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          area_id:
+          - living_room
+          - kitchen
+          - dining_room
+  mode: single
+- id: '1731508866385'
+  alias: Reset Manual Screentime Mode Change
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - input_select.screentime_mode
+    to: Blocked
+    for:
+      hours: 3
+      minutes: 0
+      seconds: 0
+  - trigger: state
+    entity_id:
+    - input_select.screentime_mode
+    to: Granted
+    for:
+      hours: 3
+      minutes: 0
+      seconds: 0
+  conditions: []
+  actions:
+  - action: input_select.select_option
+    metadata: {}
+    data:
+      option: Default
+    target:
+      entity_id: input_select.screentime_mode
+  mode: single
+- id: '1731594320640'
+  alias: Alert - Window Opened
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.downstairs_window_1_contact
+    - binary_sensor.downstairs_window_2_contact
+    - binary_sensor.downstairs_window_3_contact
+    - binary_sensor.downstairs_window_4_contact
+    - binary_sensor.downstairs_window_5_contact
+    - binary_sensor.downstairs_window_6_contact
+    to: 'on'
+    id: downstairs
+  - trigger: state
+    entity_id:
+    - binary_sensor.archers_bedroom_window_back_contact
+    - binary_sensor.archers_bedroom_window_side_contact
+    to: 'on'
+    id: archers_bedroom
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - archers_bedroom
+      sequence:
+      - action: notify.mobile_app_mjk_iphone
+        metadata: {}
+        data:
+          message: A window has been opened in Archer's Bedroom.
+          title: ALERT!
+      - action: notify.mobile_app_candy_s_phone
+        metadata: {}
+        data:
+          message: A window has been opened in Archer's Bedroom.
+          title: ALERT!
+    default:
+    - action: notify.mobile_app_mjk_iphone
+      metadata: {}
+      data:
+        message: A downstairs window has been opened.
+        title: ALERT!
+    - action: notify.mobile_app_candy_s_phone
+      metadata: {}
+      data:
+        message: A downstairs window has been opened.
+        title: ALERT!
+  mode: single
+- id: '1731596842754'
+  alias: Export System Information
+  description: Creates a detailed system information notification with system status
+  triggers: []
+  actions:
+  - data:
+      title: System Information Export
+      message: "System Information:\n  Core Version: {{ states('sensor.home_assistant_core_update')
+        }}\n  Supervisor Version: {{ states('sensor.home_assistant_supervisor_update')
+        }}\n  OS Version: {{ states('sensor.home_assistant_operating_system_update')
+        }}\n\nAdd-ons:\n  {% for addon in states.update | selectattr('entity_id',
+        'match', '^update\\..*_update$') | list %}\n  - {{ addon.name }}: {{ addon.attributes.installed_version
+        }}\n  {% endfor %}\n\nEntity Counts:\n  {% for domain in states | groupby('domain')
+        %}\n  {{ domain[0] }}: {{ domain[1] | length }}\n  {% endfor %}\n\nActive
+        Devices:\n  Lights: {{ states.light | length }}\n  Switches: {{ states.switch
+        | length }}\n  Sensors: {{ states.binary_sensor | length }}\n\nDevice Health:\n
+        \ Offline Devices:\n  {% for device in states.sensor | selectattr('entity_id',
+        'match', '.*_status$') | selectattr('state', 'eq', 'dead') %}\n  - {{ device.name
+        }}\n  {% endfor %}\n\nBackup Status:\n  Last Backup: {{ states.sensor.backup_state.attributes.last_backup
+        }}\n  Storage: {{ states.sensor.backup_state.attributes.size_in_google_drive
+        }}\n\nGenerated: {{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+    action: persistent_notification.create
+- id: '1731606262572'
+  alias: Living Area - Auto On-Off
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.sensor_presence_group_entryway
+    - binary_sensor.sensor_presence_group_dining_room
+    to: 'off'
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+    id: clear
+  - trigger: state
+    entity_id:
+    - binary_sensor.sensor_presence_group_entryway
+    to: 'on'
+    id: detected
+  - trigger: state
+    entity_id:
+    - binary_sensor.sensor_presence_group_dining_room
+    to: 'on'
+    id: detected
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - clear
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        data:
+          transition: 5
+        target:
+          area_id:
+          - hallway
+          - kitchen
+          - living_room
+          - dining_room
+          - stairway
+    - conditions:
+      - condition: trigger
+        id:
+        - detected
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 100
+        target:
+          area_id:
+          - living_room
+          - kitchen
+          - dining_room
+  mode: single
+- id: '1731795483839'
+  alias: Hallway Auto On-Off
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.hallway_motion_by_doorbell_sensor_occupancy
+    - binary_sensor.hallway_occupancy_group
+    to: 'on'
+    id: detected
+  - trigger: state
+    entity_id:
+    - binary_sensor.hallway_occupancy_group
+    to: 'off'
+    for:
+      hours: 0
+      minutes: 1
+      seconds: 0
+    id: clear
+  conditions:
+  - condition: state
+    entity_id: light.hallway_lights
+    state: 'off'
+    enabled: false
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - clear
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id: hallway
+    - conditions:
+      - condition: time
+        after: 04:00:00
+        before: 06:00:00
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 21
+        target:
+          entity_id: light.garage_entry_lamp
+    - conditions:
+      - condition: time
+        after: 06:00:00
+        before: 08:00:00
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 10
+        target:
+          area_id: hallway
+    - conditions:
+      - condition: time
+        after: 08:00:00
+        before: '17:00:00'
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 100
+        target:
+          area_id: hallway
+    - conditions:
+      - condition: time
+        after: '18:00:00'
+        before: '22:00:00'
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 10
+        target:
+          area_id: hallway
+    - conditions:
+      - condition: time
+        after: '22:00:00'
+        before: 05:00:00
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 10
+        target:
+          entity_id: light.garage_entry_lamp
+  mode: single
+- id: '1731803112774'
+  alias: Action - M1 Pee
+  description: ''
+  triggers:
+  - event_data:
+      actionID: M1_Pee
+    event_type: ios.action_fired
+    trigger: event
+  conditions: []
+  actions:
+  - action: script.update_m1_pee
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1731803212215'
+  alias: Action - M1 Poo
+  description: ''
+  triggers:
+  - event_type: ios.action_fired
+    event_data:
+      actionID: M1_Poo
+    trigger: event
+  conditions: []
+  actions:
+  - action: script.update_m1_poo
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1731803260629'
+  alias: Action - M2 Pee
+  description: ''
+  triggers:
+  - event_type: ios.action_fired
+    event_data:
+      actionID: M2_Pee
+    trigger: event
+  conditions: []
+  actions:
+  - action: script.update_m2_pee
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1731803292582'
+  alias: Action - M2 Poo
+  description: ''
+  triggers:
+  - event_type: ios.action_fired
+    event_data:
+      actionID: M2_Poo
+    trigger: event
+  conditions: []
+  actions:
+  - action: script.update_m2_poo
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1731806560882'
+  alias: Ac1
+  description: ''
+  triggers:
+  - event_data:
+      actionID: 8F5B542B-C3BA-4AF6-B919-42D31018DE62
+    event_type: ios.action_fired
+    trigger: event
+  conditions: []
+  actions:
+  - action: script.update_m1_pee
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1731806660819'
+  alias: M12
+  description: ''
+  triggers:
+  - event_data:
+      actionID: 9E9C8A14-E62C-4BA5-BC3E-D0C75B42C12B
+    event_type: ios.action_fired
+    trigger: event
+  conditions: []
+  actions:
+  - action: script.update_m1_poo
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1731806767980'
+  alias: New m21
+  description: ''
+  triggers:
+  - event_data:
+      actionID: F50C7451-9E5E-43D1-8B12-7FB62F12CF4F
+    event_type: ios.action_fired
+    trigger: event
+  conditions: []
+  actions:
+  - action: script.update_m2_pee
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1731806832123'
+  alias: New m2 poo
+  description: ''
+  triggers:
+  - event_type: ios.action_fired
+    event_data:
+      actionID: 036A5924-E60B-4AE2-A263-7F9B6624F133
+    trigger: event
+  conditions: []
+  actions:
+  - action: script.update_m2_poo
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1731929957955'
+  alias: Archers Bathroom Fan - Auto Off
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - fan.archers_bathroom_fan
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
+  conditions: []
+  actions:
+  - action: fan.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: fan.archers_bathroom_fan
+  mode: single
+- id: '1731969454534'
+  alias: 'Toggle Art Mode TV Upstairs '
+  description: ''
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    metadata: {}
+    data:
+      media_content_id: KEY_POWER
+      media_content_type: send_key
+    target:
+      entity_id: media_player.tv_upstairs
+  mode: single
+- id: '1732391307961'
+  alias: Alert - Test
+  description: ''
+  triggers:
+  - trigger: zone
+    entity_id: person.candy
+    zone: zone.near_home
+    event: enter
+  conditions: []
+  actions:
+  - action: script.play_test_sound
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1732482799921'
+  alias: Alert - People About
+  description: ''
+  triggers:
+  - entity_id: binary_sensor.bedroom_door_contact
+    to: 'on'
+    trigger: state
+    id: candy
+  - entity_id:
+    - binary_sensor.archers_bedroom_door_contact
+    to: 'on'
+    trigger: state
+    id: archer
+  - trigger: state
+    entity_id:
+    - binary_sensor.small_hallway_occupancy
+    to: 'on'
+    id: hallway
+  actions:
+  - data:
+      scene_id: temp_desk_lamp_state
+      snapshot_entities:
+      - light.michaels_office_desk_lamp
+    action: scene.create
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - candy
+      sequence:
+      - target:
+          entity_id: light.michaels_office_desk_lamp
+        data:
+          rgb_color:
+          - 255
+          - 0
+          - 234
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id:
+        - archer
+      sequence:
+      - target:
+          entity_id: light.michaels_office_desk_lamp
+        data:
+          rgb_color:
+          - 0
+          - 8
+          - 255
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id:
+        - hallway
+      sequence:
+      - target:
+          entity_id: light.michaels_office_desk_lamp
+        data:
+          rgb_color:
+          - 0
+          - 255
+          - 42
+        action: light.turn_on
+  - delay:
+      seconds: 2
+  - target:
+      entity_id: scene.temp_desk_lamp_state
+    action: scene.turn_on
+    data: {}
+- id: '1732714509769'
+  alias: Increment TV Time Counters
+  description: ''
+  triggers:
+  - minutes: /1
+    trigger: time_pattern
+  conditions:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: media_player.tv_downstairs
+      state: 'on'
+    - condition: state
+      entity_id: media_player.tv_upstairs
+      state: 'on'
+  actions:
+  - target:
+      entity_id: counter.tv_total_minutes
+    action: counter.increment
+    data: {}
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: input_select.screentime_mode
+        state: Granted
+      sequence:
+      - action: counter.increment
+        data: {}
+        target:
+          entity_id: counter.tv_granted_minutes
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.screentime_active
+        state: 'on'
+      sequence:
+      - target:
+          entity_id: counter.tv_screentime_minutes
+        action: counter.increment
+        data: {}
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.screentime_active
+        state: 'off'
+      sequence:
+      - target:
+          entity_id: counter.tv_nonscreentime_minutes
+        action: counter.increment
+        data: {}
+  mode: single
+- id: '1732720277276'
+  alias: Reset Button Pressed States
+  description: ''
+  triggers:
+  - entity_id:
+    - input_boolean.michaels_office_low_pressed
+    - input_boolean.michaels_office_medium_pressed
+    - input_boolean.michaels_office_high_pressed
+    - input_boolean.michaels_office_groovy_pressed
+    to: 'on'
+    for:
+      seconds: 5
+    trigger: state
+  actions:
+  - target:
+      entity_id: '{{ trigger.entity_id }}'
+    action: input_boolean.turn_off
+  mode: single
+- id: '1733025697507'
+  alias: Alert - Take out Garbage
+  description: Take out Garbage
+  triggers:
+  - at: 00:00:00
+    trigger: time
+    enabled: true
+  conditions:
+  - condition: time
+    weekday:
+    - sun
+    enabled: true
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: Take out Garbage
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: yellow
+    action: input_select.select_option
+- id: '1733027085378'
+  alias: Reset Alert
+  description: ''
+  triggers: []
+  conditions: []
+  actions:
+  - action: input_text.set_value
+    metadata: {}
+    data: ''
+    target:
+      entity_id: input_text.alert_message
+  mode: single
+- id: '1733105419390'
+  alias: Archer's Daily Homework Announcement
+  description: Archer's Daily Homework Announcements
+  triggers:
+  - at: '17:00:00'
+    trigger: time
+  conditions:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - target:
+      entity_id: media_player.michaels_office_mini
+    data:
+      media_content_id: "{% set announcements = [\n  \"/local/audio/alerts/homework1.mp3\",\n
+        \ \"/local/audio/alerts/homework2.mp3\",\n  \"/local/audio/alerts/homework3.mp3\",\n
+        \ \"/local/audio/alerts/homework4.mp3\",\n  \"/local/audio/alerts/homework5.mp3\",\n
+        \ \"/local/audio/alerts/homework6.mp3\",\n  \"/local/audio/alerts/homework7.mp3\"\n]
+        %} {{ announcements | random }}"
+      media_content_type: music
+    action: media_player.play_media
+- id: '1733105808240'
+  description: Reminder - Archers Watch and Chromebook 1
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_mini
+    data:
+      media_content_id: /local/audio/alerts/watch_chromebook_1.mp3
+      media_content_type: music
+  mode: single
+- id: '1733106057564'
+  alias: Reminder - Archers Watch and Chromebook 2
+  description: Reminder - Archers Watch and Chromebook 2
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_mini
+    data:
+      media_content_id: /local/audio/alerts/watch_chromebook_2.mp3
+      media_content_type: music
+  mode: single
+- id: '1733106118412'
+  alias: Alert _ Archers Watch is Low 1
+  description: Alert _ Archers Watch is Low 1
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_mini
+    data:
+      media_content_id: /local/audio/alerts/archers_watch_low_1.mp3
+      media_content_type: music
+  mode: single
+- id: '1733106134822'
+  alias: Alert - Archers Watch is Low 2
+  description: Alert _ Archers Watch is Low 2
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_mini
+    data:
+      media_content_id: /local/audio/alerts/archers_watch_low_2.mp3
+      media_content_type: music
+  mode: single
+- id: '1733350121440'
+  alias: Record Snow Plow Visit
+  description: Record Snow Plow Visit
+  triggers:
+  - event_type: record_plow_visit
+    trigger: event
+  conditions:
+  - condition: template
+    value_template: "{% set last_plow = states('input_datetime.last_plow_time') %}
+      {% if last_plow != 'unavailable' and last_plow != 'unknown' %}\n  {% set hours_since
+      = ((now() - strptime(last_plow, '%Y-%m-%d %H:%M:%S')) | as_timedelta).total_seconds()
+      / 3600 %}\n  {{ hours_since > 4 }}\n{% else %}\n  true\n{% endif %}\n"
+    enabled: false
+  actions:
+  - target:
+      entity_id: counter.driveway_plows
+    action: counter.increment
+    data: {}
+  - target:
+      entity_id: input_datetime.last_plow_time
+    data:
+      datetime: '{{ now().strftime(''%Y-%m-%d %H:%M:%S'') }}'
+    action: input_datetime.set_datetime
+  - data:
+      message: 'Snow plow visit recorded. Total visits this season: {{ states(''counter.driveway_plows'')
+        }}'
+    action: notify.notify
+- id: '1733520400119'
+  alias: Nanoleaf Gestures
+  description: ''
+  use_blueprint:
+    path: ldvc86/Nanoleaf.yaml
+    input:
+      Nano_device: 53543dfb1936ba53113747be7acf8c5b
+      swipe_left:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          rgb_color:
+          - 255
+          - 0
+          - 0
+        target:
+          entity_id: light.michaels_office_desk_lamp
+      swipe_right:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          rgb_color:
+          - 0
+          - 255
+          - 0
+        target:
+          entity_id: light.michaels_office_desk_lamp
+      swipe_up:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          rgb_color:
+          - 0
+          - 0
+          - 255
+        target:
+          entity_id: light.michaels_office_desk_lamp
+      swipe_down:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          rgb_color:
+          - 255
+          - 255
+          - 255
+        target:
+          entity_id: light.michaels_office_desk_lamp
+- id: '1733599456605'
+  alias: Alert - Candy is Heading Home
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.eva_route
+    to: home
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    metadata:
+      title: candy_entered_saugatuck_area.mp3
+      thumbnail:
+      media_class: music
+      children_media_class:
+      navigateIds:
+      - {}
+      - media_content_type: app
+        media_content_id: media-source://media_source
+    data:
+      media_content_id: media-source://media_source/local/www/audio/alerts/candy_heading_home_1.mp3
+      media_content_type: audio/mpeg
+    target:
+      entity_id: media_player.michaels_office_mini
+  mode: single
+- id: '1733600644756'
+  alias: Announce - Candy Heading Home
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.eva_route
+    to: home
+    for:
+      hours: 0
+      minutes: 1
+      seconds: 0
+  conditions: []
+  actions:
+  - action: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.5
+    enabled: true
+    target:
+      entity_id: media_player.michaels_office_speaker
+  - action: script.announce_candy_heading_home
+    metadata: {}
+    data: {}
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
+  - action: script.announce_candy_heading_home
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1733601804913'
+  alias: Announce - Candy is Almost Home
+  description: ''
+  triggers:
+  - trigger: zone
+    entity_id: device_tracker.candys_phone
+    zone: zone.near_home
+    event: enter
+  - trigger: zone
+    entity_id: device_tracker.candys_phone_2
+    zone: zone.near_home
+    event: enter
+  conditions: []
+  actions:
+  - action: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.5
+    target:
+      entity_id: media_player.michaels_office_mini
+    enabled: true
+  - action: script.announce_candy_entered_saugatuck_area
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1733601896954'
+  alias: Announce - Candy Leaving Holland
+  description: ''
+  triggers:
+  - trigger: zone
+    entity_id: device_tracker.candys_phone
+    zone: zone.holland
+    event: leave
+  - trigger: zone
+    entity_id: device_tracker.candys_phone_2
+    zone: zone.holland
+    event: leave
+  conditions: []
+  actions:
+  - action: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.5
+    target:
+      entity_id: media_player.michaels_office_mini
+    enabled: true
+  - action: script.announce_candy_leaving_holland
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1733753670308'
+  alias: Decrement Screentime Delay Counter
+  description: Decrements screentime_delay counter every minute until zero
+  triggers:
+  - minutes: '*'
+    trigger: time_pattern
+  conditions:
+  - condition: numeric_state
+    entity_id: counter.screentime_delay
+    above: 0
+  actions:
+  - target:
+      entity_id: counter.screentime_delay
+    action: counter.decrement
+    data: {}
+  - if:
+    - condition: numeric_state
+      entity_id: counter.screentime_delay
+      below: 1
+    then:
+    - action: automation.turn_off
+      data:
+        stop_actions: false
+      target:
+        entity_id: automation.decrement_screentime_delay_counter
+  mode: single
+  initial_state: false
+- id: '1734611585314'
+  alias: Wall Panel Charge Cycle
+  description: ''
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - sensor.wall_panel_battery_state
+    above: 89
+    id: High
+  - trigger: numeric_state
+    entity_id:
+    - sensor.wall_panel_battery_state
+    below: 6
+    id: Low
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 181fa316f44997334c311617e79ff259
+    entity_id: 62f20e2c011305f5a122e83abe1fd85d
+    domain: switch
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - High
+      sequence:
+      - type: turn_off
+        device_id: 181fa316f44997334c311617e79ff259
+        entity_id: 62f20e2c011305f5a122e83abe1fd85d
+        domain: switch
+    - conditions:
+      - condition: trigger
+        id:
+        - Low
+      sequence:
+      - type: turn_on
+        device_id: 181fa316f44997334c311617e79ff259
+        entity_id: 62f20e2c011305f5a122e83abe1fd85d
+        domain: switch
+  mode: single
+- id: '1734702652083'
+  alias: Announce - Candy Has Arrived
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - person.candy
+    to: home
+  - trigger: state
+    entity_id:
+    - device_tracker.eva_location
+    to: home
+  conditions:
+  - condition: state
+    entity_id: person.michael
+    state: home
+  actions:
+  - action: script.announce_candy_has_arrived
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1736285176354'
+  alias: Grade Change Notification
+  description: Grade Change Notification
+  triggers:
+  - entity_id:
+    - sensor.grade_math
+    - sensor.grade_social_studies
+    - sensor.grade_band
+    - sensor.grade_language_arts
+    trigger: state
+  actions:
+  - data:
+      title: Grade Update
+      message: '{{ trigger.to_state.name }} changed to {{ trigger.to_state.state }}'
+    action: notify.notify
+    enabled: false
+- id: '1736287165286'
+  alias: Install Python Requirements on Start
+  description: Install Python Requirements on Start
+  triggers:
+  - event: start
+    trigger: homeassistant
+  actions:
+  - action: shell_command.pip_install
+- id: '1736535906058'
+  alias: Update PowerSchool Grades
+  description: Update PowerSchool Grades
+  triggers:
+  - hours: '16'
+    trigger: time_pattern
+  actions:
+  - action: shell_command.get_grades
+  - delay: 00:00:30
+  - action: homeassistant.reload_config_entry
+    data: {}
+- id: '1736602947668'
+  alias: Bird Visit Logger
+  triggers:
+  - event_type: birdbuddy_new_postcard_sighting
+    trigger: event
+  conditions:
+  - condition: template
+    value_template: "{{ \n  trigger.event.data is defined \n  and trigger.event.data.postcard
+      is defined \n  and trigger.event.data.postcard.id is defined\n  and trigger.event.data.postcard.device_id
+      is defined\n}}\n"
+  actions:
+  - data:
+      message: "{% if trigger.event.data.species is defined %}\n  {{ trigger.event.data.species
+        }} visited at {{ now().strftime('%Y-%m-%d %H:%M:%S') }}\n{% else %}\n  Unknown
+        bird visited at {{ now().strftime('%Y-%m-%d %H:%M:%S') }}\n{% endif %}\n"
+      level: info
+    action: system_log.write
+  - target:
+      entity_id: sensor.total_bird_visits_today
+    action: homeassistant.update_entity
+  - target:
+      entity_id: input_text.bird_species_list
+    data:
+      value: "{% set current_list = states('input_text.bird_species_list') | default('[]')
+        | from_json %} {% if trigger.event.data.species is defined %}\n  {% set new_species
+        = trigger.event.data.species %}\n  {% if new_species not in current_list %}\n
+        \   {{ (current_list + [new_species]) | tojson }}\n  {% else %}\n    {{ current_list
+        | tojson }}\n  {% endif %}\n{% else %}\n  {{ current_list | tojson }}\n{%
+        endif %}\n"
+    action: input_text.set_value
+- id: '1736603929611'
+  alias: Alert - Window or Door Open
+  description: Alerts when any window or door is left open
+  triggers:
+  - entity_id:
+    - binary_sensor.windows_open
+    - binary_sensor.doors_open
+    to: 'on'
+    trigger: state
+  conditions: []
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: "{% if trigger.entity_id == 'binary_sensor.windows_open' %}\n  Open windows:
+        {{ states('sensor.open_windows_list') }}\n{% else %}\n  Open doors: {{ states('sensor.open_doors_list')
+        }}\n{% endif %}"
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: critical
+    action: input_select.select_option
+  - data:
+      message: "{% if trigger.entity_id == 'binary_sensor.windows_open' %}\n  Open
+        windows: {{ states('sensor.open_windows_list') }}\n{% else %}\n  Open doors:
+        {{ states('sensor.open_doors_list') }}\n{% endif %}"
+      title: Security Alert
+    action: notify.mobile_app_mjk_iphone
+  mode: single
+- id: '1736603957127'
+  alias: Alert - Low Battery Devices
+  description: Monitor battery levels of important devices
+  triggers:
+  - entity_id:
+    - sensor.archers_apple_watch_battery
+    below: 25
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: '{{ trigger.to_state.attributes.friendly_name }} battery at {{ trigger.to_state.state
+        }}%'
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: warning
+    action: input_select.select_option
+  - data:
+      message: '{{ trigger.to_state.attributes.friendly_name }} battery at {{ trigger.to_state.state
+        }}%'
+      title: Low Battery Alert
+    action: notify.mobile_app_mjk_iphone
+  mode: single
+- id: '1736603990555'
+  alias: Alert - Garbage Day
+  description: Reminder for garbage day
+  triggers:
+  - at: 00:00:00
+    trigger: time
+  conditions:
+  - condition: time
+    weekday:
+    - sun
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: Take out Garbage
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: info
+    action: input_select.select_option
+  mode: single
+- id: '1736604037040'
+  alias: Alert - Temperature Comfort
+  description: Alerts when temperature is outside comfort range
+  triggers:
+  - entity_id: sensor.overall_living_area_illuminance
+    above: 78
+    trigger: numeric_state
+  - entity_id: sensor.overall_living_area_illuminance
+    below: 68
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: "{% if trigger.above is defined %}\n  Temperature is too high ({{ states(trigger.entity_id)
+        }}°)\n{% else %}\n  Temperature is too low ({{ states(trigger.entity_id) }}°)\n{%
+        endif %}"
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: warning
+    action: input_select.select_option
+  mode: single
+- id: '1736604064678'
+  alias: Alert - Bird Feeder Activity
+  description: Alerts for notable bird activity
+  triggers:
+  - entity_id: sensor.other_bird_species_visits_today
+    to: '1'
+    trigger: state
+  - entity_id: sensor.unique_bird_species_today
+    above: 5
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: "{% if trigger.entity_id == 'sensor.other_bird_species_visits_today'
+        %}\n  New bird species spotted: {{ states('sensor.saugatucksparrows_bird_bud_recent_visitor')
+        }}!\n{% else %}\n  High bird activity today! {{ states('sensor.unique_bird_species_today')
+        }} different species.\n{% endif %}"
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: info
+    action: input_select.select_option
+  mode: single
+- id: '1736604115424'
+  alias: Alert - Archer Schedule
+  description: Important schedule reminders for Archer
+  triggers:
+  - entity_id: sensor.grade_math
+    trigger: state
+  - entity_id: sensor.grade_social_studies
+    trigger: state
+  - entity_id: sensor.grade_language_arts
+    trigger: state
+  conditions:
+  - condition: template
+    value_template: "{% set grade = trigger.to_state.state | regex_findall('([A-F][+-]?)(\\d+)')
+      | first %} {% set letter = grade[0] %} {% if letter in ['D', 'F'] or (letter
+      == 'C' and '-' in grade[0]) %}\n  true\n{% else %}\n  false\n{% endif %}"
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: 'Grade alert: {{ trigger.to_state.name }} is now {{ trigger.to_state.state
+        }}'
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: warning
+    action: input_select.select_option
+  mode: single
+- id: '1736604149594'
+  alias: Alert - Coffee Maker Left On
+  description: Alert when coffee maker has been on too long
+  triggers:
+  - entity_id: switch.coffee_switch
+    to: 'on'
+    for:
+      hours: 2
+    trigger: state
+  conditions: []
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: Coffee maker has been on for 2 hours
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: warning
+    action: input_select.select_option
+  mode: single
+- id: '1736604169027'
+  alias: Alert - Weather Conditions
+  description: Alerts for significant weather conditions
+  triggers:
+  - entity_id: sensor.pirateweather_precip_probability
+    above: 70
+    trigger: numeric_state
+  - entity_id: sensor.pirateweather_wind_speed
+    above: 20
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: "{% if trigger.entity_id == 'sensor.pirateweather_precip_probability'
+        %}\n  High chance of precipitation ({{ states('sensor.pirateweather_precip_probability')
+        }}%)\n  Type: {{ states('sensor.pirateweather_precip_type') }}\n{% else %}\n
+        \ High winds detected: {{ states('sensor.pirateweather_wind_speed') }} mph\n{%
+        endif %}"
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: warning
+    action: input_select.select_option
+  mode: single
+- id: '1736604192029'
+  alias: Alert - Screen Time Warning
+  description: Alert when screen time is almost used up
+  triggers:
+  - entity_id: sensor.screentime_remaining_x
+    below: 15
+    trigger: numeric_state
+  conditions:
+  - condition: numeric_state
+    entity_id: sensor.screentime_remaining_x
+    above: 0
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: 'Screen time warning: {{ states(''sensor.screentime_remaining_x'') }}
+        minutes remaining'
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: warning
+    action: input_select.select_option
+  mode: single
+- id: '1736604359088'
+  alias: Alert - Dogs Need Feeding
+  description: Alert when dogs haven't been fed on schedule
+  triggers:
+  - at: 09:30:00
+    id: morning_check
+    trigger: time
+  - at: '19:30:00'
+    id: evening_check
+    trigger: time
+  conditions:
+  - condition: or
+    conditions:
+    - condition: and
+      conditions:
+      - condition: trigger
+        id: morning_check
+      - condition: template
+        value_template: "{% set last_fed = states('input_datetime.dogs_last_fed')
+          %} {% if last_fed != 'unavailable' and last_fed != 'unknown' %}\n  {% set
+          last_fed_date = strptime(last_fed, '%Y-%m-%d %H:%M:%S') %}\n  {% set today_start
+          = now().replace(hour=0, minute=0, second=0, microsecond=0) %}\n  {{ last_fed_date
+          < today_start }}\n{% else %}\n  true\n{% endif %}"
+    - condition: and
+      conditions:
+      - condition: trigger
+        id: evening_check
+      - condition: template
+        value_template: "{% set last_fed = states('input_datetime.dogs_last_fed')
+          %} {% if last_fed != 'unavailable' and last_fed != 'unknown' %}\n  {% set
+          last_fed_time = strptime(last_fed, '%Y-%m-%d %H:%M:%S') %}\n  {% set hours_since
+          = ((now() - last_fed_time).total_seconds() / 3600) | round(2) %}\n  {{ hours_since
+          > 4 }}\n{% else %}\n  true\n{% endif %}"
+  actions:
+  - target:
+      entity_id: input_text.alert_message
+    data:
+      value: "{% if trigger.id == 'morning_check' %}\n  Dogs need morning feeding\n{%
+        else %}\n  Dogs need evening feeding\n{% endif %}"
+    action: input_text.set_value
+  - target:
+      entity_id: input_select.alert_severity
+    data:
+      option: warning
+    action: input_select.select_option
+  - data:
+      message: "{% if trigger.id == 'morning_check' %}\n  Dogs need morning feeding\n{%
+        else %}\n  Dogs need evening feeding\n{% endif %}"
+      title: Dog Feeding Alert
+    action: notify.mobile_app_mjk_iphone
+  mode: single
+- id: '1736604595105'
+  alias: Alert - Dogs Need Bathroom Break
+  description: Alert when dogs haven't been let out on schedule
+  triggers:
+  - at: 09:00:00
+    id: morning_check
+    trigger: time
+  - hours: '*'
+    minutes: '0'
+    id: hourly_check
+    trigger: time_pattern
+  conditions:
+  - condition: or
+    conditions:
+    - condition: trigger
+      id: morning_check
+    - condition: and
+      conditions:
+      - condition: trigger
+        id: hourly_check
+      - condition: time
+        after: 09:00:00
+        before: '21:00:00'
+  actions:
+  - variables:
+      m1_last_pee: '{{ states(''input_datetime.m1_last_pee'') }}'
+      m1_last_poo: '{{ states(''input_datetime.m1_last_poo'') }}'
+      m2_last_pee: '{{ states(''input_datetime.m2_last_pee'') }}'
+      m2_last_poo: '{{ states(''input_datetime.m2_last_poo'') }}'
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: morning_check
+      - condition: template
+        value_template: "{% set today_start = now().replace(hour=0, minute=0, second=0,
+          microsecond=0) %} {% set needs_out = false %} {% for timestamp in [m1_last_pee,
+          m1_last_poo, m2_last_pee, m2_last_poo] %}\n  {% if timestamp != 'unavailable'
+          and timestamp != 'unknown' %}\n    {% if strptime(timestamp, '%Y-%m-%d %H:%M:%S')
+          < today_start %}\n      {% set needs_out = true %}\n    {% endif %}\n  {%
+          else %}\n    {% set needs_out = true %}\n  {% endif %}\n{% endfor %} {{
+          needs_out }}"
+      sequence:
+      - target:
+          entity_id: input_text.alert_message
+        data:
+          value: Dogs need morning bathroom break
+        action: input_text.set_value
+      - target:
+          entity_id: input_select.alert_severity
+        data:
+          option: warning
+        action: input_select.select_option
+      - data:
+          message: Dogs need morning bathroom break
+          title: Dog Bathroom Alert
+        action: notify.mobile_app_mjk_iphone
+    - conditions:
+      - condition: trigger
+        id: hourly_check
+      - condition: template
+        value_template: "{% set needs_out = false %} {% for timestamp in [m1_last_pee,
+          m1_last_poo, m2_last_pee, m2_last_poo] %}\n  {% if timestamp != 'unavailable'
+          and timestamp != 'unknown' %}\n    {% set hours_since = ((now() - strptime(timestamp,
+          '%Y-%m-%d %H:%M:%S')).total_seconds() / 3600) | round(2) %}\n    {% if hours_since
+          > 6 %}\n      {% set needs_out = true %}\n    {% endif %}\n  {% else %}\n
+          \   {% set needs_out = true %}\n  {% endif %}\n{% endfor %} {{ needs_out
+          }}"
+      sequence:
+      - target:
+          entity_id: input_text.alert_message
+        data:
+          value: Dogs haven't been out in over 6 hours
+        action: input_text.set_value
+      - target:
+          entity_id: input_select.alert_severity
+        data:
+          option: warning
+        action: input_select.select_option
+      - data:
+          message: Dogs haven't been out in over 6 hours
+          title: Dog Bathroom Alert
+        action: notify.mobile_app_mjk_iphone
+  mode: single
+- id: '1736605196662'
+  alias: Prepare Backup Files
+  description: ''
+  triggers:
+  - at: 03:00:00
+    trigger: time
+  actions:
+  - action: shell_command.copy_backup_files

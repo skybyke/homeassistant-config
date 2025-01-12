@@ -1,0 +1,1635 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "homekit_controller-entity-map",
+  "data": {
+    "pairings": {
+      "1E:37:74:8D:B8:2A": {
+        "config_num": 1,
+        "accessories": [
+          {
+            "aid": 1,
+            "services": [
+              {
+                "iid": 1,
+                "type": "0000003E-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000014-0000-1000-8000-0026BB765291",
+                    "iid": 2,
+                    "perms": [
+                      "pw"
+                    ],
+                    "format": "bool",
+                    "description": "Identify"
+                  },
+                  {
+                    "type": "00000020-0000-1000-8000-0026BB765291",
+                    "iid": 3,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Aqara",
+                    "description": "Manufacturer",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000021-0000-1000-8000-0026BB765291",
+                    "iid": 4,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "PS-S02E",
+                    "description": "Model",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 5,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence-Sensor-FP2-4BB6",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000030-0000-1000-8000-0026BB765291",
+                    "iid": 6,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "54EF44524BB6",
+                    "description": "Serial Number",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000052-0000-1000-8000-0026BB765291",
+                    "iid": 7,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "1.2.8",
+                    "description": "Firmware Revision",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000053-0000-1000-8000-0026BB765291",
+                    "iid": 8,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "1.0.0",
+                    "description": "Hardware Revision",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "34AB8811-AC7F-4340-BAC3-FD6A85F9943B",
+                    "iid": 9,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "6.1;6.1",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000220-0000-1000-8000-0026BB765291",
+                    "iid": 10,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "data",
+                    "value": "xDsGOzOmv1k="
+                  }
+                ]
+              },
+              {
+                "iid": 16,
+                "type": "000000A2-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000037-0000-1000-8000-0026BB765291",
+                    "iid": 18,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "1.1.0",
+                    "description": "Version",
+                    "maxLen": 64
+                  }
+                ]
+              },
+              {
+                "iid": 64,
+                "type": "0000022A-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "0000022B-0000-1000-8000-0026BB765291",
+                    "iid": 66,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "bool",
+                    "value": true
+                  },
+                  {
+                    "type": "0000022C-0000-1000-8000-0026BB765291",
+                    "iid": 67,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "uint32",
+                    "value": 9,
+                    "minValue": 0,
+                    "maxValue": 15,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "0000022D-0000-1000-8000-0026BB765291",
+                    "iid": 68,
+                    "perms": [
+                      "pr",
+                      "pw",
+                      "ev",
+                      "tw",
+                      "wr"
+                    ],
+                    "format": "tlv8",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "iid": 2560,
+                "type": "00000239-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "0000023C-0000-1000-8000-0026BB765291",
+                    "iid": 2562,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "data",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "iid": 80,
+                "type": "9715BF53-AB63-4449-8DC7-2785D617390A",
+                "characteristics": [
+                  {
+                    "type": "7D943F6A-E052-4E96-A176-D17BF00E32CB",
+                    "iid": 81,
+                    "perms": [
+                      "pr",
+                      "ev",
+                      "hd"
+                    ],
+                    "format": "int",
+                    "value": -1,
+                    "description": "Firmware Update Status",
+                    "minValue": -128,
+                    "maxValue": 127,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "A45EFD52-0DB5-4C1A-9727-513FBCD8185F",
+                    "iid": 82,
+                    "perms": [
+                      "pw",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "description": "Firmware Update URL",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "40F0124A-579D-40E4-865E-0EF6740EA64B",
+                    "iid": 83,
+                    "perms": [
+                      "pw",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "description": "Firmware Update Checksum",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "96BF5F20-2996-4DB6-8D65-0E36314BCB6D",
+                    "iid": 85,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "1.2.8",
+                    "description": "Firmware Version",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "36B7A28B-3200-4783-A3FB-6714F11B1417",
+                    "iid": 84,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "lumi.motion.agl001",
+                    "description": "Device Model",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "F5329CB1-A50B-4225-BA9B-331449E7F7A9",
+                    "iid": 86,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 1,
+                    "description": "Selected IoT Platform",
+                    "minValue": 0,
+                    "maxValue": 4,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 96,
+                "type": "F49132D1-12DF-4119-87D3-A93E8D68531E",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 101,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "AIOT",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "25D889CB-7135-4A29-B5B4-C1FFD6D2DD5C",
+                    "iid": 97,
+                    "perms": [
+                      "pr",
+                      "pw",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "",
+                    "description": "Country Domain",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "C7EECAA7-91D9-40EB-AD0C-FFDDE3143CB9",
+                    "iid": 98,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "lumi1.54ef44524bb6",
+                    "description": "AIOT did",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "80FA747E-CB45-45A4-B7BE-AA7D9964859E",
+                    "iid": 99,
+                    "perms": [
+                      "pw",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "description": "AIOT bindkey",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "C3B8A329-EF0C-4739-B773-E5B7AEA52C71",
+                    "iid": 100,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "bool",
+                    "value": false,
+                    "description": "AIOT bindstate"
+                  }
+                ]
+              },
+              {
+                "iid": 2672,
+                "type": "00000084-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2673,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Light Sensor",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "0000006B-0000-1000-8000-0026BB765291",
+                    "iid": 2674,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "float",
+                    "value": 45,
+                    "description": "Current Ambient Light Level",
+                    "unit": "lux",
+                    "minValue": 0,
+                    "maxValue": 100000,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2688,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2689,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 1",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2690,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2691,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2692,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2693,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 2",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2694,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2695,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 1,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2696,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2697,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 3",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2698,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2699,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 2,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2700,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2701,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 4",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2702,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2703,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 3,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2704,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2705,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 5",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2706,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2707,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 4,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2708,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2709,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 6",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2710,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2711,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 5,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2712,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2713,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 7",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2714,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2715,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 6,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2716,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2717,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 8",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2718,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2719,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 7,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2720,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2721,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 9",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2722,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2723,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 8,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2724,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2725,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 10",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2726,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2727,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 9,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2728,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2729,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 11",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2730,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2731,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 10,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "broadcast_key": null,
+        "state_num": null
+      },
+      "4D:7B:50:AC:83:0A": {
+        "config_num": 1,
+        "accessories": [
+          {
+            "aid": 1,
+            "services": [
+              {
+                "iid": 1,
+                "type": "0000003E-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000014-0000-1000-8000-0026BB765291",
+                    "iid": 2,
+                    "perms": [
+                      "pw"
+                    ],
+                    "format": "bool",
+                    "description": "Identify"
+                  },
+                  {
+                    "type": "00000020-0000-1000-8000-0026BB765291",
+                    "iid": 3,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Aqara",
+                    "description": "Manufacturer",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000021-0000-1000-8000-0026BB765291",
+                    "iid": 4,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "PS-S02E",
+                    "description": "Model",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 5,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence-Sensor-FP2-C7DD",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000030-0000-1000-8000-0026BB765291",
+                    "iid": 6,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "54EF4451C7DD",
+                    "description": "Serial Number",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000052-0000-1000-8000-0026BB765291",
+                    "iid": 7,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "1.2.8",
+                    "description": "Firmware Revision",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000053-0000-1000-8000-0026BB765291",
+                    "iid": 8,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "1.0.0",
+                    "description": "Hardware Revision",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "34AB8811-AC7F-4340-BAC3-FD6A85F9943B",
+                    "iid": 9,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "6.1;6.1",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000220-0000-1000-8000-0026BB765291",
+                    "iid": 10,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "data",
+                    "value": "xDsGOzOmv1k="
+                  }
+                ]
+              },
+              {
+                "iid": 16,
+                "type": "000000A2-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000037-0000-1000-8000-0026BB765291",
+                    "iid": 18,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "1.1.0",
+                    "description": "Version",
+                    "maxLen": 64
+                  }
+                ]
+              },
+              {
+                "iid": 64,
+                "type": "0000022A-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "0000022B-0000-1000-8000-0026BB765291",
+                    "iid": 66,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "bool",
+                    "value": true
+                  },
+                  {
+                    "type": "0000022C-0000-1000-8000-0026BB765291",
+                    "iid": 67,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "uint32",
+                    "value": 9,
+                    "minValue": 0,
+                    "maxValue": 15,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "0000022D-0000-1000-8000-0026BB765291",
+                    "iid": 68,
+                    "perms": [
+                      "pr",
+                      "pw",
+                      "ev",
+                      "tw",
+                      "wr"
+                    ],
+                    "format": "tlv8",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "iid": 2560,
+                "type": "00000239-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "0000023C-0000-1000-8000-0026BB765291",
+                    "iid": 2562,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "data",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "iid": 80,
+                "type": "9715BF53-AB63-4449-8DC7-2785D617390A",
+                "characteristics": [
+                  {
+                    "type": "7D943F6A-E052-4E96-A176-D17BF00E32CB",
+                    "iid": 81,
+                    "perms": [
+                      "pr",
+                      "ev",
+                      "hd"
+                    ],
+                    "format": "int",
+                    "value": -1,
+                    "description": "Firmware Update Status",
+                    "minValue": -128,
+                    "maxValue": 127,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "A45EFD52-0DB5-4C1A-9727-513FBCD8185F",
+                    "iid": 82,
+                    "perms": [
+                      "pw",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "description": "Firmware Update URL",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "40F0124A-579D-40E4-865E-0EF6740EA64B",
+                    "iid": 83,
+                    "perms": [
+                      "pw",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "description": "Firmware Update Checksum",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "96BF5F20-2996-4DB6-8D65-0E36314BCB6D",
+                    "iid": 85,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "1.2.8",
+                    "description": "Firmware Version",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "36B7A28B-3200-4783-A3FB-6714F11B1417",
+                    "iid": 84,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "lumi.motion.agl001",
+                    "description": "Device Model",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "F5329CB1-A50B-4225-BA9B-331449E7F7A9",
+                    "iid": 86,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 1,
+                    "description": "Selected IoT Platform",
+                    "minValue": 0,
+                    "maxValue": 4,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 96,
+                "type": "F49132D1-12DF-4119-87D3-A93E8D68531E",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 101,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "AIOT",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "25D889CB-7135-4A29-B5B4-C1FFD6D2DD5C",
+                    "iid": 97,
+                    "perms": [
+                      "pr",
+                      "pw",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "",
+                    "description": "Country Domain",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "C7EECAA7-91D9-40EB-AD0C-FFDDE3143CB9",
+                    "iid": 98,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "value": "lumi1.54ef4451c7dd",
+                    "description": "AIOT did",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "80FA747E-CB45-45A4-B7BE-AA7D9964859E",
+                    "iid": 99,
+                    "perms": [
+                      "pw",
+                      "hd"
+                    ],
+                    "format": "string",
+                    "description": "AIOT bindkey",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "C3B8A329-EF0C-4739-B773-E5B7AEA52C71",
+                    "iid": 100,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "bool",
+                    "value": false,
+                    "description": "AIOT bindstate"
+                  }
+                ]
+              },
+              {
+                "iid": 2672,
+                "type": "00000084-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2673,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Light Sensor",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "0000006B-0000-1000-8000-0026BB765291",
+                    "iid": 2674,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "float",
+                    "value": 179,
+                    "description": "Current Ambient Light Level",
+                    "unit": "lux",
+                    "minValue": 0,
+                    "maxValue": 100000,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2688,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2689,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 1",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2690,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2691,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2692,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2693,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 2",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2694,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2695,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 1,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2696,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2697,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 3",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2698,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2699,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 2,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2700,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2701,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 4",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2702,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2703,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 3,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2704,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2705,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 5",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2706,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2707,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 4,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2708,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2709,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 6",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2710,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2711,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 5,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2712,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2713,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 7",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2714,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2715,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 6,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2716,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2717,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 8",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2718,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2719,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 7,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              },
+              {
+                "iid": 2720,
+                "type": "00000086-0000-1000-8000-0026BB765291",
+                "characteristics": [
+                  {
+                    "type": "00000023-0000-1000-8000-0026BB765291",
+                    "iid": 2721,
+                    "perms": [
+                      "pr"
+                    ],
+                    "format": "string",
+                    "value": "Presence Sensor 9",
+                    "description": "Name",
+                    "maxLen": 64
+                  },
+                  {
+                    "type": "00000071-0000-1000-8000-0026BB765291",
+                    "iid": 2722,
+                    "perms": [
+                      "pr",
+                      "ev"
+                    ],
+                    "format": "uint8",
+                    "value": 0,
+                    "description": "Occupancy Detected",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "minStep": 1
+                  },
+                  {
+                    "type": "C8622A33-826A-4DD3-9BE9-D496361F29BB",
+                    "iid": 2723,
+                    "perms": [
+                      "pr",
+                      "hd"
+                    ],
+                    "format": "uint8",
+                    "value": 8,
+                    "description": "Sensor Index",
+                    "minValue": 0,
+                    "maxValue": 30,
+                    "minStep": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "broadcast_key": null,
+        "state_num": null
+      }
+    }
+  }
+}

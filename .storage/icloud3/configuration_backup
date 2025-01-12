@@ -1,0 +1,220 @@
+{
+  "profile": {
+    "version": 1,
+    "ic3_version": "3.1.4.1",
+    "version_install_date": "2025-01-08 20:14:25",
+    "config_update_date": "2025-01-12 14:41:30",
+    "event_log_version": "3.1",
+    "event_log_version_running": "",
+    "event_log_card_directory": "www/icloud3",
+    "event_log_card_program": "icloud3-event-log-card.js",
+    "event_log_btnconfig_url": "",
+    "picture_www_dirs": []
+  },
+  "data": {
+    "tracking": {
+      "username": "michael.klynstra@gmail.com",
+      "password": "««TUpLYXBwbDIwMCE=»»",
+      "encode_password": true,
+      "icloud_server_endpoint_suffix": "None",
+      "setup_icloud_session_early": true,
+      "data_source": "iCloud,MobApp",
+      "apple_accounts": [
+        {
+          "username": "michael.klynstra@gmail.com",
+          "password": "««TUpLYXBwbDIwMCE=»»",
+          "totp_key": "",
+          "locate_all": true
+        }
+      ],
+      "devices": [
+        {
+          "ic3_devicename": "archers_apple_watch",
+          "fname": "Archers Apple Watch",
+          "picture": "None",
+          "unique_id": "",
+          "device_type": "watch",
+          "inzone_interval": 15.0,
+          "fixed_interval": 0.0,
+          "tracking_mode": "track",
+          "apple_account": "michael.klynstra@gmail.com",
+          "famshr_devicename": "Archer's Apple Watch",
+          "famshr_device_id": "AU/XP6tLZ7yTcGFf3UoXAu8T2kPvWcsrmLujrvN4qdXpGYxyscUJ3ZLIC60lRBwupXuNmNt83wWE4KPWXQNsfhNCn5dlsToemqUZBbG4YmsLibnPIiyKNrvXi/W8YGF7YD9WPh9AFTDl567ob3VGTMaDEE5q+72PD/aB1NZ2yIhMpGXQMNahRLw=",
+          "raw_model": "Watch6,12",
+          "model": "Apple Watch",
+          "model_display_name": "Apple Watch SE",
+          "mobile_app_device": "None",
+          "track_from_base_zone": "home",
+          "track_from_zones": [
+            "home"
+          ],
+          "log_zones": [
+            "none"
+          ]
+        },
+        {
+          "ic3_devicename": "michaels_ipad_pro",
+          "fname": "Michaels iPad Pro",
+          "picture": "None",
+          "unique_id": "",
+          "device_type": "ipad",
+          "inzone_interval": 120.0,
+          "fixed_interval": 0.0,
+          "tracking_mode": "monitor",
+          "apple_account": "michael.klynstra@gmail.com",
+          "famshr_devicename": "Michael's iPad (2)",
+          "famshr_device_id": "ATH0Ij7wllLMhcB5eyevI3olZZq6C1aHedfsGpYtieMB9aJ1IgEm369eBx41QQn+lXGJAUrmtAa61g==",
+          "raw_model": "iPad16,5",
+          "model": "iPad",
+          "model_display_name": "iPad Pro",
+          "mobile_app_device": "michaels_ipad",
+          "track_from_base_zone": "home",
+          "track_from_zones": [
+            "home"
+          ],
+          "log_zones": [
+            "none"
+          ]
+        },
+        {
+          "ic3_devicename": "yellow_phone",
+          "fname": "Yellow Phone",
+          "picture": "None",
+          "unique_id": "",
+          "device_type": "iphone",
+          "inzone_interval": 120.0,
+          "fixed_interval": 0.0,
+          "tracking_mode": "track",
+          "apple_account": "michael.klynstra@gmail.com",
+          "famshr_devicename": "The Yellow Phone",
+          "famshr_device_id": "AVqfnsswkI7u6KzBibWkF9OVyLHAxI200bRIsRaWSeIgPwkMcPCLqDzxs7dwYdZzcsFx0OwEulMXtG5X4/N+KiXWEEfo2Flz8C2YCWusHnowyvypZWqeMupmX9vj/sxGQeTEAtyGQW8Y2e0OUYTyBlhpLDrerhf6Y1mCy4MEZDpazP4kmIz2b30=",
+          "raw_model": "iPhone14,7",
+          "model": "iPhone",
+          "model_display_name": "iPhone 14",
+          "mobile_app_device": "the_yellow_phone",
+          "track_from_base_zone": "home",
+          "track_from_zones": [
+            "home"
+          ],
+          "log_zones": [
+            "none"
+          ]
+        }
+      ]
+    },
+    "general": {
+      "log_level": "info",
+      "log_level_devices": [
+        "all"
+      ],
+      "unit_of_measurement": "mi",
+      "time_format": "12-hour",
+      "display_zone_format": "fname",
+      "device_tracker_state_source": "ic3_fname",
+      "max_interval": 240,
+      "offline_interval": 20,
+      "exit_zone_interval": 3,
+      "mobapp_alive_interval": 60,
+      "old_location_threshold": 3,
+      "old_location_adjustment": 0,
+      "gps_accuracy_threshold": 100,
+      "display_gps_lat_long": true,
+      "travel_time_factor": 0.5,
+      "tfz_tracking_max_distance": 8,
+      "passthru_zone_time": 0.5,
+      "track_from_base_zone_used": true,
+      "track_from_base_zone": "home",
+      "track_from_home_zone": true,
+      "center_in_zone": false,
+      "discard_poor_gps_inzone": false,
+      "distance_between_devices": true,
+      "inzone_intervals": {
+        "iphone": 120,
+        "ipad": 120,
+        "watch": 15,
+        "mac": 120,
+        "airpods": 15,
+        "no_mobapp": 15,
+        "other": 120
+      },
+      "waze_used": true,
+      "waze_region": "us",
+      "waze_min_distance": 1,
+      "waze_max_distance": 1000,
+      "waze_realtime": false,
+      "waze_history_database_used": true,
+      "waze_history_max_distance": 20,
+      "waze_history_track_direction": "north_south",
+      "stat_zone_fname": "StatZon#",
+      "stat_zone_still_time": 8,
+      "stat_zone_inzone_interval": 30,
+      "stat_zone_base_latitude": 1,
+      "stat_zone_base_longitude": 0,
+      "display_text_as": [
+        "#1",
+        "#2",
+        "#3",
+        "#4",
+        "#5",
+        "#6",
+        "#7",
+        "#8",
+        "#9",
+        "#10"
+      ],
+      "away_time_zone_1_offset": 0,
+      "away_time_zone_1_devices": [
+        "none"
+      ],
+      "away_time_zone_2_offset": 0,
+      "away_time_zone_2_devices": [
+        "none"
+      ]
+    },
+    "sensors": {
+      "monitored_devices": [
+        "md_badge",
+        "md_battery"
+      ],
+      "device": [
+        "name",
+        "badge",
+        "battery",
+        "info"
+      ],
+      "tracking_update": [
+        "interval",
+        "last_located",
+        "last_update",
+        "next_update"
+      ],
+      "tracking_time": [
+        "travel_time",
+        "travel_time_min",
+        "arrival_time"
+      ],
+      "tracking_distance": [
+        "home_distance",
+        "zone_distance",
+        "moved_distance",
+        "dir_of_travel"
+      ],
+      "track_from_zones": [
+        "tfz_zone_info",
+        "tfz_travel_time",
+        "tfz_travel_time_min",
+        "tfz_arrival_time",
+        "tfz_zone_distance",
+        "tfz_dir_of_travel"
+      ],
+      "tracking_other": [],
+      "zone": [
+        "zone_name"
+      ],
+      "other": [],
+      "excluded_sensors": [
+        "None"
+      ]
+    }
+  }
+}

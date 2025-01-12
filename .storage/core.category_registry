@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "core.category_registry",
+  "data": {
+    "categories": {
+      "helpers": [
+        {
+          "category_id": "01JC7GBVG9XNNJ3CHRFPG09RCV",
+          "created_at": "2024-11-09T03:44:27.145823+00:00",
+          "icon": "mdi:television-classic",
+          "modified_at": "2024-11-09T03:44:27.145827+00:00",
+          "name": "Screentime"
+        },
+        {
+          "category_id": "01JCB8PT8TC8HM0FWVJ2T7SGFX",
+          "created_at": "2024-11-10T14:47:35.450564+00:00",
+          "icon": "mdi:dog",
+          "modified_at": "2024-11-10T14:47:35.450568+00:00",
+          "name": "Dogs"
+        },
+        {
+          "category_id": "01JCMB1CH1DWC3ADYXM8G14HCC",
+          "created_at": "2024-11-14T03:21:28.865204+00:00",
+          "icon": "mdi:paw",
+          "modified_at": "2024-11-14T03:21:28.865208+00:00",
+          "name": "Dogs and Birds"
+        }
+      ],
+      "automation": [
+        {
+          "category_id": "01JC7MHXW0GCT2J8PBWD67NG7X",
+          "created_at": "2024-11-09T04:57:40.480377+00:00",
+          "icon": "mdi:television-classic",
+          "modified_at": "2024-11-09T04:57:40.480381+00:00",
+          "name": "Screentime"
+        },
+        {
+          "category_id": "01JC7R7HJX4QZ2JB1FZJBV92DM",
+          "created_at": "2024-11-09T06:01:54.525585+00:00",
+          "icon": "mdi:cog",
+          "modified_at": "2024-11-09T06:01:54.525589+00:00",
+          "name": "Operational"
+        },
+        {
+          "category_id": "01JCJ10S74AAX77RHK42P5V3MH",
+          "created_at": "2024-11-13T05:47:54.468793+00:00",
+          "icon": "mdi:dog",
+          "modified_at": "2024-11-13T05:47:54.468796+00:00",
+          "name": "Dogs"
+        },
+        {
+          "category_id": "01JCJ125W3BQPR5Z5N98C7YQJQ",
+          "created_at": "2024-11-13T05:48:40.195995+00:00",
+          "icon": "mdi:ceiling-light-multiple",
+          "modified_at": "2024-11-13T05:48:40.195999+00:00",
+          "name": "Lighting"
+        },
+        {
+          "category_id": "01JCVH1AP42KAC0FKSBNBCEB6B",
+          "created_at": "2024-11-16T22:20:59.460486+00:00",
+          "icon": "mdi:alert",
+          "modified_at": "2024-11-16T22:20:59.460490+00:00",
+          "name": "Alerts"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_text",
+  "data": {
+    "items": [
+      {
+        "id": "bird_species_list",
+        "name": "Bird Species List",
+        "icon": "mdi:bird",
+        "max": 1024,
+        "min": 0,
+        "mode": "text"
+      }
+    ]
+  }
+}

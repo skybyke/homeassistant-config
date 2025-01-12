@@ -1,0 +1,47 @@
+[
+  {
+    "name": "costco: bananas",
+    "id": "b1af966cc9a54921820e83dbe3771f7c",
+    "complete": false
+  },
+  {
+    "name": "sams club: apples",
+    "id": "87f58b4e23c044af8dabe78570f69e47",
+    "complete": false
+  },
+  {
+    "name": "oranges",
+    "id": "2253412caa984e4c9f94eecd18f99cca",
+    "complete": false
+  },
+  {
+    "name": "oranges",
+    "id": "3370b30105c3460caa2305a6efb0dbfa",
+    "complete": false
+  },
+  {
+    "name": "pickles",
+    "id": "d8821f22fcc846e89d93df1aaba8fb5b",
+    "complete": false
+  },
+  {
+    "name": "beef jerky",
+    "id": "a932065b901047558e26f22e088f8552",
+    "complete": false
+  },
+  {
+    "name": "pretzels",
+    "id": "5fad0e8148ce4ba9ab7511cf7e325d45",
+    "complete": false
+  },
+  {
+    "name": "coffee",
+    "id": "20d7981573744bfcaed7f5f17c5414a3",
+    "complete": false
+  },
+  {
+    "name": "peanut butter",
+    "id": "24083e48cf454a0aaea795a32fb5d279",
+    "complete": false
+  }
+]

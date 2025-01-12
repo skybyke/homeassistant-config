@@ -1,0 +1,41 @@
+
+# SCREENTIME
+
+tv_total_minutes:
+  initial: 0
+  step: 1
+  minimum: 0
+
+tv_screentime_minutes:
+  initial: 0
+  step: 1
+  minimum: 0
+
+tv_nonscreentime_minutes:
+  initial: 0
+  step: 1
+  minimum: 0
+
+tv_granted_minutes:
+  initial: 0
+  step: 1
+  minimum: 0  
+
+iphone_minutes:
+  initial: 0
+  step: 1
+  minimum: 0  
+
+driveway_plows:
+  initial: 0
+  step: 1
+  minimum: 0
+
+
+
+screentime_delay:
+  name: Screen Time Delay
+  initial: 0  # Set your initial value
+  step: 1  # THIS IS IMPORTANT!
+  minimum: 0 # Optional, but good to set limits
+  maximum: 100 # Optional, but good to set limits

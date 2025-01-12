@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "minor_version": 4,
+  "key": "cloud",
+  "data": {
+    "alexa_default_expose": [
+      "climate",
+      "cover",
+      "fan",
+      "humidifier",
+      "light",
+      "lock",
+      "scene",
+      "script",
+      "sensor",
+      "switch",
+      "vacuum",
+      "water_heater"
+    ],
+    "alexa_entity_configs": {},
+    "alexa_settings_version": 3,
+    "cloud_user": "f416334e997a438e8694739e67646995",
+    "cloudhooks": {
+      "832191f1a8f4de76db1ea0c7b5aad3e8fa04887055b9cdbc0655d25b74deed50": {
+        "webhook_id": "832191f1a8f4de76db1ea0c7b5aad3e8fa04887055b9cdbc0655d25b74deed50",
+        "cloudhook_id": "8d25b8008f044c429e9f5f6ff5e5ec10",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnLmYVrV7KZh3zAAn4DMN2sx-JrNA7uXiRgPiitwsfUOVrwk8c89zmBzLmFNFOhKDRO590T3YJVhihfppjTRC4lcX6415x48WqOj7huCuf__2PxcKqkzaffP-OjaYlERfRHpjJCkJsE60iTrvbgROJ2VJEZcCac3KRjDDMTXtih17fy20=",
+        "managed": true
+      },
+      "d3f8067a6f3aeb8cf9a9ac11b75b9150e5b45821f3933e282dfbb2fa4a5c0991": {
+        "webhook_id": "d3f8067a6f3aeb8cf9a9ac11b75b9150e5b45821f3933e282dfbb2fa4a5c0991",
+        "cloudhook_id": "fa4d8ef1821e42de8c6c884dfe5754c2",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnMTHEeZlKtEAYK7p1a0OUA7ruZXjGwaOsr3baDPBTjWzJnu8XXXfeSTM_clHglX-kEmNjjs9ef-pm6eE2XxU4rczDWo8Vp85eh160ORJBrRUpdEpmHqp9rrsxS1QT1uIJtL2UG_nX7xk7llZINun98f-M-RkYxtyis3BLQTaH1QXWSEM=",
+        "managed": true
+      },
+      "-DF775enqDKWtiYKJ4M-KyBFa": {
+        "webhook_id": "-DF775enqDKWtiYKJ4M-KyBFa",
+        "cloudhook_id": "372d1fb253ae417cb941558ea134389c",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnNOBhP6SF_-A5_INpzqDJI2OzNjnr5Ar1XRqN-89BjxyJKK6Bc5NVsg5DldW2JRbtpeeAWC_Jgq7jskePj6SeCAjfGSDzA-zasRVDn4nZ7kNvzAJLpotAGQnZ7J8LC0h_uKCWj7j8kcTUFzJu69qAKzV5R2A_TjknAluCkU3QbD_V2Dw=",
+        "managed": false
+      },
+      "-syVUuwjYf85Z2emC92pIl8Ap": {
+        "webhook_id": "-syVUuwjYf85Z2emC92pIl8Ap",
+        "cloudhook_id": "ac050079bfde4816aecedf36b7692ac0",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnNOWruyyikdXowzN2bRIP6doHe1rHESib03gexRp6ZYKr08UZLJeB_ptcEJGiO41Y4nJQkxNQbjXj6eKdYue9sh3u1KHov_0JvT7vpVbruIOQtzO1ISNLFP5kvQ0_GeItqJsCp3pDUFN0Me4OqZR_BRF8NV20zPPSUwTreUdSIdfbJIc=",
+        "managed": false
+      },
+      "b50c213bccd006d32bc996c7720b203143e820a597e1d74e5bbc1c4914614cbc": {
+        "webhook_id": "b50c213bccd006d32bc996c7720b203143e820a597e1d74e5bbc1c4914614cbc",
+        "cloudhook_id": "e124f89be69543b9b9123bbbb388ee00",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnNTHaCruzjkq7UBMlICirngajm8o7-rRyeCErjsLO7f8LZKSSgD3T0JBZyRm_wK_C44Gt14XT6R2DAOhoLHTiqGzUcsAlIBtdL3ilChG6h4_XPHKMB7sXoFmQ9DCuLIVCa7QVg6dfInNVUQ5PSFo7AZ-xsgAmtLD7ICvs67vs-8SF7lw=",
+        "managed": true
+      },
+      "c5a800d6c945722188e3080cbfbc33bcd5c0b06f015a33803e448fa53e7b700c": {
+        "webhook_id": "c5a800d6c945722188e3080cbfbc33bcd5c0b06f015a33803e448fa53e7b700c",
+        "cloudhook_id": "db4eff0cf9b540128fa8d4da107adba4",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnNWRmgjv9jc3-5SKTkOEAChBXBr1erefkYMug9Bh0utcS-J1UUgHfongTAhOvLwD6vrfigC8Ln7z3KcknLG6ltIo6lx74x__LOf8LMiSoCWQxOSwu-ouS6nf1kHpo4HLFNB09dlBw68-hSkEpJ_FUP1Xv6PSL8_6c7BGsFq8ksS7apWs=",
+        "managed": true
+      },
+      "a9a895621d018d890b0b30461446243b3c460249fd1224140ff8a03a6a5e25f4": {
+        "webhook_id": "a9a895621d018d890b0b30461446243b3c460249fd1224140ff8a03a6a5e25f4",
+        "cloudhook_id": "3da5cfa9df484da4b164162a82eb3995",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnUtnPbthHG4JyJErDWO9KhBmKNNaNHQligXx1MQZVK59qW9sA1jDyUPw4C7asLmVPw85dI6MDEQQ3MBxGfe76TUaEXyyA2_iWefQXFlrOgMzFwK8GFu5gEZxzi_2CJtf9fjEuFenMjcYwUOXisvNyQyA_Cwq01t7GqakZOVQOlF7npEo=",
+        "managed": true
+      },
+      "451ede6876e9b2339508bc6f46b787ad5a9458264156e903eb3ccfaeca6e7ac1": {
+        "webhook_id": "451ede6876e9b2339508bc6f46b787ad5a9458264156e903eb3ccfaeca6e7ac1",
+        "cloudhook_id": "5116ee7cbce846e1a71a32448e7220dc",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnYauLmY1oobBw28n_dqD6m4Zj1XNZPwAdO3WqLYGHwTCCAyxQOJ_u7_UTmHuyXCMX1Rr52M2EPwmXelrk_qYGtyzjVfDZWxztHE9etZVnOuPu-xXQzMEI7KbYb-N4Yts41PFHGBXfBqkO-pHDdRHV6TxCiJnE9cCyC9OObsHGQ7vh61M=",
+        "managed": true
+      },
+      "ff587455fa041d4b6096a8c19420af524777f9ec8288d5dfa24e43f08744d252": {
+        "webhook_id": "ff587455fa041d4b6096a8c19420af524777f9ec8288d5dfa24e43f08744d252",
+        "cloudhook_id": "a94fb7be954e4fba8ac41ba4baeb2445",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnfXj3qhSdZzMNmvjn6pWls7QKvexV20OUch8OyHDlHkVo60teOxHIcTB7YmEgeHb7qgeSA_40a_v5dKhzDOXSJnfI2EXRMNl93FBLKrnoyZ22OQhAOLPuJFDPnTaxhkv74bt9AzO2RHv1AW2nponMDvOJ8gbPnUIBGMYGB-iAKvFGAVo=",
+        "managed": true
+      },
+      "22ee31fba4a7007f1272bb757075dd2604f6b2577508ed8543bcf7b5df6a0ebb": {
+        "webhook_id": "22ee31fba4a7007f1272bb757075dd2604f6b2577508ed8543bcf7b5df6a0ebb",
+        "cloudhook_id": "4f4785c0b40549bc845597306b0e132a",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABng1ZFD-ciFGem7kNeS8ChQGgNxJwW_Xy9ZQRwi9Y6ityqs2wWDyeJF-3g3WRikPevgpDHcKwnWcN2hxdzz3hch9jWw4LwgiUJ2QFiad_FHa6lAtvBOND_GbxRRzOfLmVmNh8iVexLkf2mYFamb5c7i7-XlDw8zOVZQxSnlInLTyIa92Y=",
+        "managed": true
+      }
+    },
+    "alexa_enabled": true,
+    "google_enabled": true,
+    "remote_enabled": true,
+    "cloud_ice_servers_enabled": true,
+    "google_connected": true,
+    "google_default_expose": [
+      "climate",
+      "cover",
+      "fan",
+      "humidifier",
+      "light",
+      "lock",
+      "scene",
+      "script",
+      "sensor",
+      "switch",
+      "vacuum",
+      "water_heater"
+    ],
+    "google_entity_configs": {},
+    "google_settings_version": 3,
+    "google_local_webhook_id": "e35635ad393c0f1c720227317d730d5991465f6770717aac4248b4f11c4cc136",
+    "instance_id": "047d53bc0698415a95ad192f5c0b03ef",
+    "google_secure_devices_pin": "5341",
+    "remote_domain": "fcbk463ajbts42svbp6k8svzjnxmdge7.ui.nabu.casa",
+    "remote_allow_remote_enable": true,
+    "username": "d49c48f4-8eac-4cc2-88d7-4408481d112c"
+  }
+}

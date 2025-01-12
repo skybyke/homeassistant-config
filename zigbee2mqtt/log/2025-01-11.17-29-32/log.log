@@ -1,0 +1,151 @@
+[2025-01-11 17:29:33] info: 	z2m: Logging to console, file (filename: log.log)
+[2025-01-11 17:29:33] info: 	z2m: Starting Zigbee2MQTT version 2.0.0 (commit #unknown)
+[2025-01-11 17:29:33] info: 	z2m: Starting zigbee-herdsman (3.2.1)
+[2025-01-11 17:29:33] info: 	zh:ember: Using default stack config.
+[2025-01-11 17:29:33] info: 	zh:ember: ======== Ember Adapter Starting ========
+[2025-01-11 17:29:33] info: 	zh:ember:ezsp: ======== EZSP starting ========
+[2025-01-11 17:29:33] info: 	zh:ember:uart:ash: ======== ASH Adapter reset ========
+[2025-01-11 17:29:33] info: 	zh:ember:uart:ash: RTS/CTS config is off, enabling software flow control.
+[2025-01-11 17:29:33] info: 	zh:ember:uart:ash: Serial port opened
+[2025-01-11 17:29:33] info: 	zh:ember:uart:ash: ======== ASH starting ========
+[2025-01-11 17:29:33] error: 	zh:ember:uart:ash: Received frame with CRC error
+[2025-01-11 17:29:35] info: 	zh:ember:uart:ash: ======== ASH connected ========
+[2025-01-11 17:29:35] info: 	zh:ember:uart:ash: ======== ASH started ========
+[2025-01-11 17:29:35] info: 	zh:ember:ezsp: ======== EZSP started ========
+[2025-01-11 17:29:35] info: 	zh:ember: Adapter EZSP protocol version (13) lower than Host. Switched.
+[2025-01-11 17:29:35] info: 	zh:ember: Adapter version info: {"ezsp":13,"revision":"7.4.4 [GA]","build":0,"major":7,"minor":4,"patch":4,"special":0,"type":170}
+[2025-01-11 17:29:35] info: 	zh:ember: [STACK STATUS] Network up.
+[2025-01-11 17:29:35] info: 	zh:ember: [INIT TC] Adapter network matches config.
+[2025-01-11 17:29:35] info: 	zh:ember: [CONCENTRATOR] Started source route discovery. 1249ms until next broadcast.
+[2025-01-11 17:29:35] info: 	z2m: zigbee-herdsman started (resumed)
+[2025-01-11 17:29:35] info: 	z2m: Coordinator firmware version: '{"meta":{"build":0,"ezsp":13,"major":7,"minor":4,"patch":4,"revision":"7.4.4 [GA]","special":0,"type":170},"type":"EmberZNet"}'
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office Desk Lamp (0x001788010898ca29): 9290022166 - Philips Hue white and color ambiance E26/E27 (Router)
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office Overhead Back Wall (0x00178801020a2bc7): 9290002579A - Philips Hue white and color ambiance BR30 (Router)
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office Overhead Closet (0x0017880102f31996): 9290002579A - Philips Hue white and color ambiance BR30 (Router)
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office Overhead Desk (0x0017880102204bba): 9290002579A - Philips Hue white and color ambiance BR30 (Router)
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office Uplight (0x001788010113975c): 7146060PH - Philips Hue Go (Router)
+[2025-01-11 17:29:35] info: 	z2m: Living Room Bulb 1 (0xb0ce1814032edfa5): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Living Room Bulb 2 (0xb0ce1814032d3199): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Living Room Bulb 3 (0xb0ce1814032ee8ef): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Living Room Bulb 4 (0xb0ce1814032eef43): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Living Room Bulb 5 (0xb0ce1814032c80e8): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Hallway Bulb 1 (0xb0ce1814032edf79): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Hallway Bulb 2 (0xb0ce1814032c7fc7): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Hallway Bulb 3 (0xb0ce1814032c81c1): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Hallway Bulb 4 (0xb0ce1814032c66f1): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Archers Bedroom Dresser (0x001788010898ca69): 9290022166 - Philips Hue white and color ambiance E26/E27 (Router)
+[2025-01-11 17:29:35] info: 	z2m: Archers Bedroom Bed Light (0x00178801011fd9c8): 915005106701 - Philips Hue white and color ambiance LightStrip plus (Router)
+[2025-01-11 17:29:35] info: 	z2m: Bedroom Dresser (0x00178801028a49fa): 9290011370 - Philips Hue white A60 bulb E27/B22 (Router)
+[2025-01-11 17:29:35] info: 	z2m: Bedroom MJK Bedside (0x0017880110400d5f): 9290011370 - Philips Hue white A60 bulb E27/B22 (Router)
+[2025-01-11 17:29:35] info: 	z2m: Bedroom CCK Bedside (0x00178801105b7523): 9290011370 - Philips Hue white A60 bulb E27/B22 (Router)
+[2025-01-11 17:29:35] info: 	z2m: Garage Bulb Left (0x001788010bc17034): 929002294101 - Philips Hue White and Color Ambiance E12 with bluetooth (Router)
+[2025-01-11 17:29:35] info: 	z2m: Garage Bulb Right (0x001788010bc15eab): 929002294101 - Philips Hue White and Color Ambiance E12 with bluetooth (Router)
+[2025-01-11 17:29:35] info: 	z2m: Front Candys Office (0x001788010625db5c): 1741830P7 - Philips Hue Lily outdoor spot light (Router)
+[2025-01-11 17:29:35] info: 	z2m: Front Michaels Office (0x00178801062772db): 1741830P7 - Philips Hue Lily outdoor spot light (Router)
+[2025-01-11 17:29:35] info: 	z2m: Porch Overhead Bulb 3 (0x001788010d49ce61): 579573 - Philips Hue White and Color Ambiance slim downlight 6" (Router)
+[2025-01-11 17:29:35] info: 	z2m: Porch Overhead Bulb 4 (0x001788010d49ce46): 579573 - Philips Hue White and Color Ambiance slim downlight 6" (Router)
+[2025-01-11 17:29:35] info: 	z2m: Porch Overhead Bulb 1 (0x001788010d49cec3): 579573 - Philips Hue White and Color Ambiance slim downlight 6" (Router)
+[2025-01-11 17:29:35] info: 	z2m: Porch Overhead Bulb 2 (0x001788010d49ce7e): 579573 - Philips Hue White and Color Ambiance slim downlight 6" (Router)
+[2025-01-11 17:29:35] info: 	z2m: Dining Room Repeater (0x282c02bfffe6db05): 3RSP019BZ - Third Reality Zigbee / BLE smart plug (Router)
+[2025-01-11 17:29:35] info: 	z2m: Hallway Repeater (0x282c02bfffe8b63e): 3RSP019BZ - Third Reality Zigbee / BLE smart plug (Router)
+[2025-01-11 17:29:35] info: 	z2m: Upstairs TV Outlet (0x282c02bfffe8cb89): 3RSP02028BZ - Third Reality Zigbee / BLE smart plug with power (Router)
+[2025-01-11 17:29:35] info: 	z2m: Bedroom Repeater (0x00124b0022d5f9a3): SA-003-Zigbee - eWeLink Zigbee smart plug (Router)
+[2025-01-11 17:29:35] info: 	z2m: Coffee Switch (0x000d6f0003bf5a9f): 4257050-RZHAC - Centralite 3-Series smart outlet (Router)
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office 4-Button Controller (0x90395efffe0feee2): TS0044 - Tuya Wireless switch with 4 buttons (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office Door (0x286d97000107a4a2): IM6001-MPP01 - SmartThings Multipurpose sensor (2018 model) (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Archers Bedroom Door (0x282c02bfffe86622): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Small Hallway Motion (0xa4c13852a506917f): ZMS-102 - Tuya Motion sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Bedroom Door (0xa4c1380bc5e10eea): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Bedroom Motion (0x282c02bfffed45f9): 3RMS16BZ - Third Reality Wireless motion sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Mudroom Motion (0x00124b002a4f5a0b): SNZB-03 - SONOFF Motion sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Front Door (0x282c02bfffe869e4): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Dog Food Container (0x282c02bfffe871a6): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Hallway Motion by Doorbell Sensor (0x00124b002a4ed235): SNZB-03 - SONOFF Motion sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Candys Office Door (0xa4c138989749fbcf): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Archers Bedroom Window - Side (0xa4c138f5aa095bee): SNZB-04 - SONOFF Contact sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Archers Bedroom Window - Back (0xa4c1383fa239339d): SNZB-04 - SONOFF Contact sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Downstairs Window 1 (0xa4c1387f3608d7f4): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Downstairs Window 2 (0xa4c13844f7590c7b): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Downstairs Window 3 (0xa4c138b8764ec65e): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Downstairs Window 4 (0xa4c138cc0d6c0519): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Downstairs Window 5 (0xa4c138cf270e9886): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Downstairs Window 6 (0xa4c1385f9dcec437): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: TV Downstairs Outlet (0x00124b0022ce7bed): SA-003-Zigbee - eWeLink Zigbee smart plug (Router)
+[2025-01-11 17:29:35] info: 	z2m: 0xa4c138b20146efb3 (0xa4c138b20146efb3): ZMS-102 - Tuya Motion sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Archer's Bathroom Sensor (0x00124b002fa13db6): SNZB-02 - SONOFF Temperature and humidity sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Wall Panel Charger (0x282c02bfffe6dd44): 3RSP019BZ - Third Reality Zigbee / BLE smart plug (Router)
+[2025-01-11 17:29:35] info: 	z2m: Bedroom Sensor (0xf44250000cce0000): 3RTHS0224Z - Third Reality Temperature and humidity sensor lite (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Archers Bedroom Sensor (0xa4c138cd50eb5ff9): TH02Z - Tuya Temperature and humidity sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Archers Bedroom Motion (0x00124b002a4ed433): SNZB-03 - SONOFF Motion sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office Window - Front 1 (0x282c02bfffecdf78): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office Window - Front 2 (0x282c02bfffecd685): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Michaels Office Window - Side (0x282c02bfffecdf3a): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:29:35] info: 	z2m: Currently 61 devices are joined.
+[2025-01-11 17:29:35] info: 	z2m: Connecting to MQTT server at mqtt://core-mosquitto:1883
+[2025-01-11 17:29:36] info: 	z2m: Connected to MQTT server
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"online"}'
+[2025-01-11 17:29:36] info: 	z2m: Started frontend on port 8099
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Desk Lamp', payload '{"brightness":190,"color":{"h":121,"hue":121,"s":100,"saturation":100,"x":0.171,"y":0.726},"color_mode":"xy","color_temp":153,"effect":null,"linkquality":144,"power_on_behavior":null,"state":"ON","update":{"installed_version":16786690,"latest_version":16786690,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Overhead Back Wall', payload '{"brightness":87,"color":{"h":32,"hue":32,"s":81,"saturation":81,"x":0.4574,"y":0.41},"color_mode":"color_temp","color_temp":366,"effect":null,"linkquality":132,"power_on_behavior":null,"state":"ON","update":{"installed_version":1124103171,"latest_version":1124103171,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Overhead Closet', payload '{"brightness":87,"color":{"h":32,"hue":32,"s":81,"saturation":81,"x":0.4574,"y":0.41},"color_mode":"color_temp","color_temp":366,"effect":null,"linkquality":136,"power_on_behavior":null,"state":"ON","update":{"installed_version":16787456,"latest_version":16787456,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Overhead Desk', payload '{"brightness":87,"color":{"h":32,"hue":32,"s":81,"saturation":81,"x":0.4574,"y":0.41},"color_mode":"color_temp","color_temp":366,"effect":null,"linkquality":248,"power_on_behavior":null,"state":"ON","update":{"installed_version":-1,"latest_version":-1,"state":null}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Uplight', payload '{"brightness":203,"color":{"x":0.4526,"y":0.4088},"color_mode":"color_temp","color_temp":358,"effect":null,"linkquality":144,"power_on_behavior":null,"state":"ON","update":{"installed_version":-1,"latest_version":-1,"state":null}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Living Room Bulb 1', payload '{"brightness":254,"level_config":{"on_level":"previous"},"linkquality":248,"state":"ON","update":{"installed_version":9,"latest_version":9,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Living Room Bulb 2', payload '{"brightness":254,"level_config":{"on_level":"previous"},"linkquality":204,"state":"ON","update":{"installed_version":9,"latest_version":9,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Living Room Bulb 3', payload '{"brightness":254,"level_config":{"on_level":"previous"},"linkquality":248,"state":"ON","update":{"installed_version":9,"latest_version":9,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Living Room Bulb 4', payload '{"brightness":254,"level_config":{"on_level":"previous"},"linkquality":224,"state":"ON","update":{"installed_version":9,"latest_version":9,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Living Room Bulb 5', payload '{"brightness":254,"level_config":{"on_level":"previous"},"linkquality":255,"state":"ON","update":{"installed_version":9,"latest_version":9,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Hallway Bulb 1', payload '{"brightness":254,"linkquality":240,"state":"OFF","update":{"installed_version":9,"latest_version":9,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Hallway Bulb 2', payload '{"brightness":254,"linkquality":244,"state":"OFF","update":{"installed_version":9,"latest_version":9,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Hallway Bulb 3', payload '{"brightness":254,"linkquality":244,"state":"OFF","update":{"installed_version":9,"latest_version":9,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Hallway Bulb 4', payload '{"brightness":255,"linkquality":244,"state":"ON","update":{"installed_version":9,"latest_version":9,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Archers Bedroom Dresser', payload '{"brightness":203,"color":{"h":32,"hue":32,"s":81,"saturation":81,"x":0.4574,"y":0.41},"color_mode":"color_temp","color_temp":366,"effect":null,"linkquality":192,"power_on_behavior":null,"state":"ON","update":{"installed_version":16786690,"latest_version":16786690,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Archers Bedroom Bed Light', payload '{"brightness":203,"color":{"x":0.313,"y":0.21},"color_mode":"xy","effect":null,"linkquality":224,"power_on_behavior":null,"state":"ON","update":{"installed_version":1124103171,"latest_version":1124103171,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Bedroom Dresser', payload '{"brightness":254,"effect":null,"linkquality":144,"power_on_behavior":null,"state":"OFF","update":{"installed_version":-1,"latest_version":-1,"state":null}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Bedroom MJK Bedside', payload '{"brightness":254,"effect":null,"linkquality":120,"power_on_behavior":null,"state":"OFF","update":{"installed_version":1124103171,"latest_version":1124103171,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Bedroom CCK Bedside', payload '{"brightness":254,"effect":null,"linkquality":152,"power_on_behavior":null,"state":"OFF","update":{"installed_version":1124103171,"latest_version":1124103171,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Garage Bulb Left', payload '{"brightness":122,"color":{"h":38,"hue":38,"s":61,"saturation":61,"x":0.4025,"y":0.3893},"color_mode":"color_temp","color_temp":281,"effect":null,"linkquality":192,"power_on_behavior":null,"state":"OFF","update":{"installed_version":16786690,"latest_version":16786690,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Garage Bulb Right', payload '{"brightness":122,"color":{"h":38,"hue":38,"s":61,"saturation":61,"x":0.4025,"y":0.3893},"color_mode":"color_temp","color_temp":281,"effect":null,"linkquality":192,"power_on_behavior":null,"state":"OFF","update":{"installed_version":16786690,"latest_version":16786690,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Front Candys Office', payload '{"brightness":122,"color":{"x":0.4042,"y":0.3902},"color_mode":"color_temp","color_temp":284,"effect":null,"linkquality":96,"power_on_behavior":null,"state":"OFF","update":{"installed_version":-1,"latest_version":-1,"state":null}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Front Michaels Office', payload '{"brightness":122,"color":{"h":38,"hue":38,"s":62,"saturation":62,"x":0.4042,"y":0.3902},"color_mode":"color_temp","color_temp":284,"effect":null,"linkquality":140,"power_on_behavior":null,"state":"OFF","update":{"installed_version":-1,"latest_version":-1,"state":null}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Porch Overhead Bulb 3', payload '{"brightness":254,"color":{"h":32,"hue":32,"s":81,"saturation":81,"x":0.4574,"y":0.41},"color_mode":"color_temp","color_temp":366,"effect":null,"linkquality":184,"power_on_behavior":null,"state":"OFF","update":{"installed_version":16786690,"latest_version":16786690,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Porch Overhead Bulb 4', payload '{"brightness":254,"color":{"h":32,"hue":32,"s":81,"saturation":81,"x":0.4574,"y":0.41},"color_mode":"color_temp","color_temp":366,"effect":null,"linkquality":228,"power_on_behavior":null,"state":"OFF","update":{"installed_version":16786690,"latest_version":16786690,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Porch Overhead Bulb 1', payload '{"brightness":254,"color":{"h":32,"hue":32,"s":81,"saturation":81,"x":0.4574,"y":0.41},"color_mode":"color_temp","color_temp":366,"effect":null,"linkquality":192,"power_on_behavior":null,"state":"OFF","update":{"installed_version":16786690,"latest_version":16786690,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Porch Overhead Bulb 2', payload '{"brightness":254,"color":{"h":32,"hue":32,"s":81,"saturation":81,"x":0.4574,"y":0.41},"color_mode":"color_temp","color_temp":366,"effect":null,"linkquality":228,"power_on_behavior":null,"state":"OFF","update":{"installed_version":16786690,"latest_version":16786690,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Dining Room Repeater', payload '{"linkquality":180,"power_on_behavior":"off","state":"OFF","update":{"installed_version":268513368,"latest_version":268513368,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Hallway Repeater', payload '{"linkquality":252,"power_on_behavior":"off","state":"OFF","update":{"installed_version":268513368,"latest_version":268513368,"state":"idle"}}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Upstairs TV Outlet', payload '{"ac_frequency":60,"current":0.45,"energy":47.87,"linkquality":224,"power":46.8,"power_factor":0.89,"power_on_behavior":null,"state":"ON","update":{"installed_version":268513368,"latest_version":268513368,"state":"idle"},"voltage":121.5}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Bedroom Repeater', payload '{"linkquality":132,"state":"OFF"}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Coffee Switch', payload '{"current":0,"linkquality":248,"power":0,"state":"OFF","voltage":0}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office 4-Button Controller', payload '{"battery":89,"linkquality":136,"voltage":2900}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Door', payload '{"battery":63,"battery_low":false,"contact":false,"linkquality":204,"moving":false,"tamper":false,"temperature":15.91,"x_axis":-2,"y_axis":976,"z_axis":-5}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Archers Bedroom Door', payload '{"battery":86,"battery_low":false,"contact":true,"linkquality":248,"tamper":false,"update":{"installed_version":63,"latest_version":63,"state":"idle"},"voltage":2900}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Small Hallway Motion', payload '{"battery":72,"battery_low":false,"keep_time":120,"linkquality":204,"occupancy":true,"sensitivity":"low","tamper":false,"voltage":2800}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Bedroom Door', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":252,"tamper":false,"voltage":3000}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Bedroom Motion', payload '{"battery":96.5,"battery_low":false,"linkquality":160,"occupancy":false,"tamper":false,"update":{"installed_version":-1,"latest_version":-1,"state":null},"voltage":3000}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Mudroom Motion', payload '{"battery":94,"battery_low":false,"linkquality":255,"occupancy":false,"voltage":2900}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Front Door', payload '{"battery":80,"battery_low":false,"contact":true,"linkquality":144,"tamper":false,"update":{"installed_version":63,"latest_version":63,"state":"idle"},"voltage":2800}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Dog Food Container', payload '{"battery":62,"battery_low":false,"contact":true,"linkquality":196,"tamper":false,"update":{"installed_version":-1,"latest_version":-1,"state":null},"voltage":2800}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Hallway Motion by Doorbell Sensor', payload '{"battery":92,"battery_low":false,"linkquality":184,"occupancy":true,"voltage":2900}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Candys Office Door', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":196,"tamper":false,"voltage":3000}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Archers Bedroom Window - Side', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":220,"voltage":2800}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Archers Bedroom Window - Back', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":220,"voltage":2800}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Downstairs Window 1', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":140,"tamper":false,"voltage":3000}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Downstairs Window 2', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":204,"tamper":false,"voltage":3000}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Downstairs Window 3', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":172,"tamper":false,"voltage":3000}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Downstairs Window 4', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":176,"tamper":false,"voltage":3000}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Downstairs Window 5', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":140,"tamper":false,"voltage":3000}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Downstairs Window 6', payload '{"battery":100,"battery_low":null,"contact":null,"linkquality":132,"tamper":null,"voltage":3000}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/TV Downstairs Outlet', payload '{"linkquality":132,"state":"OFF"}'
+[2025-01-11 17:29:36] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0xa4c138b20146efb3', payload '{"battery":60,"battery_low":false,"keep_time":60,"linkquality":148,"occupancy":false,"sensitivity":"medium","tamper":false,"voltage":2800}'
+[2025-01-11 17:29:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Archer's Bathroom Sensor', payload '{"battery":97.5,"humidity":54.69,"linkquality":212,"temperature":13.01,"voltage":2900}'
+[2025-01-11 17:29:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Wall Panel Charger', payload '{"linkquality":248,"power_on_behavior":"off","state":"ON","update":{"installed_version":268513368,"latest_version":268513368,"state":"idle"}}'
+[2025-01-11 17:29:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Bedroom Sensor', payload '{"battery":100,"humidity":53.57,"linkquality":192,"temperature":14.15,"update":{"installed_version":30,"latest_version":47,"state":"available"}}'
+[2025-01-11 17:29:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Archers Bedroom Sensor', payload '{"battery":100,"humidity":41.35,"linkquality":172,"temperature":13.47,"voltage":3000}'
+[2025-01-11 17:29:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Archers Bedroom Motion', payload '{"battery":100,"battery_low":false,"linkquality":136,"occupancy":true,"voltage":3200}'
+[2025-01-11 17:29:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Window - Front 1', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":152,"tamper":false,"update":{"installed_version":-1,"latest_version":-1,"state":null},"voltage":3200}'
+[2025-01-11 17:29:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Window - Front 2', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":136,"tamper":false,"update":{"installed_version":-1,"latest_version":-1,"state":null},"voltage":3200}'
+[2025-01-11 17:29:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Window - Side', payload '{"battery":100,"battery_low":false,"contact":true,"linkquality":144,"tamper":false,"update":{"installed_version":-1,"latest_version":-1,"state":null},"voltage":3200}'
+[2025-01-11 17:29:37] info: 	z2m: Zigbee2MQTT started!
+[2025-01-11 17:29:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/Michaels Office Desk Lamp', payload '{"brightness":190,"color":{"h":121,"hue":121,"s":100,"saturation":100,"x":0.171,"y":0.726},"color_mode":"xy","color_temp":153,"effect":null,"linkquality":144,"power_on_behavior":null,"state":"ON","update":{"installed_version":16786690,"latest_version":16786690,"state":"idle"}}'
+[2025-01-11 17:29:41] info: 	z2m:mqtt: MQTT publish: topic 'homeassistant/binary_sensor/1221051039810110150109113116116_0xdc8e95fffe00a097/connection_state/config', payload '{"device":{"hw_version":"EmberZNet 7.4.4 [GA]","identifiers":["zigbee2mqtt_bridge_0xdc8e95fffe00a097"],"manufacturer":"Zigbee2MQTT","model":"Bridge","name":"Zigbee2MQTT Bridge","sw_version":"2.0.0"},"device_class":"connectivity","entity_category":"diagnostic","name":"Connection state","object_id":"zigbee2mqtt_bridge_connection_state","origin":{"name":"Zigbee2MQTT","sw":"2.0.0","url":"https://www.zigbee2mqtt.io"},"payload_off":"offline","payload_on":"online","state_topic":"zigbee2mqtt/bridge/state","unique_id":"bridge_0xdc8e95fffe00a097_connection_state_zigbee2mqtt","value_template":"{{ value_json.state }}"}'

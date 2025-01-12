@@ -1,0 +1,12 @@
+language: "en"
+intents:
+  CustomCar:
+    data:
+      - sentences:
+          - "what's the car's status"
+          - "what's the car's battery level"
+          - "what's the tesla's status"
+          - "what's the car's charge level"
+          - "what's eva's status"
+          - "what's eva's battery level"
+          - "what's eva's charge level"

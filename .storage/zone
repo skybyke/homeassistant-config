@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "zone",
+  "data": {
+    "items": [
+      {
+        "id": "near_home",
+        "latitude": 42.633074682541015,
+        "longitude": -86.17401123046876,
+        "name": "Near Home",
+        "icon": "mdi:map-marker",
+        "passive": false,
+        "radius": 3203.0
+      },
+      {
+        "id": "holland",
+        "latitude": 42.789354160502775,
+        "longitude": -86.16302490234375,
+        "name": "Holland",
+        "icon": "mdi:map-marker",
+        "passive": false,
+        "radius": 9229.0
+      },
+      {
+        "id": "grand_rapids",
+        "latitude": 42.96948707959155,
+        "longitude": -85.65628051757814,
+        "name": "Grand Rapids",
+        "icon": "mdi:map-marker",
+        "passive": false,
+        "radius": 12298.0
+      },
+      {
+        "id": "school",
+        "latitude": 42.65847004683308,
+        "longitude": -86.1971426010132,
+        "name": "School",
+        "icon": "mdi:map-marker",
+        "passive": false,
+        "radius": 130.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+[ADDITION] Migrated settings to version 2
+
+[REMOVAL] The permit_join setting has been removed, use the frontend or MQTT to permit joining.
+
+For more details, see https://github.com/Koenkk/zigbee2mqtt/discussions/24198

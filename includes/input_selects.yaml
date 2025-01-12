@@ -1,0 +1,58 @@
+# Alerts
+alert_severity:
+  name: Alert Severity
+  options:
+    - critical
+    - warning
+    - info
+  initial: info
+
+# Custom ToDo  
+todo_status_1:
+  name: Todo Status 1
+  options:
+    - "not started"
+    - "completed"
+    - "approved"
+todo_status_2:
+  name: Todo Status 2
+  options:
+    - "not started"
+    - "completed"
+    - "approved"
+todo_status_3:
+  name: Todo Status 3
+  options:
+    - "not started"
+    - "completed"
+    - "approved"
+todo_status_4:
+  name: Todo Status 4
+  options:
+    - "not started"
+    - "completed"
+    - "approved"
+todo_status_5:
+  name: Todo Status 5
+  options:
+    - "not started"
+    - "completed"
+    - "approved"
+todo_status_6:
+  name: Todo Status 6
+  options:
+    - "not started"
+    - "completed"
+    - "approved"
+todo_status_7:
+  name: Todo Status 7
+  options:
+    - "not started"
+    - "completed"
+    - "approved"
+todo_status_8:
+  name: Todo Status 8
+  options:
+    - "not started"
+    - "completed"
+    - "approved"

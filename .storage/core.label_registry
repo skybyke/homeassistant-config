@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "core.label_registry",
+  "data": {
+    "labels": [
+      {
+        "color": "primary",
+        "description": null,
+        "icon": "mdi:format-color-fill",
+        "label_id": "rgb",
+        "name": "rgb",
+        "created_at": "2024-11-08T14:36:52.463482+00:00",
+        "modified_at": "2024-11-08T14:36:52.463486+00:00"
+      },
+      {
+        "color": "light-green",
+        "description": null,
+        "icon": "mdi:tree",
+        "label_id": "outside",
+        "name": "outside",
+        "created_at": "2024-11-08T19:28:34.952674+00:00",
+        "modified_at": "2024-11-08T19:28:34.952676+00:00"
+      },
+      {
+        "color": "grey",
+        "description": null,
+        "icon": "mdi:cog",
+        "label_id": "operations",
+        "name": "operational",
+        "created_at": "2024-11-08T20:48:50.286962+00:00",
+        "modified_at": "2024-11-08T21:00:59.370433+00:00"
+      },
+      {
+        "color": "green",
+        "description": null,
+        "icon": "mdi:television-classic",
+        "label_id": "screentime",
+        "name": "screentime",
+        "created_at": "2024-11-09T03:34:08.722572+00:00",
+        "modified_at": "2024-11-09T03:34:08.722575+00:00"
+      },
+      {
+        "color": "cyan",
+        "description": null,
+        "icon": "mdi:motion-sensor",
+        "label_id": "presence",
+        "name": "presence",
+        "created_at": "2024-11-13T14:36:50.589405+00:00",
+        "modified_at": "2024-11-13T14:36:50.589409+00:00"
+      },
+      {
+        "color": "deep-orange",
+        "description": null,
+        "icon": "mdi:halloween",
+        "label_id": "holiday_lighting",
+        "name": "holiday_lighting",
+        "created_at": "2025-01-08T11:28:25.834982+00:00",
+        "modified_at": "2025-01-08T11:28:25.834986+00:00"
+      },
+      {
+        "color": "blue",
+        "description": null,
+        "icon": "mdi:clouds",
+        "label_id": "weather",
+        "name": "weather",
+        "created_at": "2025-01-08T11:57:58.218552+00:00",
+        "modified_at": "2025-01-08T11:57:58.218556+00:00"
+      },
+      {
+        "color": "dark-grey",
+        "description": null,
+        "icon": "mdi:account-voice",
+        "label_id": "voice",
+        "name": "voice",
+        "created_at": "2025-01-08T16:11:09.299776+00:00",
+        "modified_at": "2025-01-08T16:11:09.299779+00:00"
+      },
+      {
+        "color": "yellow",
+        "description": null,
+        "icon": "mdi:bullhorn-variant",
+        "label_id": "announcements",
+        "name": "announcements",
+        "created_at": "2025-01-08T23:58:26.213680+00:00",
+        "modified_at": "2025-01-08T23:58:26.213683+00:00"
+      }
+    ]
+  }
+}

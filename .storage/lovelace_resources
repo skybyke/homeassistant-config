@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "id": "5708d48cbda8433aa683bc798dbd86bf",
+        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375421",
+        "type": "module"
+      },
+      {
+        "id": "14a7ee251fb74408a9d94d85800f0ebd",
+        "url": "/hacsfiles/atomic-calendar-revive/atomic-calendar-revive.js?hacstag=2465497471000",
+        "type": "module"
+      },
+      {
+        "id": "b7db1135f48241aabf13ab99c988e1d8",
+        "url": "/hacsfiles/button-card/button-card.js?hacstag=146194325412",
+        "type": "module"
+      },
+      {
+        "id": "78f44b101d0f44b0901b1f7b85adde99",
+        "url": "/hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524350",
+        "type": "module"
+      },
+      {
+        "id": "7cc1d5697e994aeeb8ec4216b370c656",
+        "url": "/hacsfiles/kiosk-mode/kiosk-mode.js?hacstag=497319128660",
+        "type": "module"
+      },
+      {
+        "id": "b73fd223080a4ed2841bec669c89adcc",
+        "url": "/local/icloud3/icloud3-event-log-card.js",
+        "type": "module"
+      },
+      {
+        "id": "4323fe7ba4644def8dd93d1534d30562",
+        "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js?hacstag=1677445841130",
+        "type": "module"
+      },
+      {
+        "id": "5279c788515c419f9345ca9c4546ee13",
+        "url": "/hacsfiles/config-template-card/config-template-card.js?hacstag=172177543136",
+        "type": "module"
+      },
+      {
+        "id": "fdd85e75619645d79ee6118906078fd5",
+        "url": "/hacsfiles/platinum-weather-card/platinum-weather-card.js?hacstag=488086721105",
+        "type": "module"
+      },
+      {
+        "id": "559398e6d1bb443dbaa0133d31acaf8e",
+        "url": "/hacsfiles/lovelace-html-card/html-card.js?hacstag=193408399100",
+        "type": "module"
+      },
+      {
+        "id": "3644d1dd7dd943deae105984ab597c97",
+        "url": "/local/custom_lovelace/html_card/html-card.js",
+        "type": "module"
+      },
+      {
+        "id": "c58d44272a084e23975ab3751029fa59",
+        "url": "/hacsfiles/lovelace-hui-element/hui-element.js?hacstag=249942054180547",
+        "type": "module"
+      },
+      {
+        "id": "652e4c407f7443e988abdfb954eb7044",
+        "url": "/hacsfiles/stack-in-card/stack-in-card.js?hacstag=248954055020",
+        "type": "module"
+      },
+      {
+        "id": "6499ae73f67b4a2983b0234ac43d7b45",
+        "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js?hacstag=1512800620121",
+        "type": "module"
+      },
+      {
+        "id": "19b48b665b7343f0adbd044d74142a24",
+        "url": "/webrtc/webrtc-camera.js?v=v3.6.0",
+        "type": "module"
+      },
+      {
+        "id": "97d02a52c1274b05b156d4bcdc12ad94",
+        "url": "/hacsfiles/decluttering-card/decluttering-card.js?hacstag=188686483100",
+        "type": "module"
+      },
+      {
+        "id": "bc78925d78644f1380d7fd256ade0e34",
+        "url": "/browser_mod.js?automatically-added",
+        "type": "module"
+      },
+      {
+        "id": "f3ee053edd354d9c95544c3f791d597c",
+        "url": "/hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js?hacstag=142051833101",
+        "type": "module"
+      },
+      {
+        "id": "d213b1c604494ff9996b872eb9bb922a",
+        "url": "/local/vertical-stack-in-card.js?v=0.4.4",
+        "type": "module"
+      },
+      {
+        "id": "c0eee2a8bcf042b7a4fa9d04c25e6a16",
+        "url": "/hacsfiles/lovelace-big-slider-card/big-slider-card.js?hacstag=332589148115",
+        "type": "module"
+      },
+      {
+        "id": "85cc56838c964d69847251dc632bb016",
+        "url": "/hacsfiles/mini-climate-card/mini-climate-card-bundle.js?hacstag=268163975272",
+        "type": "module"
+      },
+      {
+        "id": "12f0427f0ad743c2bc68e09fd53c1195",
+        "url": "/hacsfiles/LG-WebOS-Remote-Control/lg-remote-control.js?hacstag=257005990203",
+        "type": "module"
+      },
+      {
+        "id": "8fc2d5ecff3a429ebd9044e58eec671a",
+        "url": "/hacsfiles/lovelace-slider-entity-row/slider-entity-row.js?hacstag=1448997001741",
+        "type": "module"
+      },
+      {
+        "id": "fad06483df2543658a21592f01b01aaa",
+        "url": "/hacsfiles/lovelace-state-switch/state-switch.js?hacstag=158756598195",
+        "type": "module"
+      },
+      {
+        "id": "4f7af7eb4c094165acc54cb293ae8fb8",
+        "url": "/local/fonts/roboto.css",
+        "type": "css"
+      },
+      {
+        "id": "90d929dde10d45ecaa56e28c4b40a513",
+        "url": "https://cdn.jsdelivr.net/gh/nerwyn/material-rounded-theme@main/dist/material-rounded-theme.js",
+        "type": "module"
+      },
+      {
+        "id": "209679e06d9e458b85a03e3bc7aa0158",
+        "url": "/hacsfiles/clock-weather-card/clock-weather-card.js?hacstag=522634019287",
+        "type": "module"
+      },
+      {
+        "id": "811e2d73474e4a69a7bfcf46ec09a5ba",
+        "url": "/hacsfiles/weather-radar-card/weather-radar-card.js?hacstag=487680971210",
+        "type": "module"
+      }
+    ]
+  }
+}

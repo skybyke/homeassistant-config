@@ -1,0 +1,44 @@
+
+## DOGS
+
+m1_last_pee:
+  name: M1 Last Pee
+  has_date: true
+  has_time: true
+
+m1_last_poo:
+  name: M1 Last Poo
+  has_date: true
+  has_time: true
+
+m1_nothing:
+  name: M1 Nothing
+  has_date: true
+  has_time: true
+
+m2_last_pee:
+  name: M2 Last Pee
+  has_date: true
+  has_time: true
+
+m2_nothing:
+  name: M2 Last Poo
+  has_date: true
+  has_time: true
+
+m2_last_poo:
+  name: M2 Nothing
+  has_date: true
+  has_time: true
+
+dogs_last_fed:
+  name: dogs_last_fed
+  has_date: true
+  has_time: true
+
+## END DOGS
+
+last_plow_time:
+  name: Last Plow Time
+  has_date: true
+  has_time: true

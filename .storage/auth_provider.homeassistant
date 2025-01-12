@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "auth_provider.homeassistant",
+  "data": {
+    "users": [
+      {
+        "username": "michael",
+        "password": "JDJiJDEyJGV1SjBPWURVWGI1dGpxWlBQY2IuT2UzaVRWNmxoaDlWUS9ER0RqZlhRRWRnU29YTFhRZUl5"
+      },
+      {
+        "username": "mqtt-user",
+        "password": "JDJiJDEyJEpyTUJtVlBYSTdJTDBpeWdxMzVxM3V2TkoxNkw0UFlRSTdkc2I3MGVLbk1lUk9INHE4cEh1"
+      },
+      {
+        "username": "candy",
+        "password": "JDJiJDEyJGt2Y1M5TUZGeU5SZUNVQmxvODNZOHVmeXp1RXFjYU4xcEJ3VzRvTEFDbmxLWUZyZGtyZGZH"
+      },
+      {
+        "username": "kiosk",
+        "password": "JDJiJDEyJEFtMnR5YkYzSHZKUFRKQTZUZWNLeC50YmdQYXF0LzJaR1h2Z2tJZWEyZnRDMnNXTUJQN1M2"
+      },
+      {
+        "username": "archer",
+        "password": "JDJiJDEyJGlueDFma0UwTXNCNTZQWjEveDA0ck9GY05rTllCVVh4RmdOR0l2MXZ2V2tLLmt2NEk1dHQu"
+      }
+    ]
+  }
+}

@@ -1,0 +1,835 @@
+cast_on_kitchen:
+  alias: Show Downstairs on kitchen
+  sequence:
+  - action: cast.show_lovelace_view
+    data:
+      dashboard_path: dashboard-home
+      entity_id: media_player.kitchen_display
+      view_path: kitchen-display
+reset_todo_1:
+  alias: Reset Todo Item 1
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_1
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_1
+    data:
+      option: not started
+reset_todo_2:
+  alias: Reset Todo Item 2
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_2
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_2
+    data:
+      option: not started
+reset_todo_3:
+  alias: Reset Todo Item 3
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_3
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_3
+    data:
+      option: not started
+reset_todo_4:
+  alias: Reset Todo Item 4
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_4
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_4
+    data:
+      option: not started
+reset_todo_5:
+  alias: Reset Todo Item 5
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_5
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_5
+    data:
+      option: not started
+reset_todo_6:
+  alias: Reset Todo Item 6
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_6
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_6
+    data:
+      option: not started
+reset_todo_7:
+  alias: Reset Todo Item 7
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_7
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_7
+    data:
+      option: not started
+reset_todo_8:
+  alias: Reset Todo Item 8
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_8
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_8
+    data:
+      option: not started
+reset_all_todo_items:
+  alias: Reset All Todo Items
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_1
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_1
+    data:
+      option: not started
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_2
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_2
+    data:
+      option: not started
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_3
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_3
+    data:
+      option: not started
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_4
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_4
+    data:
+      option: not started
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_5
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_5
+    data:
+      option: not started
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_6
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_6
+    data:
+      option: not started
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_7
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_7
+    data:
+      option: not started
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.todo_item_8
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.todo_status_8
+    data:
+      option: not started
+play_test_sound:
+  alias: Play Test Sound
+  sequence:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: /www/audio/alerts/archer_drumming_in_20.mp3
+      media_content_type: music
+record_snow_plow:
+  alias: Record Snow Plow Visit
+  sequence:
+  - condition: template
+    value_template: "{% if not states('input_datetime.last_plow_time') %}\n  true\n{%
+      else %}\n  {% set last_plow = strptime(states('input_datetime.last_plow_time'),
+      '%Y-%m-%d %H:%M:%S') %}\n  {% set hours_since = ((now() - last_plow).total_seconds()
+      / 3600) | round(2) %}\n  {{ hours_since >= 4 }}\n{% endif %}\n"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{% if not states('input_datetime.last_plow_time') %}\n  true\n{%
+          else %}\n  {% set last_plow = strptime(states('input_datetime.last_plow_time'),
+          '%Y-%m-%d %H:%M:%S') %}\n  {% set hours_since = ((now() - last_plow).total_seconds()
+          / 3600) | round(2) %}\n  {{ hours_since >= 4 }}\n{% endif %}\n"
+      sequence:
+      - action: counter.increment
+        target:
+          entity_id: counter.driveway_plows
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.last_plow_time
+        data:
+          datetime: '{{ now().strftime(''%Y-%m-%d %H:%M:%S'') }}'
+      - action: persistent_notification.create
+        data:
+          message: 'Snow plow visit recorded at {{ now().strftime(''%-I:%M %p'') }}.
+            Total this season: {{ states(''counter.driveway_plows'') }}'
+          title: Snow Plow Recorded
+    default:
+    - action: persistent_notification.create
+      data:
+        message: 'Cannot record snow plow visit - minimum 4 hour interval required.  Last
+          recorded: {{ states(''input_datetime.last_plow_time'') }}'
+        title: Snow Plow Recording Blocked
+start_screentime_delay_countdown:
+  alias: Start Screentime Delay Countdown
+  sequence:
+  - action: automation.turn_on
+    target:
+      entity_id: automation.decrement_screentime_delay_counter
+  - action: automation.trigger
+    target:
+      entity_id: automation.decrement_screentime_delay_counter
+increment_screentime_delay:
+  alias: Increment Screentime Delay
+  sequence:
+  - action: counter.increment
+    target:
+      entity_id: counter.screentime_delay
+    data:
+      value: 5
+decrement_screentime_delay:
+  alias: Decrement Screentime Delay
+  sequence:
+  - action: counter.decrement
+    target:
+      entity_id: counter.screentime_delay
+    data:
+      value: 5
+  - condition: numeric_state
+    entity_id: counter.screentime_delay
+    below: 0
+  - action: counter.set_value
+    target:
+      entity_id: counter.screentime_delay
+    data:
+      value: 0
+reset_screentime_delay:
+  alias: Reset Screentime Delay
+  sequence:
+  - action: counter.set_value
+    target:
+      entity_id: counter.screentime_delay
+    data:
+      value: 0
+dismiss_alert:
+  alias: Dismiss alert
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: input_text.alert_message
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.alert_severity
+    data:
+      option: yellow
+reset_todo:
+  alias: Reset Todo Item
+  sequence:
+  - action: input_text.set_value
+    target:
+      entity_id: '{{ todo_input }}'
+    data:
+      value: ''
+  - action: input_select.select_option
+    target:
+      entity_id: '{{ todo_status }}'
+    data:
+      option: not started
+reset_tv_stats:
+  alias: Reset TV Statistics
+  sequence:
+  - action: recorder.purge
+    data:
+      keep_days: 0
+  - delay:
+      seconds: 2
+  - action: homeassistant.update_entity
+    target:
+      entity_id:
+      - sensor.tv_upstairs_screentime_hours
+      - sensor.tv_upstairs_granted_hours
+      - sensor.tv_upstairs_unauthorized_hours
+      - sensor.tv_upstairs_total_hours
+update_m1_pee:
+  alias: Update M1 Pee Time
+  sequence:
+  - action: input_datetime.set_datetime
+    data:
+      entity_id: input_datetime.m1_last_pee
+      datetime: '{{ now() }}'
+update_m1_poo:
+  alias: Update M1 Poo Time
+  sequence:
+  - action: input_datetime.set_datetime
+    data:
+      entity_id: input_datetime.m1_last_poo
+      datetime: '{{ now() }}'
+update_m1_nothing:
+  alias: Update M1 Nothing Time
+  sequence:
+  - action: input_datetime.set_datetime
+    data:
+      entity_id: input_datetime.m1_nothing
+      datetime: '{{ now() }}'
+update_m2_pee:
+  alias: Update M2 Pee Time
+  sequence:
+  - action: input_datetime.set_datetime
+    data:
+      entity_id: input_datetime.m2_last_pee
+      datetime: '{{ now() }}'
+update_m2_poo:
+  alias: Update M2 Poo Time
+  sequence:
+  - action: input_datetime.set_datetime
+    data:
+      entity_id: input_datetime.m2_last_poo
+      datetime: '{{ now() }}'
+update_m2_nothing:
+  alias: Update M2 Nothing Time
+  sequence:
+  - action: input_datetime.set_datetime
+    data:
+      entity_id: input_datetime.m2_nothing
+      datetime: '{{ now() }}'
+dogs_last_fed:
+  alias: Update Dogs Last Fed Time
+  sequence:
+  - action: input_datetime.set_datetime
+    data:
+      entity_id: input_datetime.dogs_last_fed
+      datetime: '{{ now() }}'
+hue_scenes:
+  alias: Light / Hue Scene
+  description: This script tries to replicate the Hue scenes. Colors are distributed
+    randomly on participating lights. Each scene currently has five different colors
+    represented by XY values. The script is only applied to lights that support XY
+    color mode.
+  fields:
+    target:
+      name: Target
+      required: true
+      description: Select one or more areas or light entities.
+      selector:
+        target:
+          entity:
+            domain: light
+    scene:
+      name: Scene
+      description: Which scene? Scenes are taken from the Hue app.
+      required: true
+      default: Savanna Sunset
+      selector:
+        select:
+          options:
+          - Savanna Sunset
+          - Golden Pond
+          - Horizon
+          - Frosty Dawn
+    onlyonlights:
+      name: Only lights currently on?
+      description: If enabled, the scene is only applied to the lights currently on.
+      required: false
+      default: false
+      selector:
+        boolean:
+    skipgroups:
+      name: Skip groups
+      description: If enabled, group light entities will be skipped.
+      required: false
+      default: true
+      selector:
+        boolean:
+  sequence:
+  - variables:
+      colors: "{% set scenes = {\n  \"Savanna Sunset\": {\n    \"colors\": [[0.644,
+        0.3348],[0.5246,\n      0.3864],[0.4801, 0.4309],[0.5862, 0.3575],[0.4162,
+        0.4341]]\n  },\n  \"Golden Pond\": {\n    \"colors\": [[0.5695, 0.3999],[0.482,\n
+        \     0.4489],[0.496, 0.4424],[0.5584, 0.4083],[0.5063, 0.4474]]\n  },\n  \"Horizon\":
+        {\n    \"colors\": [[0.2779, 0.2188],[0.1811,\n      0.1979],[0.5247, 0.3877],[0.592,
+        0.385],[0.1731, 0.1978]]\n  },\n  \"Frosty Dawn\": {\n    \"colors\": [[0.4221,
+        0.386],[0.387,\n      0.4328],[0.4013, 0.4172],[0.439, 0.3782],[0.4675, 0.3769]]\n
+        \ }\n}%}\n{{scenes[scene].colors}}"
+      lights: "{% set l=[]%}\n{% if target.area_id %}\n  {% if target.area_id is iterable
+        and not target.area_id is string %}\n    {% for a in target.area_id %}\n      {%
+        set l = l + area_entities(a)|select('match', 'light.')|list %}              \n
+        \   {% endfor %}\n  {% else %}\n    {% set l = l + area_entities(target.area_id)|select('match',
+        'light.')|list %}\n  {% endif %}\n{% endif %}\n{% if target.entity_id %}\n
+        \ {% if target.entity_id is iterable and not target.entity_id is string %}\n
+        \   {% set l = l + (target.entity_id|list) %}\n  {% else %}\n    {% set l
+        = l + [target.entity_id] %}\n  {% endif %}\n{% endif %}\n\n{% if onlyonlights
+        %}\n{% set l = l| select('is_state', 'on')%}\n{% endif %}\n\n{% if skipgroups
+        %}\n{% set l|from_json %}\n[{%- for ll in l -%}\n  {%- if not state_attr(ll,
+        \"entity_id\")-%}\n  \"{{ ll }}\"\n  {%- if not loop.last-%},{%-endif-%}\n
+        \ {%-endif-%}\n{%- endfor -%}]\n{% endset %}\n{% endif %}\n\n[{%- for ll in
+        l %}\n  {%- set colormodes = state_attr(ll, \"supported_color_modes\") -%}\n
+        \ {%- if \"xy\" in colormodes -%}\n  \"{{ ll }}\"\n  {%- if not loop.last-%},{%-endif-%}\n
+        \ {%- endif -%}\n{%- endfor -%}]"
+  - repeat:
+      for_each: '{{ lights }}'
+      sequence:
+      - action: light.turn_on
+        data:
+          xy_color: '{{ colors|random}}'
+        target:
+          entity_id: '{{ repeat.item }}'
+  mode: single
+alert_bird_buddy_battery_low:
+  alias: Alert - Bird Buddy Battery Low
+  use_blueprint:
+    path: homeassistant/confirmable_notification.yaml
+    input:
+      notify_device: c5cbce615132f4047474260c65868639
+      title: Bird Buddy Battery
+      message: Bird Buddy's battery is less than 5%
+      confirm_text: Okay
+      dismiss_text: Okay
+  description: ''
+  icon: mdi:bird
+announce_candy_heading_home:
+  alias: Announce - Candy Heading Home
+  sequence:
+  - variables:
+      current_volume: '{{ state_attr(''media_player.michaels_office_speaker'', ''volume_level'')
+        }}'
+      sounds:
+      - /local/audio/alerts/candy_heading_home_1.mp3
+      - /local/audio/alerts/candy_heading_home_2.mp3
+      - /local/audio/alerts/candy_heading_home_3.mp3
+      - /local/audio/alerts/candy_heading_home_4.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.volume_set
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      volume_level: 0.5
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_candy_has_arrived:
+  alias: Announce - Candy Has Arrived
+  sequence:
+  - variables:
+      current_volume: '{{ state_attr(''media_player.michaels_office_speaker'', ''volume_level'')
+        }}'
+      sounds:
+      - /local/audio/alerts/candy_has_arrived_1.mp3
+      - /local/audio/alerts/candy_has_arrived_2.mp3
+      - /local/audio/alerts/candy_has_arrived_3.mp3
+      - /local/audio/alerts/candy_has_arrived_4.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.volume_set
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      volume_level: 0.5
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+  - delay:
+      seconds: 5
+  - action: media_player.volume_set
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      volume_level: '{{ current_volume }}'
+announce_candy_entered_saugatuck_area:
+  alias: Announce - Candy Entered the Saugatuck Area
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/candy_entered_saugatuck_area.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: audio/mp3
+announce_archers_watch_low_1:
+  alias: Announce - Archers Watch Low 1
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/archers_watch_low_1.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_archers_watch_low_2:
+  alias: Announce - Archers Watch Low 2
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/archers_watch_low_2.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_archer_drumming_in_20:
+  alias: Announce - Archer Drumming In 20
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/archer_drumming_in_20.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_archer_home_soon:
+  alias: Announce - Archer Home Soon
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/archer_home_soon.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_archer_swimming_in_20:
+  alias: Announce - Archer Swimming In 20
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/archer_swimming_in_20.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_candy_20_min_away:
+  alias: Announce - Candy 20 Min Away
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/candy_20_min_away.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_candy_leaving_gr:
+  alias: Announce - Candy Leaving GR
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/candy_leaving_gr.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_candy_leaving_holland:
+  alias: Announce - Candy Leaving Holland
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/candy_leaving_holland.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_cleaning_lady_day:
+  alias: Announce - Cleaning Lady Day
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/cleaning_lady_day.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_feed_dogs:
+  alias: Announce - Feed Dogs
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/feed_dogs_1.mp3
+      - /local/audio/alerts/feed_dogs_2.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_garbage_day:
+  alias: Announce - Garbage Day
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/garbage_day_1.mp3
+      - /local/audio/alerts/garbage_day_2.mp3
+      - /local/audio/alerts/garbage_day_3.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_homework:
+  alias: Announce - Homework
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/homework_archer_all.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_homework_benjamin_all:
+  alias: Announce - Homework Benjamin All
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/homework_benjamin_all.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_homework_cowboy_all:
+  alias: Announce - Homework Cowboy All
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/homework_cowboy_all.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_homework_epic_movie_all:
+  alias: Announce - Homework Epic Movie All
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/homework_epic_movie_all.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_homework_evil_lady_all:
+  alias: Announce - Homework Evil Lady All
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/homework_evil_lady_all.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_homework_jessica_anne_all:
+  alias: Announce - Homework Jessica_Anne All
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/homework_jessica_anne_all.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_homework_leoni_all:
+  alias: Announce - Homework Leoni All
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/homework_leoni_all.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_homework_morgana_all:
+  alias: Announce - Homework Morgana All
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/homework_morgana_all.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_homework_shannon_all:
+  alias: Announce - Homework Shannon All
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/homework_shannon_all.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_hwk2_leona:
+  alias: Announce - Hwk2 Leona
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/hwk2_leona.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+announce_hwk_2:
+  alias: Announce - Hwk 2
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/hwk_2.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.michaels_office_speaker
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: audio/mp3
+announce_watch_chromebook:
+  alias: Announce - Watch Chromebook
+  sequence:
+  - variables:
+      sounds:
+      - /local/audio/alerts/watch_chromebook_1.mp3
+      - /local/audio/alerts/watch_chromebook_2.mp3
+      random_sound: '{{ sounds | random }}'
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.kitchen_display
+    data:
+      media_content_id: '{{ random_sound }}'
+      media_content_type: music
+llm_helper_script_for_fetching_weather_forecasts:
+  alias: LLM Helper script for fetching weather forecasts
+  use_blueprint:
+    path: TheFes/fetch_weather_forecast_by_llm.yaml
+    input:
+      weather_entity: weather.pirateweather
+  description: ' Fetches the weather forecast for either a part of a day, or one or
+    more full days. In case the weather for the weekend is requested, this means Saturday
+    and Sunday'

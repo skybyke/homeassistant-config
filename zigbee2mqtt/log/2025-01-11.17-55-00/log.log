@@ -1,0 +1,85 @@
+[2025-01-11 17:55:00] info: 	z2m: Logging to console, file (filename: log.log)
+[2025-01-11 17:55:00] info: 	z2m: Starting Zigbee2MQTT version 2.0.0 (commit #unknown)
+[2025-01-11 17:55:00] info: 	z2m: Starting zigbee-herdsman (3.2.1)
+[2025-01-11 17:55:00] info: 	zh:ember: Using default stack config.
+[2025-01-11 17:55:00] info: 	zh:ember: ======== Ember Adapter Starting ========
+[2025-01-11 17:55:00] info: 	zh:ember:ezsp: ======== EZSP starting ========
+[2025-01-11 17:55:00] info: 	zh:ember:uart:ash: ======== ASH Adapter reset ========
+[2025-01-11 17:55:00] info: 	zh:ember:uart:ash: RTS/CTS config is off, enabling software flow control.
+[2025-01-11 17:55:00] info: 	zh:ember:uart:ash: Serial port opened
+[2025-01-11 17:55:00] info: 	zh:ember:uart:ash: ======== ASH starting ========
+[2025-01-11 17:55:01] info: 	zh:ember:uart:ash: ======== ASH connected ========
+[2025-01-11 17:55:01] info: 	zh:ember:uart:ash: ======== ASH started ========
+[2025-01-11 17:55:01] info: 	zh:ember:ezsp: ======== EZSP started ========
+[2025-01-11 17:55:01] info: 	zh:ember: Adapter EZSP protocol version (13) lower than Host. Switched.
+[2025-01-11 17:55:01] info: 	zh:ember: Adapter version info: {"ezsp":13,"revision":"7.4.4 [GA]","build":0,"major":7,"minor":4,"patch":4,"special":0,"type":170}
+[2025-01-11 17:55:01] info: 	zh:ember: [STACK STATUS] Network up.
+[2025-01-11 17:55:01] info: 	zh:ember: [INIT TC] Adapter network matches config.
+[2025-01-11 17:55:01] info: 	zh:ember: [CONCENTRATOR] Started source route discovery. 1249ms until next broadcast.
+[2025-01-11 17:55:01] info: 	z2m: zigbee-herdsman started (resumed)
+[2025-01-11 17:55:01] info: 	z2m: Coordinator firmware version: '{"meta":{"build":0,"ezsp":13,"major":7,"minor":4,"patch":4,"revision":"7.4.4 [GA]","special":0,"type":170},"type":"EmberZNet"}'
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office Desk Lamp (0x001788010898ca29): 9290022166 - Philips Hue white and color ambiance E26/E27 (Router)
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office Overhead Back Wall (0x00178801020a2bc7): 9290002579A - Philips Hue white and color ambiance BR30 (Router)
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office Overhead Closet (0x0017880102f31996): 9290002579A - Philips Hue white and color ambiance BR30 (Router)
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office Overhead Desk (0x0017880102204bba): 9290002579A - Philips Hue white and color ambiance BR30 (Router)
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office Uplight (0x001788010113975c): 7146060PH - Philips Hue Go (Router)
+[2025-01-11 17:55:01] info: 	z2m: Living Room Bulb 1 (0xb0ce1814032edfa5): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Living Room Bulb 2 (0xb0ce1814032d3199): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Living Room Bulb 3 (0xb0ce1814032ee8ef): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Living Room Bulb 4 (0xb0ce1814032eef43): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Living Room Bulb 5 (0xb0ce1814032c80e8): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Hallway Bulb 1 (0xb0ce1814032edf79): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Hallway Bulb 2 (0xb0ce1814032c7fc7): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Hallway Bulb 3 (0xb0ce1814032c81c1): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Hallway Bulb 4 (0xb0ce1814032c66f1): E12-N14 - Sengled Element Classic (BR30) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Archers Bedroom Dresser (0x001788010898ca69): 9290022166 - Philips Hue white and color ambiance E26/E27 (Router)
+[2025-01-11 17:55:01] info: 	z2m: Archers Bedroom Bed Light (0x00178801011fd9c8): 915005106701 - Philips Hue white and color ambiance LightStrip plus (Router)
+[2025-01-11 17:55:01] info: 	z2m: Bedroom Dresser (0x00178801028a49fa): 9290011370 - Philips Hue white A60 bulb E27/B22 (Router)
+[2025-01-11 17:55:01] info: 	z2m: Bedroom MJK Bedside (0x0017880110400d5f): 9290011370 - Philips Hue white A60 bulb E27/B22 (Router)
+[2025-01-11 17:55:01] info: 	z2m: Bedroom CCK Bedside (0x00178801105b7523): 9290011370 - Philips Hue white A60 bulb E27/B22 (Router)
+[2025-01-11 17:55:01] info: 	z2m: Garage Bulb Left (0x001788010bc17034): 929002294101 - Philips Hue White and Color Ambiance E12 with bluetooth (Router)
+[2025-01-11 17:55:01] info: 	z2m: Garage Bulb Right (0x001788010bc15eab): 929002294101 - Philips Hue White and Color Ambiance E12 with bluetooth (Router)
+[2025-01-11 17:55:01] info: 	z2m: Front Candys Office (0x001788010625db5c): 1741830P7 - Philips Hue Lily outdoor spot light (Router)
+[2025-01-11 17:55:01] info: 	z2m: Front Michaels Office (0x00178801062772db): 1741830P7 - Philips Hue Lily outdoor spot light (Router)
+[2025-01-11 17:55:01] info: 	z2m: Porch Overhead Bulb 3 (0x001788010d49ce61): 579573 - Philips Hue White and Color Ambiance slim downlight 6" (Router)
+[2025-01-11 17:55:01] info: 	z2m: Porch Overhead Bulb 4 (0x001788010d49ce46): 579573 - Philips Hue White and Color Ambiance slim downlight 6" (Router)
+[2025-01-11 17:55:01] info: 	z2m: Porch Overhead Bulb 1 (0x001788010d49cec3): 579573 - Philips Hue White and Color Ambiance slim downlight 6" (Router)
+[2025-01-11 17:55:01] info: 	z2m: Porch Overhead Bulb 2 (0x001788010d49ce7e): 579573 - Philips Hue White and Color Ambiance slim downlight 6" (Router)
+[2025-01-11 17:55:01] info: 	z2m: Dining Room Repeater (0x282c02bfffe6db05): 3RSP019BZ - Third Reality Zigbee / BLE smart plug (Router)
+[2025-01-11 17:55:01] info: 	z2m: Hallway Repeater (0x282c02bfffe8b63e): 3RSP019BZ - Third Reality Zigbee / BLE smart plug (Router)
+[2025-01-11 17:55:01] info: 	z2m: Upstairs TV Outlet (0x282c02bfffe8cb89): 3RSP02028BZ - Third Reality Zigbee / BLE smart plug with power (Router)
+[2025-01-11 17:55:01] info: 	z2m: Bedroom Repeater (0x00124b0022d5f9a3): SA-003-Zigbee - eWeLink Zigbee smart plug (Router)
+[2025-01-11 17:55:01] info: 	z2m: Coffee Switch (0x000d6f0003bf5a9f): 4257050-RZHAC - Centralite 3-Series smart outlet (Router)
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office 4-Button Controller (0x90395efffe0feee2): TS0044 - Tuya Wireless switch with 4 buttons (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office Door (0x286d97000107a4a2): IM6001-MPP01 - SmartThings Multipurpose sensor (2018 model) (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Archers Bedroom Door (0x282c02bfffe86622): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Small Hallway Motion (0xa4c13852a506917f): ZMS-102 - Tuya Motion sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Bedroom Door (0xa4c1380bc5e10eea): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Bedroom Motion (0x282c02bfffed45f9): 3RMS16BZ - Third Reality Wireless motion sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Mudroom Motion (0x00124b002a4f5a0b): SNZB-03 - SONOFF Motion sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Front Door (0x282c02bfffe869e4): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Dog Food Container (0x282c02bfffe871a6): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Hallway Motion by Doorbell Sensor (0x00124b002a4ed235): SNZB-03 - SONOFF Motion sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Candys Office Door (0xa4c138989749fbcf): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Archers Bedroom Window - Side (0xa4c138f5aa095bee): SNZB-04 - SONOFF Contact sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Archers Bedroom Window - Back (0xa4c1383fa239339d): SNZB-04 - SONOFF Contact sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Downstairs Window 1 (0xa4c1387f3608d7f4): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Downstairs Window 2 (0xa4c13844f7590c7b): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Downstairs Window 3 (0xa4c138b8764ec65e): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Downstairs Window 4 (0xa4c138cc0d6c0519): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Downstairs Window 5 (0xa4c138cf270e9886): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Downstairs Window 6 (0xa4c1385f9dcec437): TS0203 - Tuya Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: TV Downstairs Outlet (0x00124b0022ce7bed): SA-003-Zigbee - eWeLink Zigbee smart plug (Router)
+[2025-01-11 17:55:01] info: 	z2m: 0xa4c138b20146efb3 (0xa4c138b20146efb3): ZMS-102 - Tuya Motion sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Archer's Bathroom Sensor (0x00124b002fa13db6): SNZB-02 - SONOFF Temperature and humidity sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Wall Panel Charger (0x282c02bfffe6dd44): 3RSP019BZ - Third Reality Zigbee / BLE smart plug (Router)
+[2025-01-11 17:55:01] info: 	z2m: Bedroom Sensor (0xf44250000cce0000): 3RTHS0224Z - Third Reality Temperature and humidity sensor lite (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Archers Bedroom Sensor (0xa4c138cd50eb5ff9): TH02Z - Tuya Temperature and humidity sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Archers Bedroom Motion (0x00124b002a4ed433): SNZB-03 - SONOFF Motion sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office Window - Front 1 (0x282c02bfffecdf78): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office Window - Front 2 (0x282c02bfffecd685): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Michaels Office Window - Side (0x282c02bfffecdf3a): 3RDS17BZ - Third Reality Door sensor (EndDevice)
+[2025-01-11 17:55:01] info: 	z2m: Currently 61 devices are joined.
+[2025-01-11 17:55:01] info: 	z2m: Connecting to MQTT server at mqtt://core-mosquitto:1883
+[2025-01-11 17:55:02] info: 	z2m: Connected to MQTT server
+[2025-01-11 17:55:02] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"online"}'

@@ -1,0 +1,5 @@
+* # ignore everything
+!*.yaml
+!.gitignore
+!secrets.yaml
+*.db

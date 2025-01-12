@@ -1,0 +1,126 @@
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+intent_script:
+  CustomAgenda:
+    speech:
+      text: "{{ states('sensor.todays_agenda') }}" 
+  CustomCar:    
+    speech:
+      text: >-
+        {{ states('sensor.todays_agenda') }}
+        {% if states('sensor.eva_battery') != 'unavailable' and states('sensor.eva_battery') != 'unknown' %}
+          Eva's battery is at {{ states('sensor.eva_battery') }}%.
+          {% if states('sensor.eva_charging') == 'Charging' %}
+            The car is currently charging.
+          {% elif states('sensor.eva_charging') == 'Complete' %}
+            Charging is complete.
+          {% elif states('sensor.eva_charging') == 'Disconnected' %}
+            The car is not plugged in.
+          {% endif %}
+        {% endif %}      
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+binary_sensor: !include includes/binary_sensors.yaml
+input_text: !include includes/input_texts.yaml
+input_boolean: !include includes/input_booleans.yaml
+input_select: !include includes/input_selects.yaml
+input_number: !include includes/input_numbers.yaml
+group: !include includes/groups.yaml
+light: !include includes/lights.yaml
+counter: !include includes/counters.yaml
+input_datetime: !include includes/input_datetimes.yaml
+conversation: !include includes/conversation.yaml
+sensor: !include includes/sensors.yaml
+
+shell_command:
+  system_info_export: "touch /config/system_info.txt && chmod 644 /config/system_info.txt"
+  pip_install: "pip3 install requests beautifulsoup4"
+  get_grades: "python3 /config/python_scripts/grade_scraper.py 2>&1"
+  copy_backup_files: >
+    "cp /config/configuration.yaml /config/scripts/specific_files.yaml /config/www/backup_subset/"
+
+
+ios:
+  push:
+    categories:
+      - name: RESPONSE_CATEGORY
+        identifier: 'response'
+        actions:
+          - identifier: 'OPTION_1'
+            title: 'Default'
+            behavior: 'default'
+          - identifier: 'OPTION_2'
+            title: 'Blocked'
+            behavior: 'default'
+  actions:
+    - name: M2_Poo
+      background_color: "#45C1FF" # Requires `use_custom_colors`
+      label:
+        text: "M2 Poo"
+        color: "#eeeeee" # Requires `use_custom_colors`
+      icon:
+        icon: emoticon-poop
+        color: "#ffffff"
+      show_in_carplay: false
+      show_in_watch: true
+      use_custom_colors: true
+
+
+switch:
+  - platform: wake_on_lan
+    name: lg
+    mac: "A8:23:FE:FA:5F:6E"
+
+rest_command:
+  remote_notify_webhook:
+    url: http://mjkmjkmjk.duckdns.org:8123/api/webhook/webhook2
+    method: POST
+
+
+cloud:
+
+  
+logger:
+  default: error
+
+logbook: ~
+
+recorder:
+  db_url: mysql://homeassistant:mjkhome2001@core-mariadb/homeassistant?charset=utf8mb4
+  purge_keep_days: 365
+  commit_interval: 1
+
+history:
+  exclude:
+    domains:
+      - automation      # You usually don’t need to see these in the UI
+      - script          # Similar to automations
+      - weather         # Weather trends are less useful in history
+      - zone            # Rarely interesting in the history view
+    entities:
+      - sun.sun         # Too noisy for the UI
+      - sensor.time     # Updates every minute, not useful in history
+      - sensor.date     # Daily updates, rarely needed
+      - sensor.uptime   # Not useful for most setups
+    entity_globs:
+      - sensor.network_*  # Exclude noisy network sensors
+      - sensor.memory_*   # Exclude memory stats
+      - sensor.cpu_*      # Exclude CPU stats
+
+weather:
+  - platform: pirateweather
+    api_key: XoSA3p00b0XnYxGebrQskV63Ja0Cl8r3
+
+
+python_script: # Enable Python scripts
