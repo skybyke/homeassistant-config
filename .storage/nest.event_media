@@ -11698,6 +11698,52 @@
         },
         "thumbnail_media_key": null,
         "pending_event_keys": []
+      },
+      {
+        "event_session_id": "AVPHwEtJ3u2viY9JoRh_odvmdgR1k4ErwYP4T2L45nPxuMzezDfcxNAk9cZ7RdfNE12JACKSQnGsUgyk29XV2yk1NqBd",
+        "events": {
+          "sdm.devices.events.CameraSound.Sound": {
+            "event_type": "sdm.devices.events.CameraSound.Sound",
+            "event_data": {
+              "event_session_id": "AVPHwEtJ3u2viY9JoRh_odvmdgR1k4ErwYP4T2L45nPxuMzezDfcxNAk9cZ7RdfNE12JACKSQnGsUgyk29XV2yk1NqBd",
+              "timestamp": "2025-01-12T21:14:25.924000+00:00",
+              "event_id": "CiUA2vuxr1YQLSbXMfp_tENCzWgFcYk1x8Ta5h4yLl9TUbiHwI8UEo0BADWeYadKNKQZjZlR9KgGYNCM8zQEbUZoAPxI3axd4TE6CGculY-9WU-KNsipt6xMeilAz9qpCVoHI-K0vwmozokOcMX7TylSurHihAgRnf7aRmEWBv237DrKj4Gb4s7lI88bFIBnQ5KdCvVZE0P4a8Fj2-IglPod0ORXG4wztHJx2pAHjGiZ7rgUPIrU",
+              "event_image_type": "image/jpeg",
+              "zones": []
+            },
+            "timestamp": "2025-01-12T21:14:25.924000+00:00",
+            "event_image_type": "image/jpeg"
+          }
+        },
+        "media_key": null,
+        "event_media_keys": {
+          "CiUA2vuxr1YQLSbXMfp_tENCzWgFcYk1x8Ta5h4yLl9TUbiHwI8UEo0BADWeYadKNKQZjZlR9KgGYNCM8zQEbUZoAPxI3axd4TE6CGculY-9WU-KNsipt6xMeilAz9qpCVoHI-K0vwmozokOcMX7TylSurHihAgRnf7aRmEWBv237DrKj4Gb4s7lI88bFIBnQ5KdCvVZE0P4a8Fj2-IglPod0ORXG4wztHJx2pAHjGiZ7rgUPIrU": "7842aff43a6ebcbe579f0feb17346a2e/1736716465-camera_sound.jpg"
+        },
+        "thumbnail_media_key": null,
+        "pending_event_keys": []
+      },
+      {
+        "event_session_id": "AVPHwEuF9MGqY49qDgEJBiDJD3IHLI8-BSjl-PRaIIM7fSj3dNadbcR2lQUR2v-TH1X2PLAY5qRD4nI8XbHZcYHLwQB9",
+        "events": {
+          "sdm.devices.events.CameraPerson.Person": {
+            "event_type": "sdm.devices.events.CameraPerson.Person",
+            "event_data": {
+              "event_session_id": "AVPHwEuF9MGqY49qDgEJBiDJD3IHLI8-BSjl-PRaIIM7fSj3dNadbcR2lQUR2v-TH1X2PLAY5qRD4nI8XbHZcYHLwQB9",
+              "timestamp": "2025-01-12T21:18:06.836000+00:00",
+              "event_id": "CiUA2vuxr8u34kqJyUcGDCcULaQpfsHXwDxS4QS48eA3j0sta0_eEo0BADWeYafbkONsADt-mkymUaSFO9E2Ugq82I-FSCXiKspw8JO2sqxneFFHGqwbGBwNzBOqpmd9d5H4J0Jw78aorz8X03lDdQxRuE0vaZVEmDSmk_PUBdVSR3qrMPrtfJjpBd4hyBQFsTNJzsejQQd_ncShZ_LjA9GGprfb9-NPYdGE8yoSetar7OJytngC",
+              "event_image_type": "image/jpeg",
+              "zones": []
+            },
+            "timestamp": "2025-01-12T21:18:06.836000+00:00",
+            "event_image_type": "image/jpeg"
+          }
+        },
+        "media_key": null,
+        "event_media_keys": {
+          "CiUA2vuxr8u34kqJyUcGDCcULaQpfsHXwDxS4QS48eA3j0sta0_eEo0BADWeYafbkONsADt-mkymUaSFO9E2Ugq82I-FSCXiKspw8JO2sqxneFFHGqwbGBwNzBOqpmd9d5H4J0Jw78aorz8X03lDdQxRuE0vaZVEmDSmk_PUBdVSR3qrMPrtfJjpBd4hyBQFsTNJzsejQQd_ncShZ_LjA9GGprfb9-NPYdGE8yoSetar7OJytngC": "7842aff43a6ebcbe579f0feb17346a2e/1736716686-camera_person.jpg"
+        },
+        "thumbnail_media_key": null,
+        "pending_event_keys": []
       }
     ],
     "enterprises/2c802523-8ca0-47a6-9ebb-7b372a4dbfa4/devices/AVPHwEuZHXWaYUSVwzTZIyF4AXbkXC_ISaXcGHJYr0-iwszYZdnpmnX-8T8-cu3Thu8MKg0934uiPapEhNv1a1sunXcs": [

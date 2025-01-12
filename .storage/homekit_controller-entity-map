@@ -352,7 +352,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 45,
+                    "value": 14,
                     "description": "Current Ambient Light Level",
                     "unit": "lux",
                     "minValue": 0,
@@ -1210,7 +1210,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 179,
+                    "value": 58,
                     "description": "Current Ambient Light Level",
                     "unit": "lux",
                     "minValue": 0,

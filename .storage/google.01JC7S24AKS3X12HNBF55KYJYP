@@ -7,7 +7,7 @@
       "event_sync": {
         "addressbook#contacts@group.v.calendar.google.com": {
           "items": {},
-          "sync_token": "CPCJv8OE8YoDEPCJv8OE8YoDGAEgitTayQIoitTayQI=",
+          "sync_token": "CNnWstWH8YoDENnWstWH8YoDGAEgitTayQIoitTayQI=",
           "sync_token_version": 2
         }
       }
