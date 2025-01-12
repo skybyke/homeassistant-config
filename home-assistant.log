@@ -190,3 +190,5 @@ NoneType: None
 2025-01-12 16:36:02.276 ERROR (MainThread) [homeassistant.components.template.template_entity] TemplateError('ValueError: Template error: float got invalid input 'unknown' when rendering template '{{ (states('sensor.tv_upstairs_unauthorized_hours') | float * 60) | round(0) }}' but no default was specified') while processing template 'Template<template=({{ (states('sensor.tv_upstairs_unauthorized_hours') | float * 60) | round(0) }}) renders=6>' for attribute '_attr_native_value' in entity 'sensor.tv_unauthorized_minutes_2'
 2025-01-12 16:36:07.652 ERROR (MainThread) [homeassistant.components.shell_command] Error running command: `/bin /bash pushupdates.sh`, return code: 126
 NoneType: None
+2025-01-12 16:37:47.890 ERROR (MainThread) [homeassistant.components.shell_command] Error running command: `/bin /bash pushupdates.sh`, return code: 126
+NoneType: None

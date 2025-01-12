@@ -1,13 +1,13 @@
 {
   "profile": {
     "version": 0,
-    "last_update": "2025-01-12 16:37:00",
-    "last_commit": "2025-01-12 16:37:10",
-    "recds_changed": 2
+    "last_update": "2025-01-12 16:38:10",
+    "last_commit": "2025-01-12 16:38:10",
+    "recds_changed": 5
   },
   "devices": {
     "archers_apple_watch": {
-      "last_update": "2025-01-12 16:37:00",
+      "last_update": "2025-01-12 16:38:10",
       "sensors": {
         "device_tracker_state": "Near Home",
         "name": "Archers Apple Watch (archers_apple_watch)",
@@ -72,7 +72,7 @@
         "interval": "15 mins",
         "next_update_date/time": "2025-01-12 16:38:40",
         "next_update_time": "4:38:40p",
-        "next_update": "4:38:40p",
+        "next_update": "30 secs",
         "last_updated_date/time": "2025-01-12 16:23:40",
         "last_update_time": "16:23:40",
         "last_update": "16:23:40",
@@ -156,7 +156,7 @@
       }
     },
     "michaels_ipad_pro": {
-      "last_update": "2025-01-12 16:37:00",
+      "last_update": "2025-01-12 16:38:00",
       "sensors": {
         "device_tracker_state": "home",
         "name": "Michaels iPad Pro (michaels_ipad_pro)",
@@ -305,7 +305,7 @@
       }
     },
     "yellow_phone": {
-      "last_update": "2025-01-12 16:37:00",
+      "last_update": "2025-01-12 16:38:00",
       "sensors": {
         "device_tracker_state": "home",
         "name": "Yellow Phone (yellow_phone)",
